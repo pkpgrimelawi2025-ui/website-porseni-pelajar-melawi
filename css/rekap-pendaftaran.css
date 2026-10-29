@@ -728,3 +728,57 @@
         font-size: 0.8rem;
     }
 }
+
+/* ==================================================
+   PENYEMPURNAAN MOBILE — PAGINATION REKAP
+   ================================================== */
+
+@media (max-width: 480px) {
+    .rekap-pendaftaran .rekap-info-halaman {
+        margin-top: 14px;
+        padding: 10px 12px;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        background: #ffffff;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .rekap-pendaftaran .rekap-pagination,
+    .rekap-pendaftaran .pagination,
+    .rekap-pendaftaran .rekap-navigasi-halaman {
+        gap: 8px;
+        width: 100%;
+    }
+
+    .rekap-pendaftaran .rekap-pagination button,
+    .rekap-pendaftaran .pagination button,
+    .rekap-pendaftaran .rekap-navigasi-halaman button {
+        min-height: 44px;
+        padding: 10px 12px;
+        font-size: 0.82rem;
+    }
+}
+
+/* Mencegah overflow pada layar HP */
+@media (max-width: 480px) {
+    .rekap-pendaftaran,
+    .rekap-container,
+    .rekap-panel,
+    .rekap-filter-item {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .rekap-header h2,
+    .rekap-deskripsi,
+    .rekap-status {
+        overflow-wrap: anywhere;
+    }
+
+    .rekap-tabel-wrapper {
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}

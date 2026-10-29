@@ -1,0 +1,103 @@
+
+<section id="rekap-pendaftaran" class="rekap-pendaftaran">
+    <div class="rekap-container">
+
+        <header class="rekap-header">
+            <p class="rekap-eyebrow">PORSENI PELAJAR MELAWI 2026</p>
+            <h2>Rekap Pendaftaran Peserta per Cabang Lomba</h2>
+            <p class="rekap-deskripsi">
+                Daftar peserta terdaftar dari seluruh cabang olahraga dan seni
+                PORSENI Pelajar Melawi Tahun 2026.
+            </p>
+        </header>
+
+        <!-- Status pemuatan data -->
+        <div id="rekap-status" class="rekap-status" role="status">
+            Data peserta sedang menunggu integrasi sumber.
+        </div>
+
+        <!-- FILTER DATA PESERTA -->
+        <section class="rekap-panel" aria-labelledby="judul-filter-peserta">
+            <h3 id="judul-filter-peserta">Filter Data Peserta</h3>
+
+            <div class="rekap-filter">
+
+                <div class="rekap-filter-item">
+                    <label for="filter-kecamatan">Kecamatan</label>
+                    <select id="filter-kecamatan">
+                        <option value="">Semua Kecamatan</option>
+                        <option value="Nanga Pinoh">Nanga Pinoh</option>
+                        <option value="Pinoh Utara">Pinoh Utara</option>
+                        <option value="Pinoh Selatan">Pinoh Selatan</option>
+                        <option value="Belimbing">Belimbing</option>
+                        <option value="Belimbing Hulu">Belimbing Hulu</option>
+                        <option value="Ella Hilir">Ella Hilir</option>
+                        <option value="Menukung">Menukung</option>
+                        <option value="Sayan">Sayan</option>
+                        <option value="Tanah Pinoh">Tanah Pinoh</option>
+                        <option value="Tanah Pinoh Barat">Tanah Pinoh Barat</option>
+                        <option value="Sokan">Sokan</option>
+                    </select>
+                </div>
+
+                <div class="rekap-filter-item">
+                    <label for="filter-cabang">Cabang Lomba</label>
+                    <select id="filter-cabang">
+                        <option value="">Semua Cabang Lomba</option>
+                        <option value="Bola Voli">Bola Voli</option>
+                        <option value="Sepak Bola Mini">Sepak Bola Mini</option>
+                        <option value="Atletik">Atletik</option>
+                        <option value="Catur">Catur</option>
+                        <option value="Tenis Meja">Tenis Meja</option>
+                        <option value="Karate">Karate</option>
+                        <option value="Menyanyi Solo">Menyanyi Solo</option>
+                        <option value="Baca Puisi">Baca Puisi</option>
+                        <option value="Pantomim">Pantomim</option>
+                        <option value="Seni Tari">Seni Tari</option>
+                        <option value="Mendongeng">Mendongeng</option>
+                        <option value="Menulis Cerita">Menulis Cerita</option>
+                        <option value="Seni Kriya">Seni Kriya</option>
+                        <option value="Gambar Bercerita">Gambar Bercerita</option>
+                    </select>
+                </div>
+
+                <div class="rekap-filter-item">
+                    <label for="cari-peserta">Cari Nama Peserta</label>
+                    <input
+                        id="cari-peserta"
+                        type="search"
+                        placeholder="Ketik nama peserta..."
+                        autocomplete="off"
+                    >
+                </div>
+
+            </div>
+        </section>
+
+        <!-- DAFTAR PESERTA -->
+        <section class="rekap-panel" aria-labelledby="judul-daftar-peserta">
+            <div class="rekap-panel-header">
+                <h3 id="judul-daftar-peserta">Daftar Peserta Terdaftar</h3>
+                <p id="rekap-info-hasil" class="rekap-info-hasil">
+                    Menunggu data peserta.
+                </p>
+            </div>
+
+            <div
+                id="rekap-daftar-peserta"
+                class="rekap-tabel-wrapper"
+                aria-live="polite"
+            >
+                <p>Daftar peserta akan ditampilkan setelah sumber data terhubung.</p>
+            </div>
+
+            <p id="rekap-info-halaman" class="rekap-info-halaman"></p>
+        </section>
+
+        <p class="rekap-catatan">
+            Data ditampilkan berdasarkan hasil pengolahan pendaftaran peserta.
+            Informasi pribadi yang tidak diperlukan untuk publikasi tidak ditampilkan.
+        </p>
+
+    </div>
+</section>

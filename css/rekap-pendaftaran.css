@@ -1,0 +1,270 @@
+
+/* ==================================================
+   REKAP PENDAFTARAN PORSENI PELAJAR MELAWI 2026
+   File: css/rekap-pendaftaran.css
+   ================================================== */
+
+.rekap-pendaftaran {
+    --rekap-primary: #123b67;
+    --rekap-accent: #e5a526;
+    --rekap-text: #243247;
+    --rekap-muted: #64748b;
+    --rekap-border: #e2e8f0;
+    --rekap-surface: #ffffff;
+    --rekap-background: #f5f8fc;
+
+    padding: 64px 20px;
+    background: var(--rekap-background);
+    color: var(--rekap-text);
+    font-family: inherit;
+}
+
+.rekap-pendaftaran *,
+.rekap-pendaftaran *::before,
+.rekap-pendaftaran *::after {
+    box-sizing: border-box;
+}
+
+.rekap-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.rekap-header {
+    max-width: 760px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.rekap-eyebrow {
+    margin: 0 0 12px;
+    color: var(--rekap-primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.rekap-header h2 {
+    margin: 0 0 16px;
+    color: var(--rekap-primary);
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.rekap-deskripsi {
+    margin: 0;
+    color: var(--rekap-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.rekap-status {
+    margin-bottom: 24px;
+    padding: 14px 18px;
+    border: 1px solid #cbdff5;
+    border-radius: 12px;
+    background: #edf5ff;
+    color: var(--rekap-primary);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.rekap-ringkasan {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.rekap-kartu {
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid var(--rekap-border);
+    border-radius: 16px;
+    background: var(--rekap-surface);
+    box-shadow: 0 5px 18px rgba(15, 35, 65, 0.045);
+}
+
+.rekap-kartu-label {
+    margin: 0 0 12px;
+    color: var(--rekap-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.rekap-kartu-angka {
+    margin: 0;
+    color: var(--rekap-primary);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.rekap-panel {
+    min-width: 0;
+    margin-bottom: 24px;
+    padding: 26px;
+    border: 1px solid var(--rekap-border);
+    border-radius: 16px;
+    background: var(--rekap-surface);
+    box-shadow: 0 5px 18px rgba(15, 35, 65, 0.035);
+}
+
+.rekap-panel h3 {
+    margin: 0 0 22px;
+    color: var(--rekap-primary);
+    font-size: 1.2rem;
+    font-weight: 750;
+    line-height: 1.5;
+}
+
+.rekap-filter {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 10px 16px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rekap-pendaftaran label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--rekap-text);
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+
+.rekap-pendaftaran select,
+.rekap-pendaftaran input[type="search"] {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    padding: 11px 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--rekap-text);
+    font: inherit;
+    outline: none;
+}
+
+.rekap-pendaftaran select:focus,
+.rekap-pendaftaran input[type="search"]:focus {
+    border-color: #3975b9;
+    box-shadow: 0 0 0 3px rgba(57, 117, 185, 0.15);
+}
+
+.rekap-pendaftaran button:focus-visible,
+.rekap-pendaftaran a:focus-visible {
+    outline: 3px solid #3975b9;
+    outline-offset: 3px;
+}
+
+.rekap-tabel-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--rekap-border);
+    border-radius: 10px;
+}
+
+.rekap-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.rekap-tabel th,
+.rekap-tabel td {
+    padding: 13px 15px;
+    border-bottom: 1px solid var(--rekap-border);
+    vertical-align: top;
+}
+
+.rekap-tabel th {
+    background: #edf3fa;
+    color: var(--rekap-primary);
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.rekap-tabel tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.rekap-tabel tbody tr:hover {
+    background: #f8fafc;
+}
+
+.rekap-kosong {
+    padding: 24px;
+    color: var(--rekap-muted);
+    text-align: center;
+    line-height: 1.7;
+}
+
+.rekap-info-halaman,
+.rekap-catatan {
+    margin: 16px 0 0;
+    color: var(--rekap-muted);
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.rekap-pendaftaran [hidden] {
+    display: none !important;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .rekap-pendaftaran {
+        padding: 44px 16px;
+    }
+
+    .rekap-ringkasan {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .rekap-kartu {
+        padding: 18px;
+    }
+
+    .rekap-panel {
+        padding: 20px 16px;
+    }
+
+    .rekap-filter {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
+
+/* Ponsel */
+@media (max-width: 480px) {
+    .rekap-pendaftaran {
+        padding: 36px 12px;
+    }
+
+    .rekap-ringkasan {
+        grid-template-columns: 1fr;
+    }
+
+    .rekap-kartu {
+        padding: 18px;
+    }
+
+    .rekap-panel {
+        padding: 18px 12px;
+        border-radius: 12px;
+    }
+
+    .rekap-tabel th,
+    .rekap-tabel td {
+        padding: 11px 12px;
+    }
+}

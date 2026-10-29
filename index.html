@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PORSENI Pelajar Melawi 2026</title>
+
+    <meta name="description" content="Portal resmi PORSENI Pelajar SD dan SMP Berkarakter Disdikbud Kabupaten Melawi Tahun 2026.">
+
+    <link rel="stylesheet" href="logos.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #102a56;
+            color: white;
+            padding: 22px 8%;
+        }
+
+        .identitas {
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: #f5cf70;
+            font-weight: bold;
+        }
+
+        header h1 {
+            font-size: clamp(20px, 3.2vw, 34px);
+            line-height: 1.25;
+            margin-top: 8px;
+            overflow-wrap: anywhere;
+        }
+
+        header p {
+            color: #d9e5f7;
+            margin-top: 6px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            padding: 15px 8%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 24px;
+            border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 4px 14px rgba(16, 42, 86, 0.06);
+        }
+
+        nav a {
+            position: relative;
+            color: #102a56;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 6px 0;
+            transition: color 0.25s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background: #d9aa36;
+            border-radius: 3px;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.25s ease;
+        }
+
+        nav a:hover {
+            color: #b8860b;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .hero {
+            margin: 32px auto;
+            width: 84%;
+            padding: 60px 7%;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #102a56, #176b87);
+            color: white;
+        }
+
+        .hero .label {
+            display: inline-block;
+            background: #f5cf70;
+            color: #102a56;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            line-height: 1.25;
+            letter-spacing: -0.8px;
+        }
+
+        .hero p {
+            max-width: 1100px;
+            color: #e1eaf7;
+            line-height: 1.7;
+        }
+
+        .tombol {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 25px;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #ffdc80, #f2bd45);
+            color: #102a56;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .tombol:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #ffe7a6, #ffcf5c);
+        }
+
+        .tombol:active {
+            transform: translateY(0);
+        }
+
+        .tombol:focus-visible {
+            outline: 3px solid #ffffff;
+            outline-offset: 4px;
+        }
+
+        .konten {
+            width: 84%;
+            margin: 40px auto;
+        }
+
+        .konten h2 {
+            color: #102a56;
+            margin-bottom: 8px;
+        }
+
+        .garis {
+            width: 65px;
+            height: 4px;
+            background: #d9aa36;
+            margin: 12px 0 24px;
+            border-radius: 5px;
+        }
+
+        .kartu {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .item {
+            position: relative;
+            overflow: hidden;
+            background: #ffffff;
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid #e4eaf2;
+            box-shadow: 0 6px 20px rgba(16, 42, 86, 0.06);
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #d9aa36, #f7df98);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-6px);
+            border-color: #d9aa36;
+            box-shadow: 0 16px 32px rgba(16, 42, 86, 0.12);
+        }
+
+        .item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .item .ikon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .item h3 {
+            color: #102a56;
+            margin-bottom: 8px;
+        }
+
+        .item p {
+            font-size: 14px;
+            color: #596579;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 28px 8%;
+            text-align: center;
+            background: #102a56;
+            color: #d9e5f7;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 20px 6%;
+            }
+
+            nav {
+                padding: 12px 4%;
+                gap: 8px 16px;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            nav a {
+                flex-shrink: 0;
+                font-size: 13px;
+            }
+
+            .hero,
+            .konten {
+                width: 90%;
+            }
+
+            .hero {
+                padding: 38px 7%;
+                margin-top: 22px;
+            }
+
+            .kartu {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* AREA PENDAFTARAN CABANG LOMBA */
+        .area-pendaftaran {
+            width: 84%;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 40px auto;
+            padding: 28px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            scroll-margin-top: 100px;
+        }
+
+        .area-pendaftaran[hidden] {
+            display: none !important;
+        }
+
+        .area-pendaftaran > h3 {
+            margin: 0 0 8px;
+            color: #102a56;
+            font-size: clamp(20px, 3vw, 28px);
+        }
+
+        .area-pendaftaran > p {
+            margin: 0 0 24px;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* SUSUNAN KARTU RESPONSIF */
+        .daftar-lomba {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        /* KARTU PENDAFTARAN */
+        .kartu-lomba {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 0;
+            padding: 24px;
+            overflow-wrap: anywhere;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(16, 42, 86, 0.06);
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .kartu-lomba:hover {
+            transform: translateY(-5px);
+            border-color: #d9aa36;
+            box-shadow: 0 14px 28px rgba(16, 42, 86, 0.12);
+        }
+
+        /* NOMOR KARTU */
+        .nomor-lomba {
+            display: grid;
+            place-items: center;
+            width: 46px;
+            height: 46px;
+            margin-bottom: 18px;
+            color: #102a56;
+            background: #fff2c9;
+            border: 1px solid #f0d78e;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        /* LABEL KATEGORI */
+        .kategori-lomba {
+            margin: 0 0 8px;
+            color: #a47710;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* NAMA LOMBA */
+        .kartu-lomba h3 {
+            margin: 0 0 24px;
+            color: #102a56;
+            font-size: 19px;
+            line-height: 1.5;
+        }
+
+        /* TOMBOL PENDAFTARAN */
+        .tombol-daftar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            min-height: 46px;
+            margin-top: auto;
+            padding: 12px 16px;
+            color: #ffffff;
+            background: #102a56;
+            border: 1px solid #102a56;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .tombol-daftar:hover {
+            color: #102a56;
+            background: #f5d477;
+            border-color: #d9aa36;
+        }
+
+        .tombol-daftar:focus-visible {
+            outline: 3px solid #d9aa36;
+            outline-offset: 4px;
+        }
+
+        /* TABLET */
+        @media (max-width: 900px) {
+            .daftar-lomba {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .area-pendaftaran {
+                padding: 22px;
+            }
+        }
+
+        /* HP */
+        @media (max-width: 560px) {
+            .daftar-lomba {
+                grid-template-columns: 1fr;
+            }
+
+            .area-pendaftaran {
+                padding: 18px;
+                border-radius: 14px;
+            }
+
+            .kartu-lomba {
+                padding: 20px;
+            }
+        }
+
+        /* PENGGUNA YANG MEMATIKAN ANIMASI */
+        @media (prefers-reduced-motion: reduce) {
+            .kartu-lomba,
+            .tombol-daftar {
+                transition: none;
+            }
+
+            .kartu-lomba:hover {
+                transform: none;
+            }
+        }
+
+    </style>
+
+<link rel="stylesheet" href="css/rekap-pendaftaran.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="identitas">KABUPATEN MELAWI • TAHUN 2026</div>
+
+        <h1>PORSENI PELAJAR SD &amp; SMP BERKARAKTER</h1>
+
+        <p>Dinas Pendidikan dan Kebudayaan Kabupaten Melawi</p>
+    </header>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang PORSENI</a>
+        <a href="#cabang">Cabang Lomba</a>
+        <a href="#juknis">Informasi</a>
+        <a href="#rekap-pendaftaran">Data Pendaftaran</a>
+        <a href="#beranda" class="navbar-logo" aria-label="PORSENI Pelajar - Beranda">
+            <img
+                src="assets/logos/porseni-pelajar.png"
+                alt="Logo PORSENI Pelajar"
+            >
+        </a>
+    </nav>
+
+    <main>
+        <section class="hero" id="beranda">
+            <span class="label">PORTAL PORSENI 2026</span>
+
+            <h2>Berprestasi, Berkarya, dan Berkarakter</h2>
+
+            <p>
+                Selamat datang di portal PORSENI Pelajar SD dan SMP
+                Berkarakter Dinas Pendidikan dan Kebudayaan
+                Kabupaten Melawi Tahun 2026.
+            </p>
+
+            <a class="tombol" href="#cabang">
+                Jelajahi Cabang Lomba →
+            </a>
+        </section>
+
+        <!-- KARTU JUKNIS RESMI PORSENI 2026 -->
+        <section class="konten juknis-section" id="juknis">
+            <div class="juknis-card">
+                <div class="juknis-icon" aria-hidden="true">
+                    <span>PDF</span>
+                </div>
+
+                <div class="juknis-info">
+                    <p class="juknis-label">DOKUMEN RESMI</p>
+                    <h2>Juknis PORSENI 2026</h2>
+                    <p>
+                        Panduan resmi PORSENI Pelajar SD & SMP
+                        Kabupaten Melawi Tahun 2026.
+                    </p>
+                </div>
+
+                <div class="juknis-actions">
+                    <a
+                        class="juknis-btn juknis-btn-primary"
+                        href="dokumen/REVISI%20FINAL%20JUKNIS%20PORSENI%20SD%20%26%20SMP%20MELAWI%202026.pdf"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Lihat Juknis PDF
+                    </a>
+
+                    <a
+                        class="juknis-btn juknis-btn-secondary"
+                        href="dokumen/REVISI%20FINAL%20JUKNIS%20PORSENI%20SD%20%26%20SMP%20MELAWI%202026.pdf"
+                        download
+                    >
+                        Unduh Juknis
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <div id="wadah-rekap-pendaftaran"></div>
+
+        <section class="konten" id="tentang">
+            <h2>Ajang Prestasi Pelajar Melawi</h2>
+
+            <div class="garis"></div>
+
+            <p>
+                PORSENI menjadi wadah bagi pelajar untuk mengembangkan
+                potensi, kreativitas, sportivitas, dan karakter melalui
+                kegiatan olahraga dan seni.
+            </p>
+        </section>
+
+        <section class="konten" id="cabang">
+            <h2>Cabang Lomba</h2>
+
+            <div class="garis"></div>
+
+            <div class="kartu">
+
+                <article class="item">
+                    <div class="ikon">🏆</div>
+                    <h3>Olahraga</h3>
+                    <p>
+                        Wadah untuk mengembangkan kemampuan,
+                        sportivitas, dan semangat berkompetisi.
+                    </p>
+                    <button
+                        type="button"
+                        class="tombol"
+                        onclick="bukaKategoriLomba('olahraga')"
+                    >
+                        Pendaftaran Cabang Olahraga
+                    </button>
+                </article>
+
+                <article class="item">
+                    <div class="ikon">🎨</div>
+                    <h3>Seni</h3>
+                    <p>
+                        Ruang untuk mengekspresikan kreativitas,
+                        bakat, dan apresiasi seni pelajar.
+                    </p>
+                    <button
+                        type="button"
+                        class="tombol"
+                        onclick="bukaKategoriLomba('seni')"
+                    >
+                        Pendaftaran Cabang Seni
+                    </button>
+                </article>
+
+                <article class="item">
+                    <div class="ikon">🌟</div>
+                    <h3>Karakter</h3>
+                    <p>
+                        Membangun disiplin, kejujuran, kerja sama,
+                        dan karakter pelajar yang positif.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="konten" id="informasi">
+            <h2>Informasi Kegiatan</h2>
+
+            <div class="garis"></div>
+
+            <p>
+                Informasi jadwal, peserta, hasil lomba, dan pengumuman
+                akan ditampilkan pada portal ini setelah data resmi
+                kegiatan tersedia.
+            </p>
+        </section>
+        <!-- AREA PENDAFTARAN OLAHRAGA -->
+        <div id="pendaftaran-olahraga" class="area-pendaftaran" hidden>
+            <h3>Pendaftaran Cabang Olahraga</h3>
+            <p>Pilih cabang olahraga yang akan diikuti.</p>
+            <div id="daftar-olahraga" class="daftar-lomba"></div>
+            <button
+            type="button"
+            class="tombol"
+            onclick="kembaliKeCabangLomba()"
+            >
+            ← Kembali ke Cabang Lomba
+            </button>
+        </div>
+
+        <!-- AREA PENDAFTARAN SENI -->
+        <div id="pendaftaran-seni" class="area-pendaftaran" hidden>
+            <h3>Pendaftaran Cabang Seni</h3>
+            <p>Pilih cabang seni yang akan diikuti.</p>
+            <div id="daftar-seni" class="daftar-lomba"></div>
+            <button
+            type="button"
+            class="tombol"
+            onclick="kembaliKeCabangLomba()"
+            >
+            ← Kembali ke Cabang Lomba
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            © 2026 PORSENI Pelajar SD & SMP Berkarakter
+        </p>
+        <p>
+            Dinas Pendidikan dan Kebudayaan Kabupaten Melawi
+        </p>
+        <!-- IDENTITAS DAN MITRA PENYELENGGARA -->
+        <div id="wadah-logo"></div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="js/muat-komponen.js"></script>
+    <script src="js/rekap-data.js"></script>
+    <script src="js/rekap-tampilan.js"></script>
+    <script src="js/integrasi-rekap.js"></script>
+</body>
+</html>

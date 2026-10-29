@@ -1,0 +1,389 @@
+
+/* =========================================
+   PORSENI MELAWI 2026
+   FOOTER PARTNER & INSTITUTION LOGOS
+   ========================================= */
+
+.logo-instansi {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 5% 34px;
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.logo-instansi-inner {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.logo-instansi-label {
+    margin: 0 0 28px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.logo-instansi-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: start;
+    gap: 28px;
+}
+
+.logo-instansi-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 0;
+    gap: 13px;
+    text-align: center;
+}
+
+.logo-instansi-item img {
+    display: block;
+    width: 100%;
+    max-width: 100px;
+    height: 76px;
+    object-fit: contain;
+    object-position: center;
+    background: transparent;
+    transition: transform 0.25s ease;
+}
+
+.logo-instansi-item span {
+    max-width: 180px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.logo-instansi-item.logo-porseni img {
+    max-width: 105px;
+}
+
+/* Efek halus pada perangkat yang mendukung hover */
+@media (hover: hover) {
+    .logo-instansi-item img:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .logo-instansi {
+        padding: 28px 5% 30px;
+    }
+
+    .logo-instansi-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px 22px;
+    }
+
+    .logo-instansi-item img {
+        max-width: 92px;
+        height: 72px;
+    }
+
+    .logo-instansi-item.logo-porseni img {
+        max-width: 98px;
+    }
+}
+
+/* HP */
+@media (max-width: 560px) {
+    .logo-instansi {
+        padding: 26px 7% 28px;
+    }
+
+    .logo-instansi-label {
+        margin-bottom: 24px;
+        font-size: 10px;
+        letter-spacing: 1.7px;
+    }
+
+    .logo-instansi-list {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .logo-instansi-item {
+        gap: 7px;
+    }
+
+    .logo-instansi-item img {
+        width: 100%;
+        max-width: 100%;
+        height: 42px;
+    }
+
+    .logo-instansi-item span {
+        max-width: 100%;
+        font-size: 8px;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    .logo-instansi-item.logo-porseni img {
+        max-width: 100%;
+    }
+}
+
+/* HP berlayar kecil */
+@media (max-width: 360px) {
+    .logo-instansi {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .logo-instansi-list {
+        gap: 24px 12px;
+    }
+
+    .logo-instansi-item img {
+        max-width: 76px;
+        height: 62px;
+    }
+
+    .logo-instansi-item span {
+        font-size: 9px;
+    }
+}
+
+/* Aksesibilitas */
+@media (prefers-reduced-motion: reduce) {
+    .logo-instansi-item img {
+        transition: none;
+    }
+}
+
+/* Tampilan logo minimalis tanpa teks */
+.logo-instansi-label,
+.logo-instansi-item span {
+    display: none;
+}
+
+.logo-instansi {
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+.logo-instansi-list {
+    align-items: center;
+}
+
+.logo-instansi-item {
+    gap: 0;
+}
+
+/* Logo PORSENI di sisi kanan navbar */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 4px 0 4px 18px;
+    flex-shrink: 0;
+}
+
+.navbar-logo img {
+    display: block;
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* Penyesuaian untuk HP */
+@media (max-width: 700px) {
+    .navbar-logo {
+        padding-left: 12px;
+    }
+
+    .navbar-logo img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* =========================================
+   KARTU JUKNIS PORSENI MELAWI 2026
+   ========================================= */
+
+.juknis-section {
+    margin-top: 28px;
+    margin-bottom: 36px;
+}
+
+.juknis-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 28px 30px;
+    border: 1px solid #dbe4ef;
+    border-left: 5px solid #d4a72c;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f8fc 100%);
+    box-shadow: 0 10px 28px rgba(16, 42, 86, 0.07);
+}
+
+.juknis-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 76px;
+    border-radius: 12px;
+    background: #102a56;
+    color: #ffffff;
+    box-shadow: 0 6px 14px rgba(16, 42, 86, 0.16);
+}
+
+.juknis-icon span {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.juknis-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.juknis-label {
+    margin: 0 0 7px;
+    color: #a67c16;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.juknis-info h2 {
+    margin: 0 0 8px;
+    color: #102a56;
+    font-size: 23px;
+    line-height: 1.3;
+}
+
+.juknis-info > p:last-child {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.juknis-actions {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 150px;
+}
+
+.juknis-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 16px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.juknis-btn-primary {
+    background: #102a56;
+    color: #ffffff;
+}
+
+.juknis-btn-primary:hover {
+    background: #194078;
+    transform: translateY(-1px);
+}
+
+.juknis-btn-secondary {
+    border-color: #cbd5e1;
+    background: #ffffff;
+    color: #102a56;
+}
+
+.juknis-btn-secondary:hover {
+    background: #edf3fa;
+}
+
+@media (max-width: 700px) {
+    .juknis-section {
+        margin-top: 22px;
+        margin-bottom: 28px;
+    }
+
+    .juknis-card {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 22px 18px;
+        border-radius: 14px;
+    }
+
+    .juknis-icon {
+        width: 48px;
+        height: 56px;
+        border-radius: 9px;
+    }
+
+    .juknis-icon span {
+        font-size: 13px;
+    }
+
+    .juknis-info {
+        flex: 1;
+    }
+
+    .juknis-info h2 {
+        font-size: 18px;
+    }
+
+    .juknis-label {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .juknis-info > p:last-child {
+        font-size: 12px;
+    }
+
+    .juknis-actions {
+        flex-direction: row;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .juknis-btn {
+        flex: 1;
+        min-width: 0;
+        padding: 10px 8px;
+        font-size: 11px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .juknis-btn {
+        transition: none;
+    }
+}

@@ -1,11 +1,2848 @@
-
 {
   "versi": "1.0",
-  "diperbarui_pada": null,
-  "status": "belum_tersedia",
+  "diperbarui_pada": "2026-10-29T19:46:43.522Z",
+  "status": "tersedia",
   "ringkasan": {
-    "total_keikutsertaan": 0,
-    "total_cabang": 14
+    "total_keikutsertaan": 282,
+    "total_cabang": 14,
+    "jumlah_cabang_terdaftar": 14,
+    "per_cabang": {
+      "Bola Voli": 79,
+      "Sepak Bola Mini": 47,
+      "Atletik": 14,
+      "Catur": 29,
+      "Tenis Meja": 16,
+      "Karate": 3,
+      "Menyanyi Solo": 12,
+      "Baca Puisi": 16,
+      "Pantomim": 10,
+      "Seni Tari": 29,
+      "Mendongeng": 7,
+      "Menulis Cerita": 6,
+      "Seni Kriya": 8,
+      "Gambar Bercerita": 6
+    }
   },
-  "peserta": []
+  "peserta": [
+    {
+      "nama": "Nazifa Zahira",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 09 Tanjung Lay",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "nazifa zahira",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "sdn 9 tanjung lay",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Randi",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 16 LABAI MEKAR",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "SUBANDI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "V",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "YOGI SAPUTRA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "V",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "RAKHMAD JUL DZAKY",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "V",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "M. ZHAFRAN FARABY",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "V",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "HUSEN ABDULLAH",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "V",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "JEFF KRISTAN",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "V",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Azril Ilham",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 6 Satap Pinoh selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "CHRISTIANI RALINE TWODRI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 5 Beloyang",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Mela Amelia",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDS. Sungai Kehidupan Borneo",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Ratna",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDS. Sungai Kehidupan Borneo",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Margareta Astrin",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 11 Nyanggai",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Zaskia Priscilla",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 11 Nyanggai",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Aprilia Anggraini",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 20 Gala",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Ayu Resmita Mema",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SDN 20 Gala",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Muhamad Yahya",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 7 ENTIBAB",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Afrizal Oktafian Nugroho",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDN 13 SP.III Trans Nobal",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Anselino Abersio Elnino Benedict",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDN 13 SP.III Trans Nobal",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Azril Arizzuan Akbar",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDN 13 SP.III Trans Nobal",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Kristover Antonio",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IV",
+      "asal_sekolah": "SDN 5 Pemuar",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Yohanes Fahmi Indra. P",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 12 Kancing",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Oktavianus Joehua. M",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 12 Kancing",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "AGRIL NAU PIYANSYAH",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 8 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "DIAS HARTONO",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 3 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "NOPIYA OKTASARI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 9 KEDUPAI",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "MOUDY HUTTA GHAWA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 9 KEDUPAI",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "ADELLIA SAPIRA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 9 KEDUPAI",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "SONIA SHAQIA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 9 KEDUPAI",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "MARSYA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 20 TEKABAN",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "YORIN MARISKA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 8 NUSA KENYIKAP",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "MARDA MARVELINO",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 9 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "AHMAD FAJRI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "HIRODIMUS DIKO LAS",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "RENDI HARDANI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "GRECIA AGATHA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 9 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "ANGGELA FEBRIANA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 9 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "SURIYANI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 9 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "ALIA FITRI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 8 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "TASYA NOVRILA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "THERESIA JESI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "SANTO PETRUS",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP NEGERI 11 SATAP MENUKUNG",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Anggita Sari",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 11 Satap Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "FINA RIA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VII",
+      "asal_sekolah": "SMP Negeri 11 Satap Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "SOPIYA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP Negeri 11 Satap Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "MARTIN",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 11 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "HILYA MUFIDAH",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 1 Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "HENDRIKUS ABIN",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP Negeri 1 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "DELIMA RAMADANI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 13 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "NASHWA HIMILYA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 1 Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "PETRA PEINA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP Negeri 3 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "KIRANA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP Negeri 1 Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "CELSI PUSPITA AYU",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 1 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "BELLA SAFIRA AMANDA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 1 Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "MESIA ATALIA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 3 Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "JESSICA MERISSA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 2 Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "Selsa Juni Sapitri",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 5 Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Mutia Julianti",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 5 Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Wina Aprilia Winata",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 2 Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Mutia Alwia Putri",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 2 Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "YEYEN PIONA APRIYANI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMPN 6 Satap Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "SASKIA PERMATASARI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VII",
+      "asal_sekolah": "SMPN 6 Satap Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "ANGGELA APRIANI",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMPN 1 Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "TIFANY KISSUA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 1 Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Priskila Monika Sari",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Sungai Kehidupan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Azril Ilham",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 6 Satap Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Indra Putra",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMPN 6 Satap Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "PARDI JANUANDRA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 6 Satap Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Yuda Apriadi",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VII",
+      "asal_sekolah": "SMP 5 Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Jumari",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMPN 1 Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Ahmad Fadilah",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 5 Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Aprilia Nesa",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 16 Pelaik Keruab",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Oktavia Selvi",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 16 Pelaik Keruab",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Erli",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 16 Pelaik Keruab",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Micha Lestary",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 16 Pelaik Keruab",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "AERLIN DWI ALEXA",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 2 MENUKUNG",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "MARCIA NOVELA DELIN",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 2 MENUKUNG",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "ADRIANUS DARMONO",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 8 BONDAU",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "MUHAMMAD RAFA",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 1 Pinoh Utara",
+      "kecamatan": "Pinoh Utara"
+    },
+    {
+      "nama": "Julkafli",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 05 Landau Garong",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Muhammad Naufal Fitria Tarmui",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 20 GALA",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Ya Said Wubaida",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 20 GALA",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Jaya Purnama",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 15 EMANG RAYA",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Delvan Andrias Jensen",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDS SKB",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Stenli Glensius",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDS SKB",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Viktorius Tori",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDS SKB",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Dimas Bastian",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDS SKB",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Julian Paris",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDS SKB",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Okto Febrian",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDS SKB",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Prianto",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDS SKB",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Vincensius Dhava",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDN 12 Bemban Pengersit",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "syidqi alqodri ajendra",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 20 TEKABAN",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "GUNTUR",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDN 20 TEKABAN",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "YOHANES RANDY",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 23 PALUS HULU",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "FRANSISCO ABIGAEL LUDAN",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 23 PALUS HULU",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "ZHAQIL RESTU ANUGERAH",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDN 04 BATU AMPAR",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "ADE OKTAVIANUS",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 02 BATU BUIL",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "MUHAMMAD MUSHARIFAL FADZLAN NUR",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 02 BATU BUIL",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "ZHIO EFENDI",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 9 KEDUPAI",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "UMAR SAHID",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 1 PEMUAR",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "IMANUEL REYZA",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 1 PEMUAR",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "JAVIER AKTAMA MULYA",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 1 PEMUAR",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "JAVIER BERNOULLI",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 1 PEMUAR",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "KENZO ALVARO BAPTISTA",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "ARJUN HARDIANSYAH",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "KHOIRUL RIZAL FURQON MUBAROK",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "LEONARDO KAJU TORI",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "YOHANES WALBURGA YAGIL",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "MUHAMMAD FAJRUL ARIFIN",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "ADE ALVARO PURNAMA",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "VALEN",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "AHMAD FAHRI MAULANA",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "ALIYU JERI",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "ALBIAH SELOS",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "KELVIN ALVIANDO PRANATA",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "MUHAMMAD ALIF WIRAWAN",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 7 LANDAU LEBAN",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "PRANSISKUS BRENDEN",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 7 LANDAU LEBAN",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "DIKA",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 7 LANDAU LEBAN",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "ALBERTUS ALIANDO",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 7 LANDAU LEBAN",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "MUHAMMAD AFRIJA",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 7 LANDAU LEBAN",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "RIVALDO PUTRA",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 7 LANDAU LEBAN",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "WAHYU PRATAMA WIJAYA",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 7 LANDAU LEBAN",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "AFRILIA AGUNG",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 12 LAHAI",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "ABIMAYU BASUPATI",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 03 ELLA HULU",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "ABI RAIHAN ABDILAH",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 03 ELLA HULU",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Anjeli Putri",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 11 Nanga Pinoh",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "RAFAEL DENOVAN",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 01 NANGA PINOH",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Marselino",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 05 Keluing Taja",
+      "kecamatan": "Sokan"
+    },
+    {
+      "nama": "Amelia.",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN.16.labai mekar",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "DEVIO ALPARO",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD.SWASTA SUNGAI KEHIDUPAN BORNEO",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Tri Darmawardani",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 18 Tubung",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Fahri",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "Sdn 8 nusa kenyikap",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "JESIKA ARMILA FARANI",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 2 MENUKUNG",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "FAJARIAS GALANG",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 5 BATAS NANGKA",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "NAJRIL",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 05 Landau Tubun",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "YOLITA",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 05 Landau Tubun",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Serin Febriana",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 2 Keberak",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Serin Febriana",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 2 Keberak",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Efian",
+      "cabang_lomba": "Atletik",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 3 Piawas",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Arpa Anugrah Pratama",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 5 Beloyang",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Ricardo Alvin",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 05 Keluing Taja",
+      "kecamatan": "Sokan"
+    },
+    {
+      "nama": "ANGELIE GUNAWAN",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "III",
+      "asal_sekolah": "SDS KRISTEN IMANUEL",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "ARIANDRA MAULANA MURAT",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 9 Tanjung Lay",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "ARIANDRA MAULANA MURAT",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 9 Tanjung Lay",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "CHRISTOPHER JONATAN",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IV",
+      "asal_sekolah": "SDS KRISTEN IMANUEL",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Eldiktus Fidro",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IV",
+      "asal_sekolah": "SD Negeri 3 Piawas",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Vhellyn Zivhana Clairine",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD 8 Kayu Bunga",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Vhellyn Zivhana Clairine",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 8 Kayu Bunga",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "BULTEM SURA LIBANE",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VII",
+      "asal_sekolah": "SMPN 1 NANGA PINOH",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "SYAPIRA",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VII",
+      "asal_sekolah": "SMPN 8 NANGA PINOH",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "XAVIER MIKHAIL",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP SWASTA SETYA BUDI",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "MUHAMMAD ARKAN AL RASYID",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VII",
+      "asal_sekolah": "SMPIT INSAN KAMIL MELAWI",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Josse Giovani Elsyah",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "III",
+      "asal_sekolah": "SD Negeri 15 Laman Bukit",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Nadhia Maulida",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 14 Batu Nanta",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "NADIFA SYAHLA GHINA",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 6 PINOH UTARA",
+      "kecamatan": "Pinoh Utara"
+    },
+    {
+      "nama": "NAILA SALSYABILLA",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SDN 19 Tanjung Tengang",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Siti Nurhadijah",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 11 Satap Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "DHIA IVANA",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 22 Pekolai",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "GABRIEL ELTO",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 3 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "MUHAMAD AGRA ABQARY",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 8 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "ELNATAN HERNANDEZ",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 2 MENUKUNG",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "MUHAMMAD ARSYA ALKHALIFI",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 2 DURIAN TUBA",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "MATIUS JESON O'NADIO",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 5 BATAS NANGKA",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "ADELIA RAMADANI BILQIS",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VII",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "APRILIA MEIZA",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VII",
+      "asal_sekolah": "SMP Negeri 11 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "QUEENERA GEBHY",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 5 LANDAU TUBUN",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "IRWAN PIRNA DALATA PRATAMA",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP NEGERI 2 SATAP NANGA SOKAN",
+      "kecamatan": "Sokan"
+    },
+    {
+      "nama": "Olifvia Azahra Safitri",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 7 ENTIBAB",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Muhammad Uwais Alki Iqbal",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDS Muhammadiyah",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Jessica Siau Ling",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 11 Sungai Silok",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "HASNA FAIHA ALIM",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "MIN 2 Melawi",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "MUHAMMAD UWAIS ALKI IQBAL",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDS MUHAMMADIYAH NANGA PINOH",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Maulana Fadhil Ariyansyah",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 15 Laman Bukit",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Susandra Aprilia",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 15 Laman Bukit",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Adrianus Aldi",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VII",
+      "asal_sekolah": "SMP SUNGAI KEHIDUPAN",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "SURESTI MARDAYANI",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP SUNGAI KEHIDUPAN",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "MUHAMMAD JANUARTA",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDNEGERI 6 MUNGGUK OMBAK",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Ahmad Syarif  Maulana",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 2 MENUKUNG",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "MUHAMMAD HAFIZH ASSAJID",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "CLAUDIA AGUSTIN",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP Negeri 11 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "ADE SAPUTRA",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VII",
+      "asal_sekolah": "SMP Negeri 11 Satap Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "ANGGUN",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 12 LAHAI",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Imelda",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDS SUNGAI KEHIDUPAN BORNEO",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Arga Saputra",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDN 9 LANDAU BERINGIN",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "CHAYRA FAYYOLA BELLVANIA",
+      "cabang_lomba": "Karate",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 03 NANGA PINOH",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "FARISA RAHMADANTY",
+      "cabang_lomba": "Karate",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 6 PINOH UTARA",
+      "kecamatan": "Pinoh Utara"
+    },
+    {
+      "nama": "IQBAL HABIBIE RIDWANSYAH",
+      "cabang_lomba": "Karate",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "II",
+      "asal_sekolah": "SDN 6 Nanga Pinoh",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "AYRA NAFIZA QIRANI",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 13 NANGA PINOH",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "BASILA FANI ASTIKA",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP NEGERI 2 PINOH SELATAN",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Kaira Dinar Salsabila",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SDN 6 EMANG BEMBAN",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Davinia Jeslin",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SDN 5 PEMUAR",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Davinia Jeslin",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SDN 5 Pemuar",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "MARIA TRISA DAMELA",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP NEGERI 1 NANGA PINOH",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "GHUMAISYA NUR AZIZAH",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 6 PINOH UTARA",
+      "kecamatan": "Pinoh Utara"
+    },
+    {
+      "nama": "Apriskila Wulandari",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP Negeri 2 Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "SELVIA FANI KRISTIANI",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VII",
+      "asal_sekolah": "SMP Negeri 1 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "SERENA STEVANIA DHONE",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IV",
+      "asal_sekolah": "SDN 5 BELOYANG",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "MARIA CRISTIANOVA",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 12 LAHAI",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Tania",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 8 Nanga Taum",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "JERIKHO PITER",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 1 KEBERAK",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Salwa Aqueena Aylani Arka",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SDN 5 BELOYANG",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Bagas Aufanie Ghozi",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDS  YOS SUDARSO",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "AISHA NABILA QIRANI",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SDN 13 Nanga Pinoh",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Reiva Febrina Zahira",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP NEGERI 1 PINOH SELATAN",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Dimas Sapta Riyadhi",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "Mis Al - Ma'arif 1 Belonsat",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Arina Ilman Nafi'a",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 14 Batu Nanta",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "AHMAD HOSAN MIDO",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 6 PINOH UTARA",
+      "kecamatan": "Pinoh Utara"
+    },
+    {
+      "nama": "Muhammad Saipul",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 2 Pinoh Selatan",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "ALDIZA ZULKIFLI",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 6 MUNGGUK OMBAK",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "MUHAMMAD RAMADAN",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 2 MENUKUNG",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "IGNASIUS JUWAN",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP Negeri 11 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "JASKIA",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 11 Satap Kemukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "DELIVA EDWAD",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 1 Nanga Pinoh",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "WENDA SHAFFIRA",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMPN 6 Nanga Pinoh",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Dewi Aliya Putri",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 03 Ella Hulu",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Christian Ferel",
+      "cabang_lomba": "Pantomim",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDS Yos Sudarso Nanga Pinoh",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Jordan Graciello N.L",
+      "cabang_lomba": "Pantomim",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDS Yos Sudarso Nanga Pinoh",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Haris malik",
+      "cabang_lomba": "Pantomim",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "IV",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "Vier Julson",
+      "cabang_lomba": "Pantomim",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "IV",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "Asyer Yan Kolanus",
+      "cabang_lomba": "Pantomim",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD Swasta Sungai Kehidupan Borneo",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Calvin Ireneus",
+      "cabang_lomba": "Pantomim",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD Swasta Sungai Kehidupan Borneo",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "KAMADIA RADISTA CHRISTY",
+      "cabang_lomba": "Pantomim",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 5 Pemuar",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "SATRYA GERARDO MAYELLA",
+      "cabang_lomba": "Pantomim",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 5 Pemuar",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Rahmad Fahrudin Akthar",
+      "cabang_lomba": "Pantomim",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "IV",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Syech Rizieq Maulana",
+      "cabang_lomba": "Pantomim",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "IV",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Hesty Oktaviani",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 5 Beloyang",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Laurenchia Delviana",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 5 Beloyang",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Letisya Cindy Calista",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IV",
+      "asal_sekolah": "SD Negeri 5 Beloyang",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "ELISABET RACHEL, AGATHALIA FIANCA, DAN MARGARISYA VALENCIA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 18 TANJUNG SARI",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "ADQIA ZHEFANA SYAZERA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 15 EMANG RAYA",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "MUHAMAD RAFA AZKA PUTRA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 15 EMANG RAYA",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "SALSABILA SYAHLIHIN",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 15 EMANG RAYA",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "AGRIPIANUS",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMPS Sungai Kehidupan Borneo",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "CALEB AZARYA GIRI",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMPS Sungai Kehidupan Borneo",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "SARON OKTAVIA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMPS Sungai Kehidupan Borneo",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "THIRZA YODLY RAMPAN",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMPS Sungai Kehidupan Borneo",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "TIORA APRILIA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMPS Sungai Kehidupan Borneo",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "RAJIA ALJAHIRA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 1 PINOH UTARA",
+      "kecamatan": "Pinoh Utara"
+    },
+    {
+      "nama": "Samuel Rana Bastian",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 1 Pemuar",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Kristin Nelsya Vereta",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IV",
+      "asal_sekolah": "SD Negeri 1 Pemuar",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "Alice Charlin Dafania",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 1 Pemuar",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "RIQAH SULISTYA RAMADHANI",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "RAISA ANDRIANA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "ZAHIRA APRI LIANI",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "ANGGUN ADELIA VITO",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 1 Sayan",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "Tania",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 8 Nanga Taum",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "BERNADETA TIARA FRISIA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "DINDA VANIA LESTARI",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "FAA'IQAH AQILAH FAIRUS",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VII",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "MAJUANUS DILON",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VII",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "SELVIA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VIII",
+      "asal_sekolah": "SMP Negeri 2 Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "CHAROLINE",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 12 LAHAI",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "NOVITA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 12 LAHAI",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "SALSYA NANDA TARIGAS",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 12 LAHAI",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Khairinniswa Maheswari Putri",
+      "cabang_lomba": "Mendongeng",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IV",
+      "asal_sekolah": "SD 1 KEBERAK",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Alesha Defiyya Fatihah",
+      "cabang_lomba": "Mendongeng",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "II",
+      "asal_sekolah": "SD SWASTA MUHAMMADIYAH NANGA PINOH",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "FIFI ANISA RAHMA",
+      "cabang_lomba": "Mendongeng",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IV",
+      "asal_sekolah": "SD NEGERI 15 EMANG RAYA",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Herliana Turnip",
+      "cabang_lomba": "Mendongeng",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 1 Pemuar",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "HERLIANA TURNIP",
+      "cabang_lomba": "Mendongeng",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 1 PEMUAR",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "NAILA NAUFALYN  AQILA DARMAWAN",
+      "cabang_lomba": "Mendongeng",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 6 MUNGGUK OMBAK",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "NADYA ZHAFIRA AZZAHRA",
+      "cabang_lomba": "Mendongeng",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 12 LAHAI",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Hairul Hadi Padillah",
+      "cabang_lomba": "Menulis Cerita",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP NEGERI 1 PINOH SELATAN",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Keyla Ramanda Fitri",
+      "cabang_lomba": "Menulis Cerita",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP NEGERI 1 PINOH SELATAN",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "IZZATI NUR ADHA",
+      "cabang_lomba": "Menulis Cerita",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VII",
+      "asal_sekolah": "MTS AL-HUDA MENUKUNG",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "MARSA ANJELI",
+      "cabang_lomba": "Menulis Cerita",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Negeri 11 Satap Menukung",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Eliana Roselani",
+      "cabang_lomba": "Menulis Cerita",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IX",
+      "asal_sekolah": "SMPS Kristen Imanuel Nanga Pinoh",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Louis Giovinco",
+      "cabang_lomba": "Menulis Cerita",
+      "jenjang_sekolah": "Sekolah Menengah Pertama",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IX",
+      "asal_sekolah": "SMP Swasta Setya Budi",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Muhammad Fatta Anggara",
+      "cabang_lomba": "Seni Kriya",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 15 EMANG RAYA",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "MIKHA ADELIA",
+      "cabang_lomba": "Seni Kriya",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SDN 23 Pongga",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "SYAUQIA LUTHFI FAUZAN",
+      "cabang_lomba": "Seni Kriya",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD SWASTA MUHAMMADIYAH NANGA PINOH",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "Agam Dwi Prasojo",
+      "cabang_lomba": "Seni Kriya",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 14 Batu Nanta",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "SOLA GETIA",
+      "cabang_lomba": "Seni Kriya",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEREGI 13 JONGKONG",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "Delfa Hutri Alkahfi",
+      "cabang_lomba": "Seni Kriya",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 27 Sungai Sampuk Hilir",
+      "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Ketrin Yuliana",
+      "cabang_lomba": "Seni Kriya",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 12 Lintah",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "KIMPI",
+      "cabang_lomba": "Seni Kriya",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDN 7 ENTIBAB",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "ADIBA SAKILA AMADIA",
+      "cabang_lomba": "Gambar Bercerita",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 5 BELOYANG",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "HANNY FATHUL ARDA",
+      "cabang_lomba": "Gambar Bercerita",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 18 TANJUNG SARI",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "SALSABILA SYAHLIHIN",
+      "cabang_lomba": "Gambar Bercerita",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD NEGERI 15 EMANG RAYA",
+      "kecamatan": "Pinoh Selatan"
+    },
+    {
+      "nama": "Agresya Alfathresya Hana",
+      "cabang_lomba": "Gambar Bercerita",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IV",
+      "asal_sekolah": "SD Negeri 4 Batu Ampar",
+      "kecamatan": "Belimbing"
+    },
+    {
+      "nama": "SA'IL NUR QUR'AN",
+      "cabang_lomba": "Gambar Bercerita",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "IV",
+      "asal_sekolah": "SD NEGERI 01 SAYAN",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "ZEA ALMAHYRA",
+      "cabang_lomba": "Gambar Bercerita",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "IV",
+      "asal_sekolah": "SD NEGERI 01 MENUKUNG",
+      "kecamatan": "Menukung"
+    }
+  ]
 }

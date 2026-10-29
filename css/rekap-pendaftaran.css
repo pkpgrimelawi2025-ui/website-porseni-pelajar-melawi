@@ -610,3 +610,121 @@
         transition: none;
     }
 }
+
+/* ==================================================
+   PAGINATION — NAVIGASI HALAMAN REKAP
+   ================================================== */
+
+/* Wadah navigasi halaman */
+.rekap-pendaftaran .rekap-pagination,
+.rekap-pendaftaran .pagination,
+.rekap-pendaftaran .rekap-navigasi-halaman {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 24px 0 8px;
+}
+
+/* Tombol Sebelumnya dan Berikutnya */
+.rekap-pendaftaran .rekap-pagination button,
+.rekap-pendaftaran .pagination button,
+.rekap-pendaftaran .rekap-navigasi-halaman button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 10px 17px;
+    border: 1px solid #d5dfeb;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #123b67;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* Efek hover */
+.rekap-pendaftaran .rekap-pagination button:hover:not(:disabled),
+.rekap-pendaftaran .pagination button:hover:not(:disabled),
+.rekap-pendaftaran .rekap-navigasi-halaman button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    border-color: #123b67;
+    background: #123b67;
+    color: #ffffff;
+    box-shadow: 0 5px 12px rgba(18, 59, 103, 0.15);
+}
+
+/* Tombol yang tidak aktif */
+.rekap-pendaftaran .rekap-pagination button:disabled,
+.rekap-pendaftaran .pagination button:disabled,
+.rekap-pendaftaran .rekap-navigasi-halaman button:disabled {
+    border-color: #e2e8f0;
+    background: #f1f5f9;
+    color: #94a3b8;
+    cursor: not-allowed;
+    opacity: 0.85;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Informasi Halaman 1 dari 15 */
+.rekap-pendaftaran .rekap-pagination-info,
+.rekap-pendaftaran .pagination-info,
+.rekap-pendaftaran .rekap-info-halaman {
+    color: #64748b;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Nomor halaman aktif, jika menggunakan tombol nomor */
+.rekap-pendaftaran .rekap-pagination .active,
+.rekap-pendaftaran .pagination .active,
+.rekap-pendaftaran .rekap-navigasi-halaman .active {
+    border-color: #123b67;
+    background: #123b67;
+    color: #ffffff;
+}
+
+/* Fokus keyboard */
+.rekap-pendaftaran .rekap-pagination button:focus-visible,
+.rekap-pendaftaran .pagination button:focus-visible,
+.rekap-pendaftaran .rekap-navigasi-halaman button:focus-visible {
+    outline: 3px solid rgba(57, 117, 185, 0.35);
+    outline-offset: 3px;
+}
+
+/* Tampilan ponsel */
+@media (max-width: 480px) {
+    .rekap-pendaftaran .rekap-pagination,
+    .rekap-pendaftaran .pagination,
+    .rekap-pendaftaran .rekap-navigasi-halaman {
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .rekap-pendaftaran .rekap-pagination button,
+    .rekap-pendaftaran .pagination button,
+    .rekap-pendaftaran .rekap-navigasi-halaman button {
+        min-height: 40px;
+        padding: 9px 12px;
+        font-size: 0.82rem;
+    }
+
+    .rekap-pendaftaran .rekap-pagination-info,
+    .rekap-pendaftaran .pagination-info,
+    .rekap-pendaftaran .rekap-info-halaman {
+        font-size: 0.8rem;
+    }
+}

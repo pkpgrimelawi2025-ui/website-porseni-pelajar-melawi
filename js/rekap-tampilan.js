@@ -2,7 +2,7 @@
 (function (global) {
     "use strict";
 
-    const JUMLAH_PER_HALAMAN = 50;
+    const JUMLAH_PER_HALAMAN = 20;
 
     const CABANG_LOMBA = [
         "Bola Voli",

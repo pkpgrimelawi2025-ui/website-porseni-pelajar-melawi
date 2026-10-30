@@ -782,3 +782,152 @@
         -webkit-overflow-scrolling: touch;
     }
 }
+
+/* ==================================================
+   PENYESUAIAN PROPORSI HEADER REKAP
+   ================================================== */
+
+/* Mengurangi ruang vertikal keseluruhan */
+.rekap-pendaftaran {
+    padding-top: 46px;
+    padding-bottom: 46px;
+}
+
+/* Menyamakan lebar latar dengan hero utama */
+.rekap-header {
+    width: 84vw;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 0 22px;
+
+    /* Mengurangi tinggi banner */
+    padding: 34px 42px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+/* Merapikan jarak elemen dalam header */
+.rekap-label-resmi {
+    margin-bottom: 15px;
+}
+
+.rekap-eyebrow {
+    margin-bottom: 8px;
+}
+
+.rekap-header h2 {
+    margin-bottom: 10px;
+}
+
+.rekap-subjudul {
+    margin-bottom: 12px;
+}
+
+.rekap-header-divider {
+    margin: 18px auto 12px;
+}
+
+/* Mengurangi jarak informasi portal */
+.rekap-status {
+    margin-bottom: 22px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .rekap-pendaftaran {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .rekap-header {
+        width: 92%;
+        padding: 30px 24px;
+    }
+}
+
+/* HP */
+@media (max-width: 480px) {
+    .rekap-pendaftaran {
+        padding: 28px 12px;
+    }
+
+    .rekap-header {
+        width: 100%;
+        padding: 27px 17px;
+        margin-bottom: 18px;
+        border-radius: 15px;
+    }
+
+    .rekap-label-resmi {
+        margin-bottom: 14px;
+    }
+
+    .rekap-header-divider {
+        margin: 17px auto 11px;
+    }
+}
+/* ==================================================
+   PENYESUAIAN LEBAR STATUS DAN PANEL REKAP
+   MENYESUAIKAN HERO UTAMA
+   ================================================== */
+
+/* Informasi Portal */
+.rekap-status {
+    width: 84vw;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+
+/* Panel Filter dan Daftar Peserta */
+.rekap-panel {
+    width: 84vw;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .rekap-status,
+    .rekap-panel {
+        width: 92vw;
+    }
+}
+
+/* HP */
+@media (max-width: 480px) {
+    .rekap-status,
+    .rekap-panel {
+        width: calc(100vw - 24px);
+    }
+}
+/* Menyamakan lebar catatan informasi */
+.rekap-catatan {
+    width: 84vw;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .rekap-catatan {
+        width: 92vw;
+    }
+}
+
+/* HP */
+@media (max-width: 480px) {
+    .rekap-catatan {
+        width: calc(100vw - 24px);
+    }
+}

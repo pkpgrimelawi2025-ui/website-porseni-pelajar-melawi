@@ -387,3 +387,152 @@ nav {
         transition: none;
     }
 }
+
+/* ==================================================
+   FOOTER LOGO — UNIFIED SIX LOGOS
+   ================================================== */
+
+.logo-instansi {
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo-instansi-inner {
+    width: 84%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.logo-instansi-label {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Enam logo selalu dalam satu baris */
+.logo-instansi-list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Area logo seragam */
+.logo-instansi-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    height: 90px;
+}
+
+/* Ukuran tampilan seluruh logo disamakan */
+.logo-instansi-item img {
+    display: block;
+    width: 100%;
+    height: 70px;
+    max-width: 100px;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .logo-instansi-inner {
+        width: 96%;
+    }
+
+    .logo-instansi-list {
+        gap: 8px;
+    }
+
+    .logo-instansi-item {
+        height: 76px;
+    }
+
+    .logo-instansi-item img {
+        height: 58px;
+        max-width: 80px;
+    }
+}
+
+/* HP */
+@media (max-width: 400px) {
+    .logo-instansi-inner {
+        width: 90%;
+    }
+
+    .logo-instansi-list {
+        grid-template-columns: repeat(6, minmax(0, 6fr));
+        gap: 3px;
+        padding: 6px 4px;
+    }
+
+    .logo-instansi-item {
+        height: 51px;
+    }
+
+    .logo-instansi-item img {
+        width: 90%;
+        height: 40px;
+        max-width: 51px;
+    }
+}
+/* ==================================================
+   PENYESUAIAN KHUSUS LOGO KEMENDIKDASMEN
+   ================================================== */
+
+/* Laptop */
+.logo-kemendikdasmen img {
+    transform: scale(2);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .logo-kemendikdasmen img {
+        transform: scale(1.4);
+    }
+}
+
+/* HP */
+@media (max-width: 510px) {
+    .logo-kemendikdasmen img {
+        transform: scale(1.6);
+    }
+}
+
+/* ==================================================
+   PENYESUAIAN UKURAN LIMA LOGO LAINNYA
+   TABLET DAN HP SAJA
+   ================================================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .logo-instansi-item:not(.logo-kemendikdasmen) img {
+        transform: scale(0.80);
+    }
+}
+
+/* HP */
+@media (max-width: 400px) {
+    .logo-instansi-item:not(.logo-kemendikdasmen) img {
+        transform: scale(0.75);
+    }
+}
+/* ==================================================
+   JARAK KHUSUS ANTARLOGO PADA TABLET DAN HP
+   ================================================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .logo-kemendikdasmen {
+        margin-right: 8px;
+    }
+}
+
+/* HP */
+@media (max-width: 400px) {
+    .logo-kemendikdasmen {
+        margin-right: 6px;
+    }
+}

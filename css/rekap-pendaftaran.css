@@ -391,10 +391,10 @@
 
 .rekap-tabel th,
 .rekap-tabel td {
-    padding: 14px 16px;
+    padding: 9px 12px;
     border-bottom: 1px solid var(--rekap-border);
-    vertical-align: top;
-    line-height: 1.65;
+    vertical-align: middle;
+    line-height: 1.4;
 }
 
 .rekap-tabel th {
@@ -597,7 +597,8 @@
 
     .rekap-tabel th,
     .rekap-tabel td {
-        padding: 11px 12px;
+        padding: 8px 9px;
+        line-height: 1.35;
     }
 }
 
@@ -929,5 +930,180 @@
 @media (max-width: 480px) {
     .rekap-catatan {
         width: calc(100vw - 24px);
+    }
+}
+
+/* ==================================================
+   STATISTIK PESERTA — COMPACT & COLORFUL
+   ================================================== */
+
+.rekap-statistik {
+    width: 84vw;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 22px;
+}
+
+.rekap-statistik-heading {
+    margin-bottom: 11px;
+}
+
+.rekap-statistik-heading h3 {
+    margin: 0 0 3px;
+    color: #123b67;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.rekap-statistik-heading p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+/* Grid kartu lebih rapat */
+.rekap-statistik-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 9px;
+}
+
+/* Kartu dasar */
+.rekap-statistik-kartu {
+    --kartu-warna: #2563eb;
+    --kartu-latar: #eff6ff;
+
+    min-width: 0;
+    padding: 10px 8px;
+    border: 1px solid color-mix(in srgb, var(--kartu-warna) 20%, white);
+    border-left: 3px solid var(--kartu-warna);
+    border-radius: 10px;
+    background: var(--kartu-latar);
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(15, 35, 65, 0.035);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.rekap-statistik-kartu:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 13px rgba(15, 35, 65, 0.09);
+}
+
+/* Nama kecamatan dan cabang */
+.rekap-statistik-nama {
+    display: block;
+    min-height: 32px;
+    color: #334155;
+    font-size: 0.72rem;
+    font-weight: 750;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+/* Angka peserta */
+.rekap-statistik-angka {
+    display: block;
+    margin: 5px 0 1px;
+    color: var(--kartu-warna);
+    font-size: 1.45rem;
+    font-weight: 850;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Label peserta */
+.rekap-statistik-label {
+    display: block;
+    color: #64748b;
+    font-size: 0.66rem;
+    font-weight: 600;
+}
+
+/* Variasi warna kartu */
+.rekap-statistik-kartu:nth-child(6n + 1) {
+    --kartu-warna: #2563eb;
+    --kartu-latar: #eff6ff;
+}
+
+.rekap-statistik-kartu:nth-child(6n + 2) {
+    --kartu-warna: #059669;
+    --kartu-latar: #ecfdf5;
+}
+
+.rekap-statistik-kartu:nth-child(6n + 3) {
+    --kartu-warna: #7c3aed;
+    --kartu-latar: #f5f3ff;
+}
+
+.rekap-statistik-kartu:nth-child(6n + 4) {
+    --kartu-warna: #d97706;
+    --kartu-latar: #fffbeb;
+}
+
+.rekap-statistik-kartu:nth-child(6n + 5) {
+    --kartu-warna: #0891b2;
+    --kartu-latar: #ecfeff;
+}
+
+.rekap-statistik-kartu:nth-child(6n + 6) {
+    --kartu-warna: #db2777;
+    --kartu-latar: #fdf2f8;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .rekap-statistik {
+        width: 92vw;
+    }
+
+    .rekap-statistik-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .rekap-statistik-kartu {
+        padding: 9px 7px;
+    }
+}
+
+/* HP */
+@media (max-width: 480px) {
+    .rekap-statistik {
+        width: calc(100vw - 24px);
+        margin-bottom: 19px;
+    }
+
+    .rekap-statistik-heading h3 {
+        font-size: 0.98rem;
+    }
+
+    .rekap-statistik-heading p {
+        font-size: 0.76rem;
+    }
+
+    .rekap-statistik-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .rekap-statistik-kartu {
+        padding: 8px 6px;
+        border-radius: 8px;
+    }
+
+    .rekap-statistik-nama {
+        min-height: 30px;
+        font-size: 0.67rem;
+    }
+
+    .rekap-statistik-angka {
+        font-size: 1.25rem;
+    }
+
+    .rekap-statistik-label {
+        font-size: 0.61rem;
     }
 }

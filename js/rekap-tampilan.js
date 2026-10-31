@@ -4,6 +4,20 @@
 
     const JUMLAH_PER_HALAMAN = 20;
 
+    const DAFTAR_KECAMATAN = [
+    "Nanga Pinoh",
+    "Pinoh Utara",
+    "Pinoh Selatan",
+    "Belimbing",
+    "Belimbing Hulu",
+    "Ella Hilir",
+    "Menukung",
+    "Sayan",
+    "Tanah Pinoh",
+    "Tanah Pinoh Barat",
+    "Sokan"
+    ];
+
     const CABANG_LOMBA = [
         "Bola Voli",
         "Sepak Bola Mini",
@@ -42,6 +56,102 @@
 
         return node;
     }
+
+    
+    function buatKartuStatistik(nama, jumlah) {
+        const kartu = buatElemen("div", null, "rekap-statistik-kartu");
+
+        const namaKartu = buatElemen(
+            "span",
+            nama,
+            "rekap-statistik-nama"
+        );
+
+        const angka = buatElemen(
+            "strong",
+            jumlah,
+            "rekap-statistik-angka"
+        );
+
+        const label = buatElemen(
+            "span",
+            "Peserta",
+            "rekap-statistik-label"
+        );
+
+        kartu.append(namaKartu, angka, label);
+
+        return kartu;
+    }
+
+    function tampilkanStatistikPeserta() {
+        const wadahKecamatan = elemen("rekap-statistik-kecamatan");
+        const wadahCabang = elemen("rekap-statistik-cabang");
+
+        if (!wadahKecamatan || !wadahCabang) return;
+
+        wadahKecamatan.replaceChildren();
+        wadahCabang.replaceChildren();
+
+        // Menghitung peserta berdasarkan kecamatan
+        const jumlahKecamatan = {};
+
+        DAFTAR_KECAMATAN.forEach(kecamatan => {
+            jumlahKecamatan[kecamatan.toLocaleLowerCase("id")] = 0;
+        });
+
+        // Menghitung peserta berdasarkan cabang lomba
+        const jumlahCabang = {};
+
+        CABANG_LOMBA.forEach(cabang => {
+            jumlahCabang[cabang.toLocaleLowerCase("id")] = 0;
+        });
+
+        semuaPeserta.forEach(peserta => {
+            const kecamatan = String(
+                peserta.kecamatan || ""
+            ).trim().toLocaleLowerCase("id");
+
+            const cabang = String(
+                peserta.cabang_lomba || ""
+            ).trim().toLocaleLowerCase("id");
+
+            if (Object.prototype.hasOwnProperty.call(
+                jumlahKecamatan,
+                kecamatan
+            )) {
+                jumlahKecamatan[kecamatan]++;
+            }
+
+            if (Object.prototype.hasOwnProperty.call(
+                jumlahCabang,
+                cabang
+            )) {
+                jumlahCabang[cabang]++;
+            }
+        });
+
+        // Menampilkan 11 kartu kecamatan
+        DAFTAR_KECAMATAN.forEach(kecamatan => {
+            const jumlah =
+                jumlahKecamatan[kecamatan.toLocaleLowerCase("id")] || 0;
+
+            wadahKecamatan.appendChild(
+                buatKartuStatistik(kecamatan, jumlah)
+            );
+        });
+
+        // Menampilkan 14 kartu cabang lomba
+        CABANG_LOMBA.forEach(cabang => {
+            const jumlah =
+                jumlahCabang[cabang.toLocaleLowerCase("id")] || 0;
+
+            wadahCabang.appendChild(
+                buatKartuStatistik(cabang, jumlah)
+            );
+        });
+    }
+
 
     function tampilkanStatus(pesan, tipe) {
         const status = elemen("rekap-status");
@@ -318,6 +428,9 @@
             semuaPeserta = global.RekapData.normalisasiDaftar(
                 data.peserta
             );
+
+            // Tampilkan statistik kecamatan dan cabang lomba
+            tampilkanStatistikPeserta();
 
             pesertaTersaring = semuaPeserta.slice();
             halamanAktif = 1;

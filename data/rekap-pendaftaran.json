@@ -1,25 +1,25 @@
 {
   "versi": "1.0",
-  "diperbarui_pada": "2026-10-29T19:46:43.522Z",
+  "diperbarui_pada": "2026-11-07T13:23:29.021Z",
   "status": "tersedia",
   "ringkasan": {
-    "total_keikutsertaan": 282,
+    "total_keikutsertaan": 315,
     "total_cabang": 14,
     "jumlah_cabang_terdaftar": 14,
     "per_cabang": {
-      "Bola Voli": 79,
-      "Sepak Bola Mini": 47,
+      "Bola Voli": 85,
+      "Sepak Bola Mini": 59,
       "Atletik": 14,
-      "Catur": 29,
-      "Tenis Meja": 16,
+      "Catur": 30,
+      "Tenis Meja": 21,
       "Karate": 3,
-      "Menyanyi Solo": 12,
-      "Baca Puisi": 16,
+      "Menyanyi Solo": 13,
+      "Baca Puisi": 18,
       "Pantomim": 10,
-      "Seni Tari": 29,
+      "Seni Tari": 34,
       "Mendongeng": 7,
       "Menulis Cerita": 6,
-      "Seni Kriya": 8,
+      "Seni Kriya": 9,
       "Gambar Bercerita": 6
     }
   },
@@ -815,6 +815,66 @@
       "kecamatan": "Menukung"
     },
     {
+      "nama": "Melki",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 4 Ulak Muid",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Rafael Aprilio",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 4 Ulak Muid",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Muhammad Januarta",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 6 Mungguk Ombak",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Muhammad Aziril Arsyad",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 6 Mungguk Ombak",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Andika Saputra",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 6 Mungguk Ombak",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Stenli",
+      "cabang_lomba": "Bola Voli",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 16 Poring Jawa",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
       "nama": "MUHAMMAD RAFA",
       "cabang_lomba": "Sepak Bola Mini",
       "jenjang_sekolah": "Sekolah Dasar",
@@ -1285,6 +1345,126 @@
       "kecamatan": "Menukung"
     },
     {
+      "nama": "Derbi Andre Winata",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 5 Landau Tubun",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Yosua Simon",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 5 Landau Tubun",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Jeshua Etwin Sabalino",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 5 Landau Tubun",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "MUHAMMAD HIDAYATUL IQBAL",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 6 Mungguk Ombak",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Andika Saputra",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 6 Mungguk Ombak",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Melki",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 4 Ulak Muid",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Seno",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 7 Ganjang",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Marselino",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 7 Ganjang",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Cristian Aprianto",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 7 Ganjang",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "MUHAMMAD HIDAYATUL IQBAL",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 6 Mungguk Ombak",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Andika Saputra",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 6 Mungguk Ombak",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Adriyantriputra",
+      "cabang_lomba": "Sepak Bola Mini",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 5 Landau Tubun",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
       "nama": "Anjeli Putri",
       "cabang_lomba": "Atletik",
       "jenjang_sekolah": "Sekolah Dasar",
@@ -1715,6 +1895,16 @@
       "kecamatan": "Belimbing Hulu"
     },
     {
+      "nama": "BENI PRATAMA",
+      "cabang_lomba": "Catur",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 06 NANGA SASAK",
+      "kecamatan": "Sayan"
+    },
+    {
       "nama": "Muhammad Uwais Alki Iqbal",
       "cabang_lomba": "Tenis Meja",
       "jenjang_sekolah": "Sekolah Dasar",
@@ -1875,6 +2065,56 @@
       "kecamatan": "Pinoh Selatan"
     },
     {
+      "nama": "Alvaro Gabriel",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "V",
+      "asal_sekolah": "SDN 11 Sungai Silok",
+      "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Muhammad Januarta",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putra",
+      "jenis_kelamin": "Laki-Laki",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 6 MUNGGUK OMBAK",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Grecia Indri",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD NEGERI 11 POSIN",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Grecia Indri",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "Joko Palentino, S.Pd.",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Grecia Indri",
+      "cabang_lomba": "Tenis Meja",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 11 Posin",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
       "nama": "CHAYRA FAYYOLA BELLVANIA",
       "cabang_lomba": "Karate",
       "jenjang_sekolah": "Sekolah Dasar",
@@ -2013,6 +2253,16 @@
       "kelas": "VI",
       "asal_sekolah": "SD NEGERI 12 LAHAI",
       "kecamatan": "Menukung"
+    },
+    {
+      "nama": "Tania",
+      "cabang_lomba": "Menyanyi Solo",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 8 Nanga Taum",
+      "kecamatan": "Tanah Pinoh Barat"
     },
     {
       "nama": "Tania",
@@ -2185,6 +2435,26 @@
       "kecamatan": "Menukung"
     },
     {
+      "nama": "Rere Permata Lafindi",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SDN 06 NANGA SASAK",
+      "kecamatan": "Sayan"
+    },
+    {
+      "nama": "Loura Septiawati",
+      "cabang_lomba": "Baca Puisi",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SDN 11 Posin",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
       "nama": "Christian Ferel",
       "cabang_lomba": "Pantomim",
       "jenjang_sekolah": "Sekolah Dasar",
@@ -2315,13 +2585,33 @@
       "kecamatan": "Belimbing Hulu"
     },
     {
-      "nama": "ELISABET RACHEL, AGATHALIA FIANCA, DAN MARGARISYA VALENCIA",
+      "nama": "ELISABET RACHEL",
       "cabang_lomba": "Seni Tari",
       "jenjang_sekolah": "Sekolah Dasar",
-      "kategori": "Putri",
-      "jenis_kelamin": "Perempuan",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
       "kelas": "VI",
-      "asal_sekolah": "SDN 18 TANJUNG SARI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "AGATHALIA FIANCA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
+      "kecamatan": "Nanga Pinoh"
+    },
+    {
+      "nama": "DAN MARGARISYA VALENCIA",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Belum ditentukan",
+      "jenis_kelamin": "",
+      "kelas": "VI",
+      "asal_sekolah": "Belum terverifikasi",
       "kecamatan": "Nanga Pinoh"
     },
     {
@@ -2575,6 +2865,36 @@
       "kecamatan": "Menukung"
     },
     {
+      "nama": "Hafsah Hafizah",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 8 Nanga Taum",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Enjel",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "V",
+      "asal_sekolah": "SD Negeri 8 Nanga Taum",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
+      "nama": "Tania",
+      "cabang_lomba": "Seni Tari",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 8 Nanga Taum",
+      "kecamatan": "Tanah Pinoh Barat"
+    },
+    {
       "nama": "Khairinniswa Maheswari Putri",
       "cabang_lomba": "Mendongeng",
       "jenjang_sekolah": "Sekolah Dasar",
@@ -2783,6 +3103,16 @@
       "kelas": "V",
       "asal_sekolah": "SDN 7 ENTIBAB",
       "kecamatan": "Belimbing Hulu"
+    },
+    {
+      "nama": "Ketrin Yuliana",
+      "cabang_lomba": "Seni Kriya",
+      "jenjang_sekolah": "Sekolah Dasar",
+      "kategori": "Putri",
+      "jenis_kelamin": "Perempuan",
+      "kelas": "VI",
+      "asal_sekolah": "SD Negeri 12 Lintah",
+      "kecamatan": "Tanah Pinoh Barat"
     },
     {
       "nama": "ADIBA SAKILA AMADIA",

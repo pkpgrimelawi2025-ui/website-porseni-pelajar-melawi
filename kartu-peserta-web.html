@@ -1,0 +1,1289 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kartu Peserta | PORSENI Melawi 2026</title>
+
+  <style>
+    :root {
+      --navy: #102a56;
+      --navy-light: #174b87;
+      --gold: #e7b342;
+      --gold-light: #fff4d6;
+      --text: #172033;
+      --muted: #65748b;
+      --background: #eef2f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+    }
+
+    .topbar {
+      background: var(--navy);
+      color: white;
+      padding: 22px 5%;
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .topbar .identitas {
+      color: #ffdf8a;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .topbar h1 {
+      margin: 8px 0;
+      font-size: clamp(22px, 4vw, 32px);
+    }
+
+    .topbar p {
+      margin: 0;
+      color: #d9e5f7;
+    }
+
+    .kontrol {
+      width: min(1000px, 92%);
+      margin: 25px auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .kontrol h2 {
+      color: var(--navy);
+      margin: 0;
+    }
+
+    .tombol {
+      display: inline-block;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, #ffdc80, #f2bd45);
+      color: var(--navy);
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .tombol:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    /* TOMBOL KEMBALI KE BERANDA */
+    .tombol-beranda {
+        background: linear-gradient(135deg, #174b87, #102a56);
+        color: #ffffff;
+        border: 1px solid #e7b342;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+    }
+
+    .tombol-beranda:hover {
+        background: linear-gradient(135deg, #1e5b9e, #102a56);
+        color: #ffdf8a;
+        box-shadow: 0 4px 12px rgba(16, 42, 86, 0.2);
+    }
+
+    .kartu-container {
+      display: flex;
+      justify-content: center;
+      padding: 10px 15px 40px;
+    }
+
+    /* KARTU A6 */
+    .kartu {
+      position: relative;
+      width: 105mm;
+      height: 148mm;
+      background: white;
+      border: 1px solid #d5dce8;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(16, 42, 86, 0.15);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .kartu-header {
+      position: relative;
+      background: linear-gradient(
+        135deg,
+        var(--navy),
+        var(--navy-light)
+      );
+      color: white;
+      text-align: center;
+      padding: 17px 12px 14px;
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .kartu-header .label {
+      color: #ffdf8a;
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .kartu-header h2 {
+      margin: 7px 0 4px;
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .kartu-header p {
+      margin: 0;
+      font-size: 11px;
+      color: #d9e5f7;
+    }
+
+    .label-identitas {
+      margin: 12px auto 8px;
+      padding: 5px 15px;
+      width: fit-content;
+      border-radius: 20px;
+      background: #eaf1fb;
+      color: var(--navy-light);
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .foto-container {
+      display: flex;
+      justify-content: center;
+      margin: 5px 0 8px;
+    }
+
+    .foto {
+    width: 28mm;
+    height: 35mm;
+    object-fit: cover;
+    border: 3px solid var(--gold);
+    border-radius: 8px;
+    background: #eef2f7;
+    flex-shrink: 0;
+    }
+
+    #fotoPesertaKartu {
+    display: none;
+    }
+
+    #fotoPesertaPlaceholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: bold;
+    }
+
+    .nama {
+      padding: 4px 12px;
+      text-align: center;
+      font-size: 19px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .cabang {
+      margin: 8px 12px;
+      padding: 8px;
+      text-align: center;
+      background: var(--gold-light);
+      color: #805600;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .detail {
+      padding: 5px 17px 12px;
+    }
+
+    .baris {
+      display: flex;
+      border-bottom: 1px solid #e8edf3;
+      padding: 6px 0;
+      font-size: 10px;
+    }
+
+    .label-detail {
+      width: 38%;
+      color: var(--muted);
+      font-weight: bold;
+    }
+
+    .nilai {
+      width: 62%;
+      color: var(--text);
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
+
+    .id-kartu {
+      margin-top: auto;
+      padding: 8px;
+      text-align: center;
+      color: var(--navy-light);
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .kartu-footer {
+      padding: 9px;
+      text-align: center;
+      background: var(--navy);
+      color: white;
+      font-size: 9px;
+      letter-spacing: 0.5px;
+    }
+
+    .kartu-footer .tagline {
+      color: #ffdf8a;
+      margin-top: 3px;
+      font-size: 8px;
+    }
+
+    @media (max-width: 500px) {
+        .kontrol {
+            width: 92%;
+            align-items: stretch;
+        }
+
+        .tombol-beranda {
+            width: 100%;
+            text-align: center;
+        }
+
+        .kartu-container {
+            padding: 5px;
+        }
+
+        .kartu {
+            transform-origin: top center;
+        }
+    }
+
+    @media print {
+      @page {
+        size: A6 portrait;
+        margin: 0;
+      }
+
+      body {
+        background: white;
+        margin: 0;
+        padding: 0;
+      }
+
+      .topbar,
+      .kontrol {
+        display: none !important;
+      }
+
+      .kartu-container {
+        display: block;
+        padding: 0;
+        margin: 0;
+      }
+
+      .kartu {
+        width: 105mm;
+        height: 148mm;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+    .logo-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    }
+
+    .logo-header img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    background: white;
+    padding: 5px;
+    border-radius: 12px;
+    }
+
+    .filter-panel {
+    width: min(1100px, 92%);
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(16, 42, 86, .06);
+    }
+
+    .filter-panel h2 {
+    color: #102a56;
+    margin: 0 0 18px;
+    }
+
+    .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    }
+
+    .filter-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #102a56;
+    }
+
+    .filter-group select,
+    .filter-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    }
+
+    .tabel-container {
+    width: min(1100px, 92%);
+    margin: 25px auto 50px;
+    overflow-x: auto;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(16, 42, 86, .06);
+    }
+
+    .tabel-peserta {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+    }
+
+    .tabel-peserta th {
+    background: #102a56;
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-size: 13px;
+    }
+
+    .tabel-peserta td {
+    padding: 14px;
+    border-bottom: 1px solid #e8edf3;
+    font-size: 13px;
+    }
+
+    .tabel-peserta tr:hover {
+    background: #f8fafc;
+    }
+
+    .aksi-peserta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    }
+
+    .btn-lihat,
+    .btn-pdf {
+    border: none;
+    padding: 9px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    }
+
+    .btn-lihat {
+    background: #102a56;
+    color: white;
+    }
+
+    .btn-pdf {
+    background: #f5cf70;
+    color: #102a56;
+    }
+
+    .hasil-info {
+    margin-top: 15px;
+    color: #64748b;
+    font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+    .logo-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-panel {
+        padding: 18px;
+    }
+    }
+    .kartu-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    }
+
+    .logo-kartu {
+    width:14mm;
+    height:14mm;
+    object-fit:contain;
+    flex-shrink:0;
+    background:white;
+    padding:2px;
+    border-radius:6px;
+    }
+
+    .kartu-header-teks {
+    text-align: center;
+    }
+
+    .kartu-header-teks .label {
+    color: #ffdf8a;
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    }
+
+    .kartu-header-teks h2 {
+    margin: 5px 0;
+    font-size: 17px;
+    font-weight: 900;
+    }
+
+    .kartu-header-teks p {
+    font-size: 10px;
+    }
+    .pagination-container {
+    width: min(1100px, 92%);
+    margin: -30px auto 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    }
+
+    .btn-pagination {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #102a56;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    }
+
+    .btn-pagination:hover:not(:disabled) {
+    background: #174b87;
+    }
+
+    .btn-pagination:disabled {
+    background: #cbd5e1;
+    color: #64748b;
+    cursor: not-allowed;
+    }
+
+    .info-halaman {
+    font-size: 13px;
+    font-weight: bold;
+    color: #102a56;
+    }
+
+    @media (max-width: 500px) {
+    .pagination-container {
+        gap: 8px;
+    }
+
+    .btn-pagination {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    }
+    /* MODAL KARTU PESERTA */
+    .modal-kartu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(10, 25, 50, 0.75);
+    overflow-y: auto;
+    padding: 25px 15px;
+    }
+
+    .modal-kartu.aktif {
+    display: block;
+    }
+
+    .modal-kartu-content {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    }
+
+    .modal-kartu-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+    }
+
+    .modal-kartu-toolbar h2 {
+    color: #102a56;
+    font-size: 18px;
+    margin: 0;
+    }
+
+    .modal-kartu-actions {
+    display: flex;
+    gap: 8px;
+    }
+
+    .foto-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #102a56;
+    font-size: 18px;
+    font-weight: bold;
+    }
+
+    @media (max-width: 500px) {
+    .modal-kartu-content {
+        padding: 8px;
+    }
+
+    .modal-kartu-toolbar {
+        flex-direction: column;
+    }
+    }
+
+    /* CETAK KARTU */
+    @media print {
+    body.cetak-kartu > *:not(#modalKartu) {
+        display: none !important;
+    }
+
+    body.cetak-kartu #modalKartu {
+        display: block !important;
+        position: static;
+        background: white;
+        padding: 0;
+        overflow: visible;
+    }
+
+    body.cetak-kartu .modal-kartu-content {
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    body.cetak-kartu .modal-kartu-toolbar {
+        display: none !important;
+    }
+
+    body.cetak-kartu .kartu {
+        width: 105mm;
+        height: 148mm;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+    }
+  </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+    <div class="logo-header">
+        <img
+        src="assets/logos/porseni-pelajar.png"
+        alt="Logo PORSENI Pelajar"
+        >
+
+        <div>
+        <div class="identitas">KABUPATEN MELAWI • TAHUN 2026</div>
+        <h1>KARTU PESERTA PORSENI</h1>
+        <p>Dinas Pendidikan dan Kebudayaan Kabupaten Melawi</p>
+        </div>
+    </div>
+    </header>
+
+    <section class="kontrol">
+        <div class="kontrol-info">
+            <h2>Daftar Kartu Peserta</h2>
+            <p>Filter dan kelola kartu peserta PORSENI 2026</p>
+        </div>
+
+        <a
+            href="https://pkpgrimelawi2025-ui.github.io/website-porseni-pelajar-melawi/"
+            class="tombol tombol-beranda"
+        >
+            <span aria-hidden="true">⌂</span>
+            Kembali ke Halaman Utama
+        </a>
+    </section>
+
+    <section class="filter-panel">
+    <h2>Filter Data Kartu Peserta</h2>
+
+    <div class="filter-grid">
+
+        <div class="filter-group">
+        <label for="filterKecamatan">Filter Kecamatan</label>
+        <select id="filterKecamatan">
+            <option value="">Semua Kecamatan</option>
+        </select>
+        </div>
+
+        <div class="filter-group">
+        <label for="filterCabang">Filter Cabang Lomba</label>
+        <select id="filterCabang">
+            <option value="">Semua Cabang Lomba</option>
+        </select>
+        </div>
+
+        <div class="filter-group">
+        <label for="cariPeserta">Cari Nama Peserta</label>
+        <input
+            type="search"
+            id="cariPeserta"
+            placeholder="Ketik nama peserta..."
+        >
+        </div>
+
+    </div>
+
+    <div class="hasil-info" id="hasilInfo">
+        Menampilkan seluruh peserta.
+    </div>
+    </section>
+
+    <div class="tabel-container">
+    <table class="tabel-peserta">
+        <thead>
+        <tr>
+            <th>No.</th>
+            <th>Nama Peserta</th>
+            <th>Cabang Lomba</th>
+            <th>Kecamatan</th>
+            <th>Aksi</th>
+        </tr>
+        </thead>
+
+        <tbody id="daftarPeserta"></tbody>
+    </table>
+    </div>
+    <div class="pagination-container">
+    <button id="btnSebelumnya" class="btn-pagination">
+        ← Sebelumnya
+    </button>
+
+    <span id="infoHalaman" class="info-halaman">
+        Halaman 1
+    </span>
+
+    <button id="btnBerikutnya" class="btn-pagination">
+        Berikutnya →
+    </button>
+    </div>
+
+    <!-- MODAL PRATINJAU KARTU PESERTA -->
+    <div id="modalKartu" class="modal-kartu">
+
+        <div class="modal-kartu-content">
+
+            <div class="modal-kartu-toolbar">
+            <h2>Pratinjau Kartu Peserta</h2>
+
+            <div class="modal-kartu-actions">
+                <button id="btnCetakKartu" class="btn-pdf">
+                Cetak Kartu
+                </button>
+
+                <button id="btnTutupKartu" class="btn-lihat">
+                Tutup
+                </button>
+            </div>
+            </div>
+
+            <article class="kartu" id="kartuDinamis">
+
+            <header class="kartu-header">
+                <div class="kartu-header-inner">
+
+                <img
+                    src="assets/logos/porseni-pelajar.png"
+                    alt="Logo PORSENI Pelajar"
+                    class="logo-kartu"
+                >
+
+                <div class="kartu-header-teks">
+                    <div class="label">KARTU PESERTA RESMI</div>
+                    <h2>PORSENI PELAJAR</h2>
+                    <p>KABUPATEN MELAWI 2026</p>
+                </div>
+
+                </div>
+            </header>
+
+            <div class="label-identitas">
+                IDENTITAS PESERTA
+            </div>
+
+            <div class="foto-container">
+                <img
+                    id="fotoPesertaKartu"
+                    class="foto"
+                    src=""
+                    alt="Foto Peserta"
+                >
+
+                <div
+                    id="fotoPesertaPlaceholder"
+                    class="foto foto-placeholder"
+                >
+                    FOTO
+                </div>
+            </div>
+
+            <div class="nama" id="kartuNama">
+                NAMA PESERTA
+            </div>
+
+            <div class="cabang" id="kartuCabang">
+                CABANG LOMBA
+            </div>
+
+            <section class="detail">
+
+                <div class="baris">
+                <div class="label-detail">Jenjang</div>
+                <div class="nilai" id="kartuJenjang"></div>
+                </div>
+
+                <div class="baris">
+                <div class="label-detail">Kategori</div>
+                <div class="nilai" id="kartuKategori"></div>
+                </div>
+
+                <div class="baris">
+                <div class="label-detail">Jenis Kelamin</div>
+                <div class="nilai" id="kartuJenisKelamin"></div>
+                </div>
+
+                <div class="baris">
+                <div class="label-detail">Kelas</div>
+                <div class="nilai" id="kartuKelas"></div>
+                </div>
+
+                <div class="baris">
+                <div class="label-detail">Sekolah</div>
+                <div class="nilai" id="kartuSekolah"></div>
+                </div>
+
+                <div class="baris">
+                <div class="label-detail">Kecamatan</div>
+                <div class="nilai" id="kartuKecamatan"></div>
+                </div>
+
+            </section>
+
+            <div class="id-kartu" id="kartuID"></div>
+
+            <footer class="kartu-footer">
+                <strong>PORSENI PELAJAR MELAWI • 2026</strong>
+
+                <div class="tagline">
+                BERPRESTASI • BERKARYA • BERKARAKTER
+                </div>
+            </footer>
+
+            </article>
+
+        </div>
+
+    </div>
+
+  <script>
+    const URL_DATA_PESERTA =
+    "https://script.google.com/macros/s/AKfycbw2Vp1HH3mKF-f43Hhy-LB4P71kHamzWoC6Jy5fzZJAbL0rmV8iF7Jg1B8m74DIx086Zg/exec";
+
+    let pesertaContoh = [];
+
+    function muatDataPeserta() {
+    const tbody = document.getElementById("daftarPeserta");
+    const hasilInfo = document.getElementById("hasilInfo");
+
+    tbody.innerHTML = `
+        <tr>
+        <td colspan="5" style="text-align:center;">
+            Memuat data peserta...
+        </td>
+        </tr>
+    `;
+
+    const callbackName = "porseniCallback_" + Date.now();
+
+    const script = document.createElement("script");
+
+    const url = new URL(
+        "https://script.google.com/macros/s/AKfycbw2Vp1HH3mKF-f43Hhy-LB4P71kHamzWoC6Jy5fzZJAbL0rmV8iF7Jg1B8m74DIx086Zg/exec"
+    );
+
+    url.searchParams.set("halaman", "data-peserta");
+    url.searchParams.set("callback", callbackName);
+
+    const timeout = setTimeout(() => {
+        cleanup();
+
+        tbody.innerHTML = `
+        <tr>
+            <td colspan="5" style="text-align:center;color:red;">
+            Waktu pemuatan data habis.
+            </td>
+        </tr>
+        `;
+
+        hasilInfo.textContent = "Gagal memuat data peserta.";
+    }, 30000);
+
+    function cleanup() {
+        clearTimeout(timeout);
+        script.remove();
+        delete window[callbackName];
+    }
+
+    window[callbackName] = function(json) {
+        cleanup();
+
+        if (!json || !Array.isArray(json.peserta)) {
+        tbody.innerHTML = `
+            <tr>
+            <td colspan="5" style="text-align:center;color:red;">
+                Format data peserta tidak valid.
+            </td>
+            </tr>
+        `;
+
+        return;
+        }
+
+        pesertaContoh = json.peserta.map((item, index) => ({
+            id: "PORSENI2026-" + String(index + 1).padStart(4, "0"),
+            nama: item.nama || "",
+            cabang: item.cabang_lomba || "",
+            kecamatan: item.kecamatan || "",
+            jenjang: item.jenjang_sekolah || "",
+            kategori: item.kategori || "",
+            jenisKelamin: item.jenis_kelamin || "",
+            kelas: item.kelas || "",
+            sekolah: item.asal_sekolah || "",
+
+            // Metadata sumber foto peserta
+            kodeSumber: item.kode_sumber || "",
+            barisSumber: item.baris_sumber || ""
+        }));
+
+        // Isi ulang filter setelah data peserta berhasil dimuat
+        isiFilter(
+            filterKecamatan,
+            pesertaContoh.map(p => p.kecamatan).filter(Boolean),
+            "Semua Kecamatan"
+        );
+
+        isiFilter(
+            filterCabang,
+            pesertaContoh.map(p => p.cabang).filter(Boolean),
+            "Semua Cabang Lomba"
+        );
+
+        tampilkanPeserta();
+
+        hasilInfo.textContent =
+            "Berhasil memuat " + pesertaContoh.length + " peserta.";
+    };
+
+    script.onerror = function() {
+        cleanup();
+
+        tbody.innerHTML = `
+        <tr>
+            <td colspan="5" style="text-align:center;color:red;">
+            Gagal menghubungi server data peserta.
+            </td>
+        </tr>
+        `;
+
+        hasilInfo.textContent = "Gagal memuat data peserta.";
+    };
+
+    script.src = url.toString();
+    document.head.appendChild(script);
+    }
+
+    const filterKecamatan = document.getElementById("filterKecamatan");
+    const filterCabang = document.getElementById("filterCabang");
+    const cariPeserta = document.getElementById("cariPeserta");
+    const daftarPeserta = document.getElementById("daftarPeserta");
+    const hasilInfo = document.getElementById("hasilInfo");
+    const btnSebelumnya = document.getElementById("btnSebelumnya");
+    const btnBerikutnya = document.getElementById("btnBerikutnya");
+    const infoHalaman = document.getElementById("infoHalaman");
+
+    const JUMLAH_PER_HALAMAN = 10;
+    let halamanAktif = 1;
+
+    function isiFilter(select, daftar, labelSemua) {
+    select.innerHTML = `<option value="">${labelSemua}</option>`;
+
+    [...new Set(daftar)].sort().forEach(nilai => {
+        const option = document.createElement("option");
+        option.value = nilai;
+        option.textContent = nilai;
+        select.appendChild(option);
+    });
+    }
+
+    isiFilter(
+    filterKecamatan,
+    pesertaContoh.map(p => p.kecamatan),
+    "Semua Kecamatan"
+    );
+
+    isiFilter(
+    filterCabang,
+    pesertaContoh.map(p => p.cabang),
+    "Semua Cabang Lomba"
+    );
+
+    function tampilkanPeserta() {
+    const kecamatan = filterKecamatan.value;
+    const cabang = filterCabang.value;
+    const nama = cariPeserta.value.toLowerCase().trim();
+
+    // Filter seluruh peserta
+    const hasil = pesertaContoh.filter(p =>
+        (!kecamatan || p.kecamatan === kecamatan) &&
+        (!cabang || p.cabang === cabang) &&
+        p.nama.toLowerCase().includes(nama)
+    );
+
+    // Jumlah halaman berdasarkan hasil filter
+    const totalHalaman = Math.max(
+        1,
+        Math.ceil(hasil.length / JUMLAH_PER_HALAMAN)
+    );
+
+    // Pastikan halaman aktif tidak melebihi total halaman
+    if (halamanAktif > totalHalaman) {
+        halamanAktif = totalHalaman;
+    }
+
+    // Tentukan data yang ditampilkan pada halaman ini
+    const mulai = (halamanAktif - 1) * JUMLAH_PER_HALAMAN;
+    const sampai = mulai + JUMLAH_PER_HALAMAN;
+    const dataHalaman = hasil.slice(mulai, sampai);
+
+    daftarPeserta.innerHTML = "";
+
+    dataHalaman.forEach((p, index) => {
+        const tr = document.createElement("tr");
+
+        const tdNo = document.createElement("td");
+        tdNo.textContent = mulai + index + 1;
+
+        const tdNama = document.createElement("td");
+        tdNama.textContent = p.nama;
+
+        const tdCabang = document.createElement("td");
+        tdCabang.textContent = p.cabang;
+
+        const tdKecamatan = document.createElement("td");
+        tdKecamatan.textContent = p.kecamatan;
+
+        const tdAksi = document.createElement("td");
+        const aksi = document.createElement("div");
+        aksi.className = "aksi-peserta";
+
+        const btnLihat = document.createElement("button");
+        btnLihat.className = "btn-lihat";
+        btnLihat.textContent = "Lihat Kartu Peserta";
+        btnLihat.onclick = () => lihatKartu(p);
+
+        const btnPDF = document.createElement("button");
+        btnPDF.className = "btn-pdf";
+        btnPDF.textContent = "Unduh PDF Kartu Peserta";
+        btnPDF.onclick = () => unduhPDF(p);
+
+        aksi.append(btnLihat, btnPDF);
+        tdAksi.appendChild(aksi);
+
+        tr.append(
+        tdNo,
+        tdNama,
+        tdCabang,
+        tdKecamatan,
+        tdAksi
+        );
+
+        daftarPeserta.appendChild(tr);
+    });
+
+    // Informasi jumlah peserta
+    hasilInfo.textContent =
+        `Menampilkan ${dataHalaman.length} Data Peserta dari ` +
+        `${pesertaContoh.length} Peserta Total`;
+
+    // Informasi halaman
+    infoHalaman.textContent =
+        `Halaman ${halamanAktif} dari ${totalHalaman}`;
+
+    // Status tombol
+    btnSebelumnya.disabled = halamanAktif === 1;
+    btnBerikutnya.disabled = halamanAktif === totalHalaman;
+    }
+
+    function lihatKartu(p) {
+        document.getElementById("kartuNama").textContent =
+            p.nama || "-";
+
+        document.getElementById("kartuCabang").textContent =
+            "CABANG LOMBA: " + (p.cabang || "-");
+
+        document.getElementById("kartuJenjang").textContent =
+            p.jenjang || "-";
+
+        document.getElementById("kartuKategori").textContent =
+            p.kategori || "-";
+
+        document.getElementById("kartuJenisKelamin").textContent =
+            p.jenisKelamin || "-";
+
+        document.getElementById("kartuKelas").textContent =
+            p.kelas || "-";
+
+        document.getElementById("kartuSekolah").textContent =
+            p.sekolah || "-";
+
+        document.getElementById("kartuKecamatan").textContent =
+            p.kecamatan || "-";
+
+        document.getElementById("kartuID").textContent =
+            p.id || "-";
+
+        // Tampilkan modal kartu peserta
+        document.getElementById("modalKartu").classList.add("aktif");
+
+        // Ambil foto peserta dari Google Drive
+        muatFotoPeserta(p);
+    }
+
+    function unduhPDF(p) {
+    alert(
+        "Fitur PDF untuk " + p.nama +
+        " akan diaktifkan setelah halaman kartu dinamis selesai."
+    );
+    }
+
+    filterKecamatan.addEventListener("change", () => {
+    halamanAktif = 1;
+    tampilkanPeserta();
+    });
+
+    filterCabang.addEventListener("change", () => {
+    halamanAktif = 1;
+    tampilkanPeserta();
+    });
+
+    cariPeserta.addEventListener("input", () => {
+    halamanAktif = 1;
+    tampilkanPeserta();
+    });
+
+    // Tombol halaman sebelumnya
+    btnSebelumnya.addEventListener("click", () => {
+    if (halamanAktif > 1) {
+        halamanAktif--;
+        tampilkanPeserta();
+    }
+    });
+
+    // Tombol halaman berikutnya
+    btnBerikutnya.addEventListener("click", () => {
+    const kecamatan = filterKecamatan.value;
+    const cabang = filterCabang.value;
+    const nama = cariPeserta.value.toLowerCase().trim();
+
+    const hasil = pesertaContoh.filter(p =>
+        (!kecamatan || p.kecamatan === kecamatan) &&
+        (!cabang || p.cabang === cabang) &&
+        p.nama.toLowerCase().includes(nama)
+    );
+
+    const totalHalaman = Math.ceil(
+        hasil.length / JUMLAH_PER_HALAMAN
+    );
+
+    if (halamanAktif < totalHalaman) {
+        halamanAktif++;
+        tampilkanPeserta();
+    }
+    });
+
+    // Tutup modal kartu
+    document.getElementById("btnTutupKartu")
+    .addEventListener("click", () => {
+        document.getElementById("modalKartu")
+        .classList.remove("aktif");
+    });
+
+    // Tutup modal jika klik area luar kartu
+    document.getElementById("modalKartu")
+    .addEventListener("click", function(event) {
+        if (event.target === this) {
+        this.classList.remove("aktif");
+        }
+    });
+
+    // Cetak kartu peserta
+    document.getElementById("btnCetakKartu")
+    .addEventListener("click", () => {
+        document.body.classList.add("cetak-kartu");
+        window.print();
+    });
+
+    // Kembalikan tampilan setelah proses cetak
+    window.addEventListener("afterprint", () => {
+    document.body.classList.remove("cetak-kartu");
+    });
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        muatDataPeserta
+    );
+    
+    function muatFotoPeserta(p) {
+        const foto = document.getElementById("fotoPesertaKartu");
+        const placeholder = document.getElementById("fotoPesertaPlaceholder");
+
+        if (!foto || !placeholder) return;
+
+        // Reset foto sebelumnya
+        foto.style.display = "none";
+        foto.removeAttribute("src");
+        placeholder.style.display = "flex";
+
+        console.log("DATA PESERTA UNTUK FOTO:", p);
+        console.log("Kode sumber:", p?.kodeSumber);
+        console.log("Baris sumber:", p?.barisSumber);
+
+        if (!p || !p.kodeSumber || !p.barisSumber) {
+            console.warn("Metadata sumber foto belum tersedia.");
+            return;
+        }
+
+        const callbackName = "fotoPesertaCallback_" + Date.now();
+        const script = document.createElement("script");
+
+        const url = new URL(
+            "https://script.google.com/macros/s/AKfycbw2Vp1HH3mKF-f43Hhy-LB4P71kHamzWoC6Jy5fzZJAbL0rmV8iF7Jg1B8m74DIx086Zg/exec"
+        );
+
+        url.searchParams.set("halaman", "foto-peserta");
+        url.searchParams.set("kode", p.kodeSumber);
+        url.searchParams.set("baris", p.barisSumber);
+        url.searchParams.set("callback", callbackName);
+
+        let selesai = false;
+
+        function cleanup() {
+            if (selesai) return;
+            selesai = true;
+
+            script.remove();
+            delete window[callbackName];
+        }
+
+        window[callbackName] = function(data) {
+            cleanup();
+
+            console.log("RESPONS ENDPOINT FOTO:", data);
+
+            if (!data || data.status !== "success" || !data.fotoUrl) {
+                console.error("URL foto tidak diterima:", data);
+                return;
+            }
+
+            console.log("URL FOTO DITERIMA:", data.fotoUrl);
+
+            foto.onload = function() {
+                console.log("FOTO BERHASIL DIMUAT:", foto.naturalWidth, foto.naturalHeight);
+                foto.style.display = "block";
+                placeholder.style.display = "none";
+            };
+
+            foto.onerror = function() {
+                console.error("FOTO GAGAL DIMUAT:", foto.src);
+                foto.style.display = "none";
+                placeholder.style.display = "flex";
+            };
+
+            foto.src = data.fotoUrl;
+        };
+
+        script.onerror = function() {
+            cleanup();
+        };
+
+        script.src = url.toString();
+        document.head.appendChild(script);
+    }
+    </script>
+
+</body>
+</html>

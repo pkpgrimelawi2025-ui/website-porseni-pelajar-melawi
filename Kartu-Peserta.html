@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<? 
+  const data = dataKartu;
+  const peserta = data.kartu || [];
+?>
+<html>
+<head>
+  <base target="_top">
+  <meta charset="UTF-8">
+
+  <style>
+    @page {
+      size: A6 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #eef2f7;
+      color: #172033;
+    }
+
+    .kartu {
+      width: 105mm;
+      min-height: 148mm;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #d5dce8;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 8px 25px rgba(0,0,0,.12);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #102a56, #174b87);
+      color: white;
+      text-align: center;
+      padding: 18px 12px;
+      border-bottom: 5px solid #e7b342;
+    }
+
+    .header .label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      margin: 7px 0 4px;
+      font-weight: 900;
+    }
+
+    .header .tahun {
+      font-size: 12px;
+      color: #ffdf8a;
+      font-weight: bold;
+    }
+
+    .label-kartu {
+      margin: 15px auto 8px;
+      width: fit-content;
+      padding: 5px 16px;
+      border-radius: 20px;
+      background: #eaf1fb;
+      color: #174b87;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .nama {
+      padding: 8px 14px;
+      text-align: center;
+      font-size: 21px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #102a56;
+      line-height: 1.2;
+    }
+
+    .cabang {
+      text-align: center;
+      margin: 8px 12px;
+      background: #fff4d6;
+      color: #805600;
+      padding: 9px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .detail {
+      padding: 12px 18px;
+    }
+
+    .baris {
+      display: flex;
+      border-bottom: 1px solid #e8edf3;
+      padding: 7px 0;
+      font-size: 11px;
+    }
+
+    .label {
+      width: 38%;
+      color: #65748b;
+      font-weight: bold;
+    }
+
+    .nilai {
+      width: 62%;
+      color: #172033;
+      font-weight: bold;
+    }
+
+    .qr-area {
+      text-align: center;
+      padding: 12px 10px;
+    }
+
+    .qr-placeholder {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+      border: 2px dashed #9aa8ba;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 10px;
+      text-align: center;
+    }
+
+    .id-kartu {
+      margin-top: 7px;
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #174b87;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 9px;
+      text-align: center;
+      background: #102a56;
+      color: white;
+      font-size: 9px;
+      letter-spacing: .5px;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: white;
+      }
+
+      .kartu {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="kartu">
+
+    <div class="header">
+      <div class="label">KARTU PESERTA RESMI</div>
+      <h1>PORSENI PELAJAR</h1>
+      <div class="tahun">KABUPATEN MELAWI 2026</div>
+    </div>
+
+    <div class="label-kartu">IDENTITAS PESERTA</div>
+
+    <div class="nama">
+      NAMA PESERTA
+    </div>
+
+    <div class="cabang">
+      CABANG LOMBA
+    </div>
+
+    <div class="detail">
+
+      <div class="baris">
+        <div class="label">Jenjang</div>
+        <div class="nilai">SMP</div>
+      </div>
+
+      <div class="baris">
+        <div class="label">Kategori</div>
+        <div class="nilai">Putra / Putri</div>
+      </div>
+
+      <div class="baris">
+        <div class="label">Kelas</div>
+        <div class="nilai">VII</div>
+      </div>
+
+      <div class="baris">
+        <div class="label">Sekolah</div>
+        <div class="nilai">Nama Sekolah</div>
+      </div>
+
+      <div class="baris">
+        <div class="label">Kecamatan</div>
+        <div class="nilai">Nama Kecamatan</div>
+      </div>
+
+    </div>
+
+    <div class="qr-area">
+      <div class="qr-placeholder">
+        QR CODE
+      </div>
+
+      <div class="id-kartu">
+        PORSENI2026-0001
+      </div>
+    </div>
+
+    <div class="footer">
+      PORSENI PELAJAR MELAWI • 2026
+    </div>
+
+  </div>
+
+  <div class="kartu-container">
+
+  <? peserta.forEach(function(item) { ?>
+
+    <div class="kartu-peserta">
+
+      <div class="kartu-header">
+        <h2>KARTU PESERTA RESMI</h2>
+        <h3>PORSENI PELAJAR</h3>
+        <p>KABUPATEN MELAWI 2026</p>
+      </div>
+
+      <div class="kartu-body">
+
+        <div class="kartu-identitas">
+          <p class="label">NAMA PESERTA</p>
+          <h2><?= item.nama ?></h2>
+
+          <p><strong>Cabang:</strong> <?= item.cabang_lomba ?></p>
+          <p><strong>Jenjang:</strong> <?= item.jenjang_sekolah ?></p>
+          <p><strong>Kategori:</strong> <?= item.kategori ?></p>
+          <p><strong>Kelas:</strong> <?= item.kelas ?></p>
+          <p><strong>Sekolah:</strong> <?= item.asal_sekolah ?></p>
+          <p><strong>Kecamatan:</strong> <?= item.kecamatan ?></p>
+        </div>
+
+      </div>
+
+      <div class="kartu-footer">
+        <p><?= item.id_kartu ?></p>
+        <strong>PORSENI PELAJAR MELAWI 2026</strong>
+      </div>
+
+    </div>
+
+  <? }); ?>
+
+</div>
+
+</body>
+</html>

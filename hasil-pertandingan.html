@@ -627,6 +627,233 @@ tbody tr{transition:background .18s}tbody tr:nth-child(even){background:#f5f9ff}
     height: 20px;
   }
 }
+/* =========================================================
+   MODAL INPUT MEDALI - RESPONSIVE PREMIUM
+========================================================= */
+
+.admin-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.admin-modal.show {
+  display: flex;
+}
+
+.admin-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.admin-modal-dialog {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: min(1100px, 100%);
+  height: min(850px, 92vh);
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+  animation: adminModalShow 0.25s ease-out;
+}
+
+/* HEADER */
+.admin-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 24px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #172554, #1d4ed8);
+  flex-shrink: 0;
+}
+
+.admin-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.admin-modal-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 25px;
+}
+
+.admin-modal-title h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.admin-modal-title p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.admin-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.2s;
+}
+
+.admin-modal-close:hover {
+  background: #ef4444;
+  transform: rotate(90deg);
+}
+
+/* BODY */
+.admin-modal-body {
+  flex: 1;
+  min-height: 0;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.admin-modal-body iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ffffff;
+}
+
+/* FOOTER */
+.admin-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.admin-modal-footer-close {
+  padding: 9px 20px;
+  border: none;
+  border-radius: 9px;
+  background: #1e40af;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-modal-footer-close:hover {
+  background: #1d4ed8;
+}
+
+/* ANIMASI */
+@keyframes adminModalShow {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .admin-modal {
+    padding: 12px;
+  }
+
+  .admin-modal-dialog {
+    width: 100%;
+    height: 94vh;
+    border-radius: 16px;
+  }
+
+  .admin-modal-header {
+    padding: 15px 18px;
+  }
+
+  .admin-modal-title h2 {
+    font-size: 17px;
+  }
+}
+
+/* HP */
+@media (max-width: 480px) {
+  .admin-modal {
+    padding: 0;
+  }
+
+  .admin-modal-dialog {
+    width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    border-radius: 0;
+  }
+
+  .admin-modal-header {
+    padding: 12px 14px;
+  }
+
+  .admin-modal-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 21px;
+    border-radius: 10px;
+  }
+
+  .admin-modal-title h2 {
+    font-size: 15px;
+  }
+
+  .admin-modal-title p {
+    font-size: 10px;
+  }
+
+  .admin-modal-close {
+    width: 36px;
+    height: 36px;
+    font-size: 26px;
+  }
+
+  .admin-modal-footer {
+    padding: 10px 14px;
+  }
+}
+
+/* KUNCI SCROLL HALAMAN SAAT MODAL TERBUKA */
+body.modal-open {
+  overflow: hidden;
+}
 </style>
 </head>
 <body>
@@ -637,8 +864,10 @@ tbody tr{transition:background .18s}tbody tr:nth-child(even){background:#f5f9ff}
       <div class="brand-text"><strong>PORSENI PELAJAR MELAWI 2026</strong><span>Pekan Olahraga, Seni, dan Pembelajaran</span></div>
     </div>
     <div class="navactions">
-      <a class="navlink" href="index.html">← Beranda</a>
-      <a class="navlink primary" href="https://script.google.com/macros/s/AKfycbw2Vp1HH3mKF-f43Hhy-LB4P71kHamzWoC6Jy5fzZJAbL0rmV8iF7Jg1B8m74DIx086Zg/exec?halaman=admin-hasil" target="_blank" rel="noopener">✍️ Input Medali</a>
+      <a class="navlink" href="index.html">← Kembali ke Beranda</a>
+      <button class="navlink primary" type="button" onclick="openAdminModal()">
+        ✍️ Input Medali
+      </button>
     </div>
   </div>
   <div class="hero"><h1>Hasil Pertandingan</h1><p>PORSENI Pelajar Berkarakter Kabupaten Melawi Tahun 2026</p></div>
@@ -685,6 +914,41 @@ function getResult(cabang){
   return (DATA?.hasil||[]).find(x=>String(x.kategori||x.jenis||"").toLowerCase()===activeKind.toLowerCase()&&String(x.cabang||"").toLowerCase()===String(cabang).toLowerCase())
     ||(DATA?.hasil||[]).find(x=>String(x.cabang||"").toLowerCase()===String(cabang).toLowerCase());
 }
+/* =========================================================
+   MODAL INPUT MEDALI
+========================================================= */
+
+const ADMIN_URL =
+  "https://script.google.com/macros/s/AKfycbw2Vp1HH3mKF-f43Hhy-LB4P71kHamzWoC6Jy5fzZJAbL0rmV8iF7Jg1B8m74DIx086Zg/exec?halaman=admin-hasil";
+
+function openAdminModal() {
+  const modal = document.getElementById("adminModal");
+  const frame = document.getElementById("adminFrame");
+
+  modal.classList.add("show");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+
+  // Muat halaman admin ketika modal dibuka
+  if (frame.src === "about:blank") {
+    frame.src = ADMIN_URL;
+  }
+}
+
+function closeAdminModal() {
+  const modal = document.getElementById("adminModal");
+
+  modal.classList.remove("show");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+}
+
+// Tutup modal dengan tombol ESC
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeAdminModal();
+  }
+});
 function render() {
   if (!DATA) return;
 
@@ -871,5 +1135,48 @@ document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>
 }));
 loadResults();
 </script>
+<!-- MODAL INPUT MEDALI -->
+<div id="adminModal" class="admin-modal" aria-hidden="true">
+  <div class="admin-modal-backdrop" onclick="closeAdminModal()"></div>
+
+  <div class="admin-modal-dialog" role="dialog" aria-modal="true"
+       aria-labelledby="adminModalTitle">
+
+    <div class="admin-modal-header">
+      <div class="admin-modal-title">
+        <span class="admin-modal-icon">🏅</span>
+        <div>
+          <h2 id="adminModalTitle">Input Hasil Medali</h2>
+          <p>PORSENI Pelajar Berkarakter Melawi 2026</p>
+        </div>
+      </div>
+
+      <button class="admin-modal-close"
+              type="button"
+              onclick="closeAdminModal()"
+              aria-label="Tutup modal">
+        &times;
+      </button>
+    </div>
+
+    <div class="admin-modal-body">
+      <iframe
+        id="adminFrame"
+        title="Formulir Admin Input Medali"
+        src="about:blank"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="admin-modal-footer">
+      <span>🔒 Area Admin Panitia</span>
+      <button type="button" class="admin-modal-footer-close"
+              onclick="closeAdminModal()">
+        Tutup
+      </button>
+    </div>
+
+  </div>
+</div>
 </body>
 </html>

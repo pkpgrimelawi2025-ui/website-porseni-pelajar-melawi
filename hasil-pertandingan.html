@@ -908,7 +908,20 @@ function showError(message){
   document.getElementById("mainContent").innerHTML=`<div class="error">⚠️ ${escapeHtml(message)}<br><button class="tab" style="margin-top:14px" onclick="loadResults()">Coba muat ulang</button></div>`;
 }
 function escapeHtml(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
-function medalNames(value){if(!value)return '<span class="empty">Belum ditentukan</span>';return escapeHtml(String(value).split(";").map(x=>x.trim()).filter(Boolean).join(", "));}
+function medalNames(value) {
+  if (!value) {
+    return '<span class="empty">Belum ditentukan</span>';
+  }
+
+  return escapeHtml(
+    String(value)
+      .replace(/,/g, ";") // Ubah koma menjadi titik koma
+      .split(";")
+      .map(x => x.trim())
+      .filter(Boolean)
+      .join("; ")
+  );
+}
 function getCabang(){return DATA?.cabang?.[activeKind]||[];}
 function getResult(cabang){
   return (DATA?.hasil||[]).find(x=>String(x.kategori||x.jenis||"").toLowerCase()===activeKind.toLowerCase()&&String(x.cabang||"").toLowerCase()===String(cabang).toLowerCase())

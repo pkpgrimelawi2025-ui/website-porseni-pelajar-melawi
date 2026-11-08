@@ -767,6 +767,340 @@ img {
     }
 }
 
+
+        /* IDENTITAS PENGEMBANG DI FOOTER */
+        .footer-developer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            width: max-content;
+            max-width: 100%;
+            margin: 14px auto 0;
+            padding: 5px 10px;
+            border: 1px solid rgba(245, 207, 112, 0.35);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #b9c8df;
+            font-size: 10px;
+            line-height: 1.4;
+            letter-spacing: 0.25px;
+        }
+
+        .footer-developer .developer-name {
+            color: #f5cf70;
+            font-weight: 700;
+        }
+
+        .footer-developer a {
+            color: #f5cf70;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.2s ease, text-shadow 0.2s ease;
+        }
+
+        .footer-developer a:hover {
+            color: #ffe8a3;
+            text-decoration: underline;
+            text-shadow: 0 0 8px rgba(245, 207, 112, 0.35);
+        }
+
+        .footer-developer a:focus-visible {
+            outline: 2px solid #f5cf70;
+            outline-offset: 3px;
+            border-radius: 3px;
+        }
+
+        @media (max-width: 400px) {
+            .footer-developer {
+                font-size: 9px;
+                padding: 5px 8px;
+                gap: 3px;
+            }
+        }
+
+
+        /* HEADER + COUNTDOWN PORSENI */
+        header .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        header .header-copy {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        header .header-copy h1 {
+            max-width: 100%;
+        }
+
+        .countdown-box {
+            flex: 0 0 auto;
+            min-width: 245px;
+            padding: 14px 18px;
+            border: 1px solid rgba(245, 207, 112, 0.55);
+            border-radius: 14px;
+            background: linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.035));
+            box-shadow: 0 8px 22px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.08);
+            text-align: center;
+        }
+
+        .countdown-title {
+            color: #f5cf70;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 7px;
+        }
+
+        .countdown-date {
+            color: #d9e5f7;
+            font-size: 11px;
+            margin-bottom: 8px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .countdown-unit {
+            min-width: 45px;
+            padding: 6px 5px;
+            border-radius: 8px;
+            background: rgba(4, 19, 43, .42);
+        }
+
+        .countdown-unit strong {
+            display: block;
+            color: #fff;
+            font-size: 23px;
+            line-height: 1.1;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .countdown-unit span {
+            display: block;
+            color: #f5cf70;
+            font-size: 9px;
+            margin-top: 4px;
+            letter-spacing: .5px;
+        }
+
+        .countdown-status {
+            color: #f5cf70;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+            header .header-inner {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 18px;
+            }
+            .countdown-box {
+                width: min(100%, 420px);
+                min-width: 0;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 700px) {
+            header .header-copy { text-align: center; }
+            .countdown-box { padding: 12px 10px; }
+            .countdown-unit { min-width: 42px; }
+            .countdown-unit strong { font-size: 21px; }
+        }
+
+        /* =====================================================
+        PORSENI 2026 — COMPACT UI REFINEMENT
+        Header, Hero, dan Rekap Pendaftaran
+        ===================================================== */
+
+
+        /* =====================================================
+        1. HEADER UTAMA — PORSENI PELAJAR
+        ===================================================== */
+
+        body > header {
+            padding: 15px 8% !important;
+        }
+
+        body > header .identitas {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            line-height: 1.4;
+        }
+
+        body > header h1 {
+            font-size: clamp(22px, 2.5vw, 30px);
+            line-height: 1.2;
+            margin-top: 5px;
+            margin-bottom: 4px;
+        }
+
+        body > header p {
+            font-size: 13px;
+            line-height: 1.4;
+            margin-top: 4px;
+        }
+
+
+        /* =====================================================
+        2. HERO — BERPRESTASI, BERKARYA, DAN BERKARAKTER
+        ===================================================== */
+
+        .hero {
+            padding: 35px 6% !important;
+            margin: 24px auto !important;
+            border-radius: 16px;
+        }
+
+        .hero .label {
+            padding: 5px 12px;
+            font-size: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h2 {
+            font-size: clamp(22px, 2.5vw, 28px);
+            line-height: 1.25;
+            letter-spacing: -0.4px;
+            margin-top: 12px;
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            max-width: 950px;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 8px;
+        }
+
+        .hero .tombol {
+            margin-top: 18px;
+            padding: 11px 20px;
+            font-size: 13px;
+            border-radius: 8px;
+        }
+
+
+        /* =====================================================
+        3. REKAP PENDAFTARAN PESERTA
+        ===================================================== */
+
+        /* Bagian luar rekap */
+        #rekap-pendaftaran {
+            margin-top: 28px !important;
+            margin-bottom: 28px !important;
+        }
+
+        /* Judul utama rekap */
+        #rekap-pendaftaran h1,
+        #rekap-pendaftaran h2 {
+            font-size: clamp(20px, 2.2vw, 27px);
+            line-height: 1.25;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        /* Label PORSENI PELAJAR MELAWI 2026 */
+        #rekap-pendaftaran .label,
+        #rekap-pendaftaran .section-label {
+            font-size: 10px;
+            letter-spacing: 1.2px;
+            line-height: 1.4;
+        }
+
+        /* Jarak antar elemen rekap */
+        #rekap-pendaftaran p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+
+        /* =====================================================
+        RESPONSIVE — TABLET DAN HP
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            body > header {
+                padding: 18px 5% !important;
+            }
+
+            body > header h1 {
+                font-size: clamp(20px, 5vw, 26px);
+                line-height: 1.25;
+            }
+
+            body > header p {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 28px 22px !important;
+                margin: 18px auto !important;
+            }
+
+            .hero h2 {
+                font-size: clamp(21px, 5.5vw, 26px);
+            }
+
+            .hero p {
+                font-size: 13px;
+                line-height: 1.65;
+            }
+
+            #rekap-pendaftaran {
+                margin-top: 22px !important;
+                margin-bottom: 22px !important;
+            }
+
+            #rekap-pendaftaran h1,
+            #rekap-pendaftaran h2 {
+                font-size: 21px;
+            }
+        }
+
+
+        /* =====================================================
+        HP KECIL
+        ===================================================== */
+
+        @media (max-width: 400px) {
+
+            body > header {
+                padding: 15px 14px !important;
+            }
+
+            body > header h1 {
+                font-size: 20px;
+            }
+
+            .hero {
+                padding: 24px 17px !important;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 12px;
+            }
+        }
+
     </style>
 
 <link rel="stylesheet" href="css/rekap-pendaftaran.css">
@@ -776,11 +1110,25 @@ img {
 <body>
 
     <header>
-        <div class="identitas">KABUPATEN MELAWI • TAHUN 2026</div>
+        <div class="header-inner">
+            <div class="header-copy">
+                <div class="identitas">KABUPATEN MELAWI • TAHUN 2026</div>
+                <h1>PORSENI PELAJAR SD &amp; SMP BERKARAKTER</h1>
+                <p>Dinas Pendidikan dan Kebudayaan Kabupaten Melawi</p>
+            </div>
 
-        <h1>PORSENI PELAJAR SD &amp; SMP BERKARAKTER</h1>
-
-        <p>Dinas Pendidikan dan Kebudayaan Kabupaten Melawi</p>
+            <aside class="countdown-box" aria-label="Hitung mundur pelaksanaan PORSENI">
+                <div class="countdown-title">Menuju PORSENI PELAJAR 2026</div>
+                <div class="countdown-date">27 November 2026 • 00.00 WIB</div>
+                <div class="countdown-timer" id="countdown-timer">
+                    <div class="countdown-unit"><strong id="countdown-days">--</strong><span>HARI</span></div>
+                    <div class="countdown-unit"><strong id="countdown-hours">--</strong><span>JAM</span></div>
+                    <div class="countdown-unit"><strong id="countdown-minutes">--</strong><span>MENIT</span></div>
+                    <div class="countdown-unit"><strong id="countdown-seconds">--</strong><span>DETIK</span></div>
+                </div>
+                <div class="countdown-status" id="countdown-status" hidden></div>
+            </aside>
+        </div>
     </header>
 
     <nav>
@@ -871,10 +1219,8 @@ img {
 
             <div class="garis"></div>
 
-            <p>
-                PORSENI menjadi wadah bagi pelajar untuk mengembangkan
-                potensi, kreativitas, sportivitas, dan karakter melalui
-                kegiatan olahraga dan seni.
+            <p class="narasi-porseni">
+                PORSENI Pelajar SD &amp; SMP Berkarakter Kabupaten Melawi Tahun 2026 merupakan ajang untuk mengembangkan potensi, kreativitas, sportivitas, dan karakter murid melalui kegiatan olahraga dan seni. Kegiatan ini diselenggarakan oleh Dinas Pendidikan dan Kebudayaan Kabupaten Melawi pada Jum’at sampai dengan Senin, tanggal 27–30 November 2026, bertempat di Graha PGRI Melawi. Mari bersama-sama menjunjung tinggi semangat kebersamaan, fair play, dan prestasi demi melahirkan generasi pelajar Melawi yang unggul, kreatif, serta berkarakter.
             </p>
         </section>
 
@@ -967,8 +1313,55 @@ img {
         </p>
         <!-- IDENTITAS DAN MITRA PENYELENGGARA -->
         <div id="wadah-logo"></div>
+
+        <!-- KREDIT PENGEMBANG: WhatsApp dapat diklik -->
+        <div class="footer-developer">
+            <span>Developed by</span>
+            <span class="developer-name">Rohu</span>
+            <span>— CP:</span>
+            <a href="https://wa.me/628993248127" target="_blank" rel="noopener noreferrer"
+               aria-label="Hubungi Rohu melalui WhatsApp di 08993248127">08993248127</a>
+        </div>
     </footer>
 
+
+    <script>
+        // Countdown menuju pembukaan PORSENI: 27 November 2026 pukul 00.00 WIB
+        (function () {
+            const targetDate = new Date("2026-11-27T00:00:00+07:00").getTime();
+            const dayEl = document.getElementById("countdown-days");
+            const hourEl = document.getElementById("countdown-hours");
+            const minuteEl = document.getElementById("countdown-minutes");
+            const secondEl = document.getElementById("countdown-seconds");
+            const timerEl = document.getElementById("countdown-timer");
+            const statusEl = document.getElementById("countdown-status");
+
+            function updateCountdown() {
+                const now = Date.now();
+                const distance = targetDate - now;
+
+                if (distance <= 0) {
+                    timerEl.hidden = true;
+                    statusEl.hidden = false;
+                    statusEl.textContent = "PORSENI 2026 TELAH DIMULAI!";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                dayEl.textContent = String(days).padStart(2, "0");
+                hourEl.textContent = String(hours).padStart(2, "0");
+                minuteEl.textContent = String(minutes).padStart(2, "0");
+                secondEl.textContent = String(seconds).padStart(2, "0");
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        })();
+    </script>
     <script src="script.js"></script>
     <script src="js/muat-komponen.js"></script>
     <script src="js/rekap-data.js"></script>

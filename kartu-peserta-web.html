@@ -1519,6 +1519,135 @@
             font-size: 10px;
         }
     }
+    /* =====================================================
+    FOOTER KARTU PESERTA — PORSENI MELAWI 2026
+    ===================================================== */
+
+    .kartu-footer {
+        position: relative;
+        width: 100%;
+        margin-top: auto;
+        padding: 9px 8px 10px;
+        text-align: center;
+
+        background: linear-gradient(
+            135deg,
+            #102a56,
+            #174b87
+        );
+
+        color: #ffffff;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.7px;
+        line-height: 1.4;
+
+        border-top: 3px solid #e7b342;
+        flex-shrink: 0;
+    }
+
+    .kartu-footer strong {
+        display: block;
+        color: #ffffff;
+        font-size: 9px;
+        font-weight: 900;
+        letter-spacing: 0.8px;
+    }
+
+    .kartu-footer .tagline {
+        margin-top: 3px;
+        color: #ffdf8a;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 1.4;
+    }
+
+    /* Pastikan footer ikut tercetak */
+    @media print {
+        .kartu-footer {
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+    }
+  
+
+    /* =====================================================
+       FOOTER KARTU PESERTA — FIX FINAL
+       Pastikan footer terlihat di preview dan hasil cetak
+       ===================================================== */
+    #kartuDinamis {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+    }
+
+    #kartuDinamis .detail {
+        padding-bottom: 8px !important;
+    }
+
+    #kartuDinamis .id-kartu {
+        position: absolute !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 34px !important;
+        margin: 0 !important;
+        padding: 4px 8px !important;
+        text-align: center !important;
+        background: #ffffff !important;
+        color: #174b87 !important;
+        font-size: 8px !important;
+        line-height: 1.25 !important;
+        letter-spacing: 0.7px !important;
+        z-index: 2 !important;
+    }
+
+    #kartuDinamis .kartu-footer {
+        position: absolute !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        min-height: 31px !important;
+        margin: 0 !important;
+        padding: 5px 8px 6px !important;
+        display: block !important;
+        text-align: center !important;
+        background: linear-gradient(135deg, #102a56, #174b87) !important;
+        color: #ffffff !important;
+        border-top: 3px solid #e7b342 !important;
+        font-size: 8px !important;
+        line-height: 1.25 !important;
+        z-index: 5 !important;
+    }
+
+    #kartuDinamis .kartu-footer strong {
+        display: block !important;
+        color: #ffffff !important;
+        font-size: 8px !important;
+        font-weight: 900 !important;
+        letter-spacing: 0.6px !important;
+        line-height: 1.25 !important;
+    }
+
+    #kartuDinamis .kartu-footer .tagline {
+        display: block !important;
+        margin-top: 2px !important;
+        color: #ffdf8a !important;
+        font-size: 7px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.4px !important;
+        line-height: 1.25 !important;
+    }
+
+    @media print {
+        #kartuDinamis .kartu-footer {
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+        }
+    }
+
   </style>
 </head>
 
@@ -1721,12 +1850,10 @@
 
             <div class="id-kartu" id="kartuID"></div>
 
+            <!-- FOOTER KARTU PESERTA: satu footer saja -->
             <footer class="kartu-footer">
                 <strong>PORSENI PELAJAR MELAWI • 2026</strong>
-
-                <div class="tagline">
-                BERPRESTASI • BERKARYA • BERKARAKTER
-                </div>
+                <div class="tagline">BERPRESTASI • BERKARYA • BERKARAKTER</div>
             </footer>
 
             </article>

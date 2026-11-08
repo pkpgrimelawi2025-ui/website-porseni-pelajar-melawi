@@ -1,0 +1,1134 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Juara Umum | PORSENI Pelajar Melawi 2026</title>
+
+<style>
+:root {
+  --navy: #10244a;
+  --blue: #1d4ed8;
+  --gold: #f4b400;
+  --silver: #94a3b8;
+  --bronze: #b87333;
+  --green: #059669;
+  --bg: #f1f5f9;
+  --text: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAVBAR */
+.topbar {
+  background: linear-gradient(120deg, #0f1f40, #1e40af);
+  color: white;
+  padding: 10px 0 16px;
+}
+
+.wrap {
+  width: min(1200px, calc(100% - 32px));
+  margin: auto;
+}
+
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+}
+
+.brand-text strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.brand-text span {
+  display: block;
+  font-size: 12px;
+  opacity: .8;
+  margin-top: 4px;
+}
+
+.navactions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.navlink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: .2s;
+}
+
+.navlink:hover {
+  background: rgba(255,255,255,.15);
+}
+
+.navlink.active {
+  background: #fbbf24;
+  color: #172554;
+  border-color: #fbbf24;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 900;
+  letter-spacing: -.5px;
+}
+
+.hero p {
+  margin: 5px 0 0;
+  color: #dbeafe;
+  font-size: 15px;
+}
+
+/* STATUS */
+.status {
+  margin: 20px 0;
+  padding: 12px 16px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #475569;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  background: #f59e0b;
+  border-radius: 50%;
+}
+
+/* PODIUM */
+.podium-section {
+  background: linear-gradient(135deg, #0f1e3a, #172554 65%, #1e3a8a);
+  padding: 18px 22px;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(15,23,42,.15);
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.podium-section::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.035);
+  top: -170px;
+  right: -80px;
+}
+
+.podium-title {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 14px;
+}
+
+.podium-title .eyebrow {
+  display: inline-block;
+  color: #fde68a;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.podium-title h2 {
+  margin: 0;
+  font-size: clamp(19px, 2.5vw, 28px);
+  font-weight: 900;
+}
+
+.podium-title p {
+  margin: 4px 0 0;
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.podium-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: end;
+  position: relative;
+  z-index: 1;
+}
+
+.champion-card {
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  padding: 18px 14px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(8px);
+  min-width: 0;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.champion-card:hover {
+  transform: translateY(-5px);
+}
+
+.champion-card.first {
+  background: linear-gradient(180deg, rgba(250,204,21,.20), rgba(255,255,255,.07));
+  border: 1px solid rgba(250,204,21,.55);
+  box-shadow: 0 0 35px rgba(250,204,21,.12);
+  padding-top: 20px;
+}
+
+.champion-card.second {
+  border-color: rgba(203,213,225,.35);
+}
+
+.champion-card.third {
+  border-color: rgba(205,127,50,.4);
+}
+
+.champion-image {
+  width: 100%;
+  max-width: 210px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 8px;
+  filter: drop-shadow(0 10px 12px rgba(0,0,0,.25));
+}
+
+.first .champion-image {
+  max-width: 235px;
+  height: 175px;
+}
+
+.champion-rank {
+  display: inline-block;
+  padding: 6px 13px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.first .champion-rank {
+  color: #713f12;
+  background: #facc15;
+}
+
+.second .champion-rank {
+  color: #1e293b;
+  background: #cbd5e1;
+}
+
+.third .champion-rank {
+  color: #431407;
+  background: #cd7f32;
+}
+
+.champion-name {
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 900;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  margin: 5px 0 12px;
+}
+
+.champion-medals {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.medal-stat {
+  border-radius: 9px;
+  padding: 7px 9px;
+  background: rgba(0,0,0,.2);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.champion-total {
+  font-size: 13px;
+  font-weight: 800;
+  color: #fde68a;
+  margin-top: 12px;
+}
+
+.no-champion {
+  padding: 30px 10px;
+  color: #cbd5e1;
+}
+
+/* SUMMARY */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 15px;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 5px 15px rgba(15,23,42,.04);
+}
+
+.summary-card .label {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.summary-card .value {
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 6px;
+}
+
+.summary-card.gold {
+  border-top: 4px solid #eab308;
+}
+
+.summary-card.silver {
+  border-top: 4px solid #94a3b8;
+}
+
+.summary-card.bronze {
+  border-top: 4px solid #b87333;
+}
+
+/* TABLE */
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0 15px;
+  flex-wrap: wrap;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.pill {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #dbeafe;
+  color: #1e40af;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tablewrap {
+  overflow-x: auto;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(15,23,42,.08);
+}
+
+.standings-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.standings-table th {
+  padding: 14px 12px;
+  background: #172554;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+.standings-table th:nth-child(2) {
+  text-align: left;
+}
+
+.medal-heading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.medal-heading img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.standings-table td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #d5deeb;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.standings-table td:nth-child(2) {
+  text-align: left;
+}
+
+.standings-table tbody tr:nth-child(even) {
+  background: #eaf1fb;
+}
+
+.standings-table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.standings-table tbody tr:hover {
+  background: #d5e7ff;
+}
+
+.standings-table tbody tr.rank-1 {
+  background: #fff8dc;
+}
+
+.standings-table tbody tr.rank-2 {
+  background: #f1f5f9;
+}
+
+.standings-table tbody tr.rank-3 {
+  background: #fff1e6;
+}
+
+.standings-table tbody tr.rank-1:hover,
+.standings-table tbody tr.rank-2:hover,
+.standings-table tbody tr.rank-3:hover {
+  background: #dbeafe;
+}
+
+.standings-table .rank-cell {
+  width: 65px;
+}
+
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #e2e8f0;
+  color: #334155;
+  font-weight: 900;
+}
+
+.rank-1 .rank-badge {
+  background: linear-gradient(135deg, #fef3c7, #facc15);
+  color: #713f12;
+}
+
+.rank-2 .rank-badge {
+  background: linear-gradient(135deg, #f8fafc, #94a3b8);
+  color: #1e293b;
+}
+
+.rank-3 .rank-badge {
+  background: linear-gradient(135deg, #fed7aa, #b87333);
+  color: #431407;
+}
+
+.gold-cell {
+  background: rgba(250,204,21,.13);
+  color: #92400e;
+}
+
+.silver-cell {
+  background: rgba(148,163,184,.15);
+  color: #334155;
+}
+
+.bronze-cell {
+  background: rgba(184,115,51,.12);
+  color: #7c2d12;
+}
+
+.total-cell {
+  color: #047857;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+.empty {
+  text-align: center;
+  padding: 35px;
+  color: #64748b;
+}
+
+.footer {
+  text-align: center;
+  color: #64748b;
+  font-size: 12px;
+  padding: 30px 10px;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 850px) {
+  .topbar {
+    padding: 9px 0 14px;
+  }
+
+  .hero {
+    margin-top: 12px;
+  }
+
+  .podium-section {
+    padding: 16px;
+  }
+
+  .champion-image {
+    height: 155px;
+  }
+
+  .first .champion-image {
+    height: 185px;
+  }
+
+  .champion-card {
+    padding: 13px 9px;
+  }
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 600px) {
+  .wrap {
+    width: calc(100% - 20px);
+  }
+
+  .topbar {
+    padding: 8px 0 12px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero {
+    margin-top: 10px;
+  }
+
+  .hero p {
+    margin-top: 4px;
+  }
+
+  .status {
+    margin: 12px 0;
+    padding: 9px 10px;
+    flex-wrap: wrap;
+  }
+
+  .podium-title {
+    margin-bottom: 10px;
+  }
+
+  .podium-title .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+  }
+
+  .podium-title h2 {
+    font-size: 16px;
+  }
+
+  .podium-title p {
+    font-size: 10px;
+    margin-top: 3px;
+  }
+
+  .topnav {
+    align-items: flex-start;
+  }
+
+  .brand-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brand-text strong {
+    font-size: 13px;
+  }
+
+  .brand-text span {
+    font-size: 10px;
+  }
+
+  .navactions {
+    width: 100%;
+  }
+
+  .navlink {
+    flex: 1;
+    font-size: 11px;
+    padding: 9px 8px;
+  }
+
+  .hero {
+    margin-top: 25px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  .podium-section {
+    padding: 15px 8px;
+    border-radius: 16px;
+  }
+
+  .podium-grid {
+    gap: 6px;
+  }
+
+  .champion-card {
+    padding: 10px 4px;
+    border-radius: 12px;
+  }
+
+  .champion-card.first {
+    padding-top: 15px;
+  }
+
+  .champion-image {
+    height: 100px;
+  }
+
+  .first .champion-image {
+    height: 125px;
+  }
+
+  .champion-rank {
+    font-size: 8px;
+    padding: 5px 5px;
+    letter-spacing: 0;
+  }
+
+  .champion-name {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .medal-stat {
+    font-size: 8px;
+    padding: 5px 4px;
+  }
+
+  .champion-total {
+    font-size: 10px;
+  }
+
+  .summary-grid {
+    gap: 7px;
+  }
+
+  .summary-card {
+    padding: 12px 8px;
+  }
+
+  .summary-card .label {
+    font-size: 9px;
+  }
+
+  .summary-card .value {
+    font-size: 23px;
+  }
+
+  .section-title h2 {
+    font-size: 18px;
+  }
+
+  .standings-table th {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  .standings-table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .medal-heading {
+    gap: 3px;
+  }
+
+  .medal-heading img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .champion-image {
+    height: 80px;
+  }
+
+  .first .champion-image {
+    height: 100px;
+  }
+
+  .champion-name {
+    font-size: 10px;
+  }
+
+  .champion-rank {
+    font-size: 7px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+
+    <div class="topnav">
+      <div class="brand">
+        <img
+          src="assets/logos/porseni-pelajar.png"
+          alt="Logo PORSENI"
+          class="brand-logo">
+
+        <div class="brand-text">
+          <strong>PORSENI PELAJAR MELAWI 2026</strong>
+          <span>Pekan Olahraga, Seni, dan Pembelajaran</span>
+        </div>
+      </div>
+
+      <div class="navactions">
+        <a class="navlink" href="index.html">← Beranda</a>
+        <a class="navlink" href="hasil-pertandingan.html">
+          Hasil Pertandingan
+        </a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1>🏆 Juara Umum</h1>
+      <p>PORSENI Pelajar Berkarakter Kabupaten Melawi Tahun 2026</p>
+    </div>
+
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="status">
+    <span class="dot" id="statusDot"></span>
+    <span id="statusText">Menghubungkan ke database...</span>
+    <span style="margin-left:auto" id="updatedAt"></span>
+  </div>
+
+  <section class="podium-section">
+
+    <div class="podium-title">
+      <span class="eyebrow">🏅 CHAMPIONSHIP LEADERBOARD</span>
+      <h2>PODIUM JUARA PORSENI PELAJAR</h2>
+      <p>Akumulasi perolehan medali Olahraga dan Seni</p>
+    </div>
+
+    <div id="podium" class="podium-grid">
+      <div class="no-champion">⏳ Memuat podium juara...</div>
+    </div>
+
+  </section>
+
+  <div class="summary-grid">
+    <div class="summary-card gold">
+      <div class="label">🥇 TOTAL MEDALI EMAS</div>
+      <div class="value" id="totalEmas">0</div>
+    </div>
+
+    <div class="summary-card silver">
+      <div class="label">🥈 TOTAL MEDALI PERAK</div>
+      <div class="value" id="totalPerak">0</div>
+    </div>
+
+    <div class="summary-card bronze">
+      <div class="label">🥉 TOTAL MEDALI PERUNGGU</div>
+      <div class="value" id="totalPerunggu">0</div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <h2>📊 Klasemen Juara Umum</h2>
+    <span class="pill">Emas → Perak → Perunggu</span>
+  </div>
+
+  <div class="tablewrap">
+    <table class="standings-table">
+
+      <thead>
+        <tr>
+          <th class="rank-cell">Rank</th>
+          <th>Kecamatan</th>
+          <th><span class="medal-heading"><img src="assets/medalis/emas.png" alt="Medali Emas"> Emas</span></th>
+          <th><span class="medal-heading"><img src="assets/medalis/perak.png" alt="Medali Perak"> Perak</span></th>
+          <th><span class="medal-heading"><img src="assets/medalis/perunggu.png" alt="Medali Perunggu"> Perunggu</span></th>
+          <th>Total</th>
+        </tr>
+      </thead>
+
+      <tbody id="standingsBody">
+        <tr>
+          <td colspan="6" class="empty">Memuat klasemen...</td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+  <div class="footer">
+    PORSENI Pelajar Berkarakter Kabupaten Melawi 2026
+    · Klasemen gabungan Olahraga dan Seni
+  </div>
+
+</main>
+
+<script>
+const WEB_APP_URL =
+  "https://script.google.com/macros/s/AKfycbw2Vp1HH3mKF-f43Hhy-LB4P71kHamzWoC6Jy5fzZJAbL0rmV8iF7Jg1B8m74DIx086Zg/exec";
+
+let DATA = null;
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  }[c]));
+}
+
+function getDistrict(row) {
+  return String(
+    row.kecamatan ||
+    row.kabupaten ||
+    row.nama ||
+    row.distrik ||
+    row.name ||
+    ""
+  ).trim();
+}
+
+function getMedal(row, medal) {
+  const aliases = {
+    emas: ["emas", "Emas", "gold"],
+    perak: ["perak", "Perak", "silver"],
+    perunggu: ["perunggu", "Perunggu", "bronze"]
+  };
+
+  for (const key of aliases[medal]) {
+    if (row[key] !== undefined && row[key] !== null) {
+      return Number(row[key]) || 0;
+    }
+  }
+
+  return 0;
+}
+
+function aggregateStandings(data) {
+  const combined = new Map();
+
+  ["Olahraga", "Seni"].forEach(kind => {
+    const rows = data.klasemen?.[kind] || [];
+
+    rows.forEach(row => {
+      const district = getDistrict(row);
+
+      if (!district) return;
+
+      const key = district.toLocaleLowerCase("id-ID");
+
+      if (!combined.has(key)) {
+        combined.set(key, {
+          kecamatan: district,
+          emas: 0,
+          perak: 0,
+          perunggu: 0
+        });
+      }
+
+      const item = combined.get(key);
+
+      item.emas += getMedal(row, "emas");
+      item.perak += getMedal(row, "perak");
+      item.perunggu += getMedal(row, "perunggu");
+    });
+  });
+
+  const result = [...combined.values()].map(item => ({
+    ...item,
+    total: item.emas + item.perak + item.perunggu
+  }));
+
+  result.sort((a, b) =>
+    b.emas - a.emas ||
+    b.perak - a.perak ||
+    b.perunggu - a.perunggu ||
+    a.kecamatan.localeCompare(b.kecamatan, "id")
+  );
+
+  // Peringkat bersama:
+  // jika emas, perak, perunggu sama, peringkat sama.
+  let currentRank = 0;
+
+  result.forEach((item, index) => {
+    const previous = result[index - 1];
+
+    if (
+      !previous ||
+      item.emas !== previous.emas ||
+      item.perak !== previous.perak ||
+      item.perunggu !== previous.perunggu
+    ) {
+      currentRank = index + 1;
+    }
+
+    item.rank = currentRank;
+  });
+
+  return result;
+}
+
+function render(data) {
+  const standings = aggregateStandings(data);
+
+  const totalEmas = standings.reduce((sum, x) => sum + x.emas, 0);
+  const totalPerak = standings.reduce((sum, x) => sum + x.perak, 0);
+  const totalPerunggu = standings.reduce((sum, x) => sum + x.perunggu, 0);
+
+  document.getElementById("totalEmas").textContent = totalEmas;
+  document.getElementById("totalPerak").textContent = totalPerak;
+  document.getElementById("totalPerunggu").textContent = totalPerunggu;
+
+  renderPodium(standings);
+  renderTable(standings);
+
+  document.getElementById("statusText").textContent =
+    "Database terhubung · klasemen berhasil diperbarui";
+
+  document.getElementById("statusDot").style.background = "#16a34a";
+
+  document.getElementById("updatedAt").textContent =
+    "Pembaruan: " + new Date().toLocaleTimeString("id-ID");
+}
+
+function renderPodium(standings) {
+  const podium = document.getElementById("podium");
+
+  const first = standings.find(x => x.rank === 1);
+  const second = standings.find(x => x.rank === 2);
+  const third = standings.find(x => x.rank === 3);
+
+  // Tampilan podium tetap 3 posisi.
+  // Jika tidak ada peringkat tertentu, tampilkan placeholder.
+  const champions = [
+    { data: second, className: "second", image: "juara-2.png", label: "PERINGKAT 2" },
+    { data: first, className: "first", image: "juara-1.png", label: "JUARA UMUM" },
+    { data: third, className: "third", image: "juara-3.png", label: "PERINGKAT 3" }
+  ];
+
+  podium.innerHTML = champions.map(item => {
+    const x = item.data;
+
+    return `
+      <article class="champion-card ${item.className}">
+        <img
+          class="champion-image"
+          src="assets/champions/${item.image}"
+          alt="${item.label}">
+
+        <div class="champion-rank">${item.label}</div>
+
+        <div class="champion-name">
+          ${x ? escapeHtml(x.kecamatan) : "Belum ditentukan"}
+        </div>
+
+        ${
+          x
+          ? `
+            <div class="champion-medals">
+              <span class="medal-stat">🥇 ${x.emas}</span>
+              <span class="medal-stat">🥈 ${x.perak}</span>
+              <span class="medal-stat">🥉 ${x.perunggu}</span>
+            </div>
+
+            <div class="champion-total">
+              ${x.total} MEDALI
+            </div>
+          `
+          : `<div class="no-champion">Belum ada data</div>`
+        }
+      </article>
+    `;
+  }).join("");
+}
+
+function renderTable(standings) {
+  const body = document.getElementById("standingsBody");
+
+  if (!standings.length) {
+    body.innerHTML = `
+      <tr>
+        <td colspan="6" class="empty">
+          Belum ada data klasemen Juara Umum.
+        </td>
+      </tr>
+    `;
+    return;
+  }
+
+  body.innerHTML = standings.map((x, index) => {
+    const rankClass = x.rank <= 3 ? `rank-${x.rank}` : "";
+
+    return `
+      <tr class="${rankClass}">
+        <td>
+          <span class="rank-badge">${x.rank}</span>
+        </td>
+
+        <td>${escapeHtml(x.kecamatan)}</td>
+
+        <td class="gold-cell">${x.emas}</td>
+        <td class="silver-cell">${x.perak}</td>
+        <td class="bronze-cell">${x.perunggu}</td>
+
+        <td class="total-cell">${x.total}</td>
+      </tr>
+    `;
+  }).join("");
+}
+
+function showError(message) {
+  document.getElementById("statusText").textContent =
+    "Koneksi database bermasalah";
+
+  document.getElementById("statusDot").style.background = "#dc2626";
+
+  document.getElementById("standingsBody").innerHTML = `
+    <tr>
+      <td colspan="6" class="empty">
+        ⚠️ ${escapeHtml(message)}
+      </td>
+    </tr>
+  `;
+
+  document.getElementById("podium").innerHTML = `
+    <div class="no-champion">
+      Gagal memuat klasemen Juara Umum.
+    </div>
+  `;
+}
+
+function loadResults() {
+  const callbackName =
+    "juaraUmumCallback_" + Date.now();
+
+  window[callbackName] = function(response) {
+    try {
+      if (!response || response.status !== "success") {
+        throw new Error(
+          response?.pesan || "Respons database tidak valid."
+        );
+      }
+
+      DATA = response;
+      render(DATA);
+
+    } catch (error) {
+      showError(error.message);
+
+    } finally {
+      try {
+        delete window[callbackName];
+      } catch (e) {}
+    }
+  };
+
+  const script = document.createElement("script");
+
+  script.src =
+    WEB_APP_URL +
+    "?halaman=hasil-medali&callback=" +
+    callbackName +
+    "&t=" + Date.now();
+
+  script.onerror = () => {
+    showError(
+      "Gagal mengambil data dari Apps Script. Periksa koneksi internet."
+    );
+  };
+
+  document.head.appendChild(script);
+}
+
+loadResults();
+</script>
+
+</body>
+</html>

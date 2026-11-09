@@ -38,6 +38,7 @@
     let semuaPeserta = [];
     let pesertaTersaring = [];
     let halamanAktif = 1;
+    let intervalPembaruanRekap = null;
 
     function elemen(id) {
         return document.getElementById(id);
@@ -367,6 +368,138 @@
             : "";
     }
 
+    /* =========================================================
+    LIVE DATA PESERTA — GOOGLE APPS SCRIPT
+    Sinkronisasi dengan halaman Kartu Peserta
+    ========================================================= */
+
+    const URL_DATA_PESERTA =
+        "https://script.google.com/macros/s/AKfycbw2Vp1HH3mKF-f43Hhy-LB4P71kHamzWoC6Jy5fzZJAbL0rmV8iF7Jg1B8m74DIx086Zg/exec";
+
+
+    function ambilDataPesertaLive() {
+        return new Promise((resolve, reject) => {
+
+            const callbackName =
+                "rekapPorseniCallback_" + Date.now();
+
+            const script = document.createElement("script");
+
+            const url = new URL(URL_DATA_PESERTA);
+
+            url.searchParams.set("halaman", "data-peserta");
+            url.searchParams.set("callback", callbackName);
+            url.searchParams.set("_", Date.now());
+
+            let selesai = false;
+
+            const timeout = setTimeout(() => {
+                cleanup();
+
+                reject(
+                    new Error("Waktu pemuatan data peserta habis.")
+                );
+            }, 30000);
+
+            function cleanup() {
+                if (selesai) return;
+
+                selesai = true;
+
+                clearTimeout(timeout);
+                script.remove();
+
+                delete window[callbackName];
+            }
+
+            window[callbackName] = function(data) {
+
+                if (!data || !Array.isArray(data.peserta)) {
+                    cleanup();
+
+                    reject(
+                        new Error("Format data peserta tidak valid.")
+                    );
+
+                    return;
+                }
+
+                cleanup();
+                resolve(data);
+            };
+
+            script.onerror = function() {
+                cleanup();
+
+                reject(
+                    new Error("Gagal terhubung ke Google Apps Script.")
+                );
+            };
+
+            script.src = url.toString();
+            script.async = true;
+
+            document.head.appendChild(script);
+        });
+    }
+
+
+    /* =========================================================
+    MEMUAT DAN MEMPERBARUI DATA REKAP
+    ========================================================= */
+
+    async function muatDataPesertaLive() {
+
+        try {
+
+            const data = await ambilDataPesertaLive();
+
+            semuaPeserta = global.RekapData.normalisasiDaftar(
+                data.peserta
+            );
+
+            // Perbarui statistik kecamatan dan cabang lomba
+            tampilkanStatistikPeserta();
+
+            // Perbarui tabel dan jumlah keikutsertaan
+            terapkanFilter();
+
+            const waktuPembaruan = new Date().toLocaleTimeString(
+                "id-ID",
+                {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit"
+                }
+            );
+
+            tampilkanStatus(
+                `Data peserta live berhasil dimuat: ${semuaPeserta.length} keikutsertaan. Terakhir diperbarui ${waktuPembaruan} WIB.`,
+                "siap"
+            );
+
+            console.info(
+                `[Rekap Live] ${semuaPeserta.length} peserta berhasil dimuat.`
+            );
+
+            return true;
+
+        } catch (error) {
+
+            console.error(
+                "[Rekap Live] Gagal memperbarui data:",
+                error
+            );
+
+            tampilkanStatus(
+                "Data peserta belum dapat diperbarui. Periksa koneksi internet.",
+                "error"
+            );
+
+            return false;
+        }
+    }
+
     async function mulaiRekapPendaftaran() {
         if (!global.RekapData) {
             tampilkanStatus(
@@ -413,60 +546,24 @@
         isiPilihanCabang();
         tampilkanStatus("Sedang memuat data peserta...", "info");
 
-        try {
-            const respons = await fetch(
-                "data/rekap-pendaftaran.json",
-                { cache: "no-cache" }
+        /* =========================================================
+        PEMUATAN AWAL DATA PESERTA LIVE
+        ========================================================= */
+
+        await muatDataPesertaLive();
+
+
+        /* =========================================================
+        PEMBARUAN OTOMATIS SETIAP 60 DETIK
+        ========================================================= */
+
+        if (!intervalPembaruanRekap) {
+
+            intervalPembaruanRekap = setInterval(
+                muatDataPesertaLive,
+                60000
             );
 
-            if (!respons.ok) {
-                throw new Error(`HTTP ${respons.status}`);
-            }
-
-            const data = await respons.json();
-
-            semuaPeserta = global.RekapData.normalisasiDaftar(
-                data.peserta
-            );
-
-            // Tampilkan statistik kecamatan dan cabang lomba
-            tampilkanStatistikPeserta();
-
-            pesertaTersaring = semuaPeserta.slice();
-            halamanAktif = 1;
-
-            terapkanFilter();
-
-            if (data.status === "siap") {
-                tampilkanStatus(
-                    `Data peserta berhasil dimuat. Terakhir diperbarui: ${
-                        data.diperbarui_pada || "belum dicantumkan"
-                    }.`,
-                    "siap"
-                );
-            } else {
-                tampilkanStatus(
-                    "Struktur rekap aktif. Data belum dinyatakan siap dipublikasikan.",
-                    "belum-siap"
-                );
-            }
-
-            console.info(
-                `[Rekap] ${semuaPeserta.length} keikutsertaan berhasil dimuat.`
-            );
-
-        } catch (error) {
-            console.error("[Rekap] Gagal memuat data:", error);
-
-            semuaPeserta = [];
-            pesertaTersaring = [];
-            tampilkanDaftarPeserta();
-            tampilkanInfoHasil();
-
-            tampilkanStatus(
-                "Data peserta belum dapat dimuat. Periksa file JSON dan koneksi website.",
-                "error"
-            );
         }
     }
 

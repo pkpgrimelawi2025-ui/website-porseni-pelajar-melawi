@@ -2247,9 +2247,17 @@
         }
 
         const foto = document.getElementById("fotoPesertaKartu");
-        if (foto && foto.style.display !== "none" && !foto.complete) {
-            alert("Foto peserta masih dimuat. Tunggu sampai foto tampil, lalu klik Unduh Kartu kembali.");
-            return;
+        if (foto && foto.style.display !== "none") {
+            if (!foto.complete || !foto.naturalWidth) {
+                alert("Foto peserta belum berhasil dimuat. Tunggu sampai foto tampil, lalu klik Unduh Kartu kembali.");
+                return;
+            }
+            if (foto.decode) {
+                try { await foto.decode(); } catch (e) {
+                    alert("Foto peserta belum siap diproses. Muat ulang pratinjau lalu coba kembali.");
+                    return;
+                }
+            }
         }
 
         const teksAwal = tombol.textContent;
@@ -2339,6 +2347,9 @@
         url.searchParams.set("kode", p.kodeSumber);
         url.searchParams.set("baris", p.barisSumber);
         url.searchParams.set("callback", callbackName);
+        // Ambil foto sebagai Data URL dari Apps Script agar html2canvas
+        // dapat memasukkan foto tanpa kendala CORS Google Drive.
+        url.searchParams.set("format", "base64");
 
         let selesai = false;
 
@@ -2355,12 +2366,12 @@
 
             console.log("RESPONS ENDPOINT FOTO:", data);
 
-            if (!data || data.status !== "success" || !data.fotoUrl) {
-                console.error("URL foto tidak diterima:", data);
+            if (!data || data.status !== "success" || !data.fotoDataUrl) {
+                console.error("Data foto tidak diterima:", data);
                 return;
             }
 
-            console.log("URL FOTO DITERIMA:", data.fotoUrl);
+            console.log("DATA FOTO BASE64 DITERIMA");
 
             foto.onload = function() {
                 console.log("FOTO BERHASIL DIMUAT:", foto.naturalWidth, foto.naturalHeight);
@@ -2374,7 +2385,8 @@
                 placeholder.style.display = "flex";
             };
 
-            foto.src = data.fotoUrl;
+            // Data URL berasal dari Apps Script; aman untuk diekspor ke canvas.
+            foto.src = data.fotoDataUrl;
         };
 
         script.onerror = function() {

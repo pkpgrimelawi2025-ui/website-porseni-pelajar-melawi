@@ -437,6 +437,29 @@
     color: #102a56;
     }
 
+    .btn-unduh-kartu {
+    border: none;
+    padding: 9px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg, #174b87, #102a56);
+    color: #ffffff;
+    transition: transform .2s ease, filter .2s ease;
+    }
+
+    .btn-unduh-kartu:hover {
+    filter: brightness(1.12);
+    transform: translateY(-1px);
+    }
+
+    .btn-unduh-kartu:disabled {
+    opacity: .65;
+    cursor: wait;
+    transform: none;
+    }
+
     .hasil-info {
     margin-top: 15px;
     color: #64748b;
@@ -1377,6 +1400,10 @@
 
     .modal-kartu-actions button {
         flex: 1;
+        min-width: 0;
+        padding-left: 9px;
+        padding-right: 9px;
+        font-size: 10px;
     }
     }
 
@@ -1760,6 +1787,10 @@
                 Cetak Kartu
                 </button>
 
+                <button id="btnUnduhKartu" class="btn-unduh-kartu" type="button">
+                Unduh Kartu
+                </button>
+
                 <button id="btnTutupKartu" class="btn-lihat">
                 Tutup
                 </button>
@@ -1862,6 +1893,7 @@
 
     </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script>
     const URL_DATA_PESERTA =
     "https://script.google.com/macros/s/AKfycbw2Vp1HH3mKF-f43Hhy-LB4P71kHamzWoC6Jy5fzZJAbL0rmV8iF7Jg1B8m74DIx086Zg/exec";
@@ -2196,6 +2228,74 @@
     .addEventListener("click", () => {
         document.body.classList.add("cetak-kartu");
         window.print();
+    });
+
+    // Unduh kartu peserta sebagai gambar PNG.
+    document.getElementById("btnUnduhKartu")
+    .addEventListener("click", async () => {
+        const tombol = document.getElementById("btnUnduhKartu");
+        const kartu = document.getElementById("kartuDinamis");
+
+        if (!kartu) {
+            alert("Elemen kartu peserta tidak ditemukan.");
+            return;
+        }
+
+        if (typeof html2canvas !== "function") {
+            alert("Fitur unduh gambar belum termuat. Periksa koneksi internet lalu muat ulang halaman.");
+            return;
+        }
+
+        const foto = document.getElementById("fotoPesertaKartu");
+        if (foto && foto.style.display !== "none" && !foto.complete) {
+            alert("Foto peserta masih dimuat. Tunggu sampai foto tampil, lalu klik Unduh Kartu kembali.");
+            return;
+        }
+
+        const teksAwal = tombol.textContent;
+        tombol.disabled = true;
+        tombol.textContent = "Menyiapkan...";
+
+        try {
+            if (document.fonts && document.fonts.ready) {
+                await document.fonts.ready;
+            }
+
+            const canvas = await html2canvas(kartu, {
+                scale: 3,
+                backgroundColor: "#ffffff",
+                useCORS: true,
+                allowTaint: false,
+                imageTimeout: 20000,
+                logging: false,
+                scrollX: 0,
+                scrollY: 0
+            });
+
+            const tautan = document.createElement("a");
+            const namaPeserta = (document.getElementById("kartuNama")?.textContent || "peserta")
+                .trim()
+                .replace(/[^a-z0-9]+/gi, "-")
+                .replace(/^-+|-+$/g, "")
+                .toLowerCase();
+
+            tautan.download = "kartu-porseni-2026-" + (namaPeserta || "peserta") + ".png";
+            tautan.href = canvas.toDataURL("image/png");
+            document.body.appendChild(tautan);
+            tautan.click();
+            tautan.remove();
+
+        } catch (error) {
+            console.error("Gagal membuat gambar kartu:", error);
+            alert(
+                "Kartu belum berhasil diunduh sebagai gambar. " +
+                "Jika foto peserta sudah tampil, kemungkinan sumber foto Google Drive " +
+                "belum mengizinkan proses ekspor gambar. Silakan coba lagi atau gunakan Cetak Kartu."
+            );
+        } finally {
+            tombol.disabled = false;
+            tombol.textContent = teksAwal;
+        }
     });
 
     // Kembalikan tampilan setelah proses cetak

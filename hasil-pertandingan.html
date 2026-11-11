@@ -902,31 +902,50 @@ function loadResults(){
   document.head.appendChild(script);
   setTimeout(()=>{if(!DATA)showError("Data belum berhasil dimuat. Pastikan Web App Apps Script dapat diakses oleh siapa saja.")},12000);
 }
+
 function showError(message){
   document.getElementById("statusText").textContent="Koneksi database bermasalah";
   document.getElementById("statusDot").style.background="#dc2626";
   document.getElementById("mainContent").innerHTML=`<div class="error">⚠️ ${escapeHtml(message)}<br><button class="tab" style="margin-top:14px" onclick="loadResults()">Coba muat ulang</button></div>`;
 }
-function escapeHtml(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
-function medalNames(value) {
-  if (!value) {
-    return '<span class="empty">Belum ditentukan</span>';
+
+function escapeHtml(value){
+  return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+function medalArray(value){
+  if(Array.isArray(value)) return value.map(x=>String(x).trim()).filter(Boolean);
+  if(!value) return [];
+  return String(value).replace(/,/g,";").split(";").map(x=>x.trim()).filter(Boolean);
+}
+
+function medalNames(value){
+  const names=medalArray(value);
+  if(!names.length) return '<span class="empty">Belum ditentukan</span>';
+  return escapeHtml(names.join("; "));
+}
+
+function getCabang(){
+  const byLevel=DATA?.cabangJenjang?.[activeKind];
+  if(byLevel){
+    return Object.entries(byLevel).flatMap(([jenjang,cabangList]) =>
+      (cabangList||[]).map(cabang=>({cabang,jenjang}))
+    );
   }
 
-  return escapeHtml(
-    String(value)
-      .replace(/,/g, ";") // Ubah koma menjadi titik koma
-      .split(";")
-      .map(x => x.trim())
-      .filter(Boolean)
-      .join("; ")
-  );
+  // Fallback agar halaman memberi informasi yang jelas
+  // jika Web App belum menggunakan backend versi terbaru.
+  return [];
 }
-function getCabang(){return DATA?.cabang?.[activeKind]||[];}
-function getResult(cabang){
-  return (DATA?.hasil||[]).find(x=>String(x.kategori||x.jenis||"").toLowerCase()===activeKind.toLowerCase()&&String(x.cabang||"").toLowerCase()===String(cabang).toLowerCase())
-    ||(DATA?.hasil||[]).find(x=>String(x.cabang||"").toLowerCase()===String(cabang).toLowerCase());
+
+function getResult(cabang,jenjang){
+  return (DATA?.hasil||[]).find(x=>
+    String(x.kategori||"").toLowerCase()===activeKind.toLowerCase() &&
+    String(x.cabang||"").toLowerCase()===String(cabang).toLowerCase() &&
+    String(x.jenjang||"").toUpperCase()===jenjang
+  ) || null;
 }
+
 /* =========================================================
    MODAL INPUT MEDALI
 ========================================================= */
@@ -942,7 +961,6 @@ function openAdminModal() {
   modal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
 
-  // Muat halaman admin ketika modal dibuka
   if (frame.src === "about:blank") {
     frame.src = ADMIN_URL;
   }
@@ -954,32 +972,55 @@ function closeAdminModal() {
   modal.classList.remove("show");
   modal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");
+
+  // Muat ulang hasil ketika admin menutup panel input,
+  // agar perubahan terbaru langsung tampil.
+  loadResults();
 }
 
-// Tutup modal dengan tombol ESC
 document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape") {
-    closeAdminModal();
-  }
+  if (event.key === "Escape") closeAdminModal();
 });
+
+
+/* =========================================================
+   RENDER KARTU MEDALI DAN KLASMEN
+========================================================= */
+
 function render() {
   if (!DATA) return;
 
   const branches = getCabang();
 
-  // =========================================
-  // KARTU PEROLEHAN MEDALI
-  // =========================================
-  const cards = branches.map(branch => {
-    const row = getResult(branch) || {};
+  if (!DATA.cabangJenjang || typeof DATA.cabangJenjang !== "object" || !branches.length) {
+    document.getElementById("mainContent").innerHTML =
+      `<div class="error">
+        Data konfigurasi cabang per jenjang belum tersedia.
+        Pastikan HasilPertandingan.gs versi terbaru sudah disimpan
+        dan Web App Apps Script sudah di-deploy ulang.
+      </div>`;
+    return;
+  }
 
-    const gold = row.emas ?? row.Emas ?? row.gold ?? "";
-    const silver = row.perak ?? row.Perak ?? row.silver ?? "";
-    const bronze = row.perunggu ?? row.Perunggu ?? row.bronze ?? "";
+  const legacyCount = (DATA.hasil||[]).filter(item =>
+    item.kategori === activeKind && !String(item.jenjang||"").trim()
+  ).length;
+
+  const cards = branches.map(({cabang,jenjang}) => {
+    const row = getResult(cabang,jenjang) || {};
+
+    const gold = medalArray(row.emas ?? row.Emas ?? row.gold);
+    const silver = medalArray(row.perak ?? row.Perak ?? row.silver);
+    const bronze = medalArray(row.perunggu ?? row.Perunggu ?? row.bronze);
 
     return `
       <article class="card">
-        <div class="cardhead">${escapeHtml(branch)}</div>
+        <div class="cardhead">
+          ${escapeHtml(cabang)}
+          <span style="margin-left:auto;background:#dceafe;color:#164778;border:1px solid #c6dcfa;padding:5px 9px;border-radius:20px;font-size:10px;font-weight:900;white-space:nowrap">
+            JENJANG ${escapeHtml(jenjang)}
+          </span>
+        </div>
 
         <div class="cardbody">
           <div class="medals">
@@ -988,7 +1029,7 @@ function render() {
               <div class="emoji">
                 <img src="assets/medalis/emas.png" alt="Medali Emas">
               </div>
-              <strong>${gold ? "1" : "—"}</strong>
+              <strong>${gold.length || "—"}</strong>
               <small>EMAS</small>
             </div>
 
@@ -996,7 +1037,7 @@ function render() {
               <div class="emoji">
                 <img src="assets/medalis/perak.png" alt="Medali Perak">
               </div>
-              <strong>${silver ? "1" : "—"}</strong>
+              <strong>${silver.length || "—"}</strong>
               <small>PERAK</small>
             </div>
 
@@ -1004,7 +1045,7 @@ function render() {
               <div class="emoji">
                 <img src="assets/medalis/perunggu.png" alt="Medali Perunggu">
               </div>
-              <strong>${bronze ? "1" : "—"}</strong>
+              <strong>${bronze.length || "—"}</strong>
               <small>PERUNGGU</small>
             </div>
 
@@ -1028,68 +1069,55 @@ function render() {
       </article>`;
   }).join("");
 
-  // =========================================
-  // KLASMEN KECAMATAN
-  // =========================================
-  const standings = (DATA.klasemen?.[activeKind] || []).map((d, i) => {
-
+  // Klasemen backend sudah menggabungkan perolehan SD dan SMP
+  // dalam kategori yang sama.
+  const standings = (DATA.klasemen?.[activeKind] || []).map((d,i) => {
     const emas = Number(d.emas || d.Emas || 0);
     const perak = Number(d.perak || d.Perak || 0);
     const perunggu = Number(d.perunggu || d.Perunggu || 0);
-
-    const district =
-      d.kecamatan ||
-      d.kabupaten ||
-      d.nama ||
-      d.distrik ||
-      d.name ||
-      "—";
-
+    const district = d.kecamatan || d.kabupaten || d.nama || d.distrik || d.name || "—";
     const total = emas + perak + perunggu;
 
     let rankClass = "";
-
     if (i === 0) rankClass = "rank-gold";
     else if (i === 1) rankClass = "rank-silver";
     else if (i === 2) rankClass = "rank-bronze";
 
     return `
       <tr class="${rankClass}">
-        <td class="rank">
-          <span class="rank-number">${i + 1}</span>
-        </td>
-
-        <td class="district">
-          ${escapeHtml(district)}
-        </td>
-
-        <td class="num medal-column gold-column">
-          ${emas}
-        </td>
-
-        <td class="num medal-column silver-column">
-          ${perak}
-        </td>
-
-        <td class="num medal-column bronze-column">
-          ${perunggu}
-        </td>
-
-        <td class="num total">
-          ${total}
-        </td>
+        <td class="rank"><span class="rank-number">${d.peringkat || i+1}</span></td>
+        <td class="district">${escapeHtml(district)}</td>
+        <td class="num medal-column gold-column">${emas}</td>
+        <td class="num medal-column silver-column">${perak}</td>
+        <td class="num medal-column bronze-column">${perunggu}</td>
+        <td class="num total total-column">${total}</td>
       </tr>`;
   }).join("");
 
-  // =========================================
-  // RENDER KE HALAMAN
-  // =========================================
+  const jenjangCount = branches.reduce((acc,item) => {
+    acc[item.jenjang]=(acc[item.jenjang]||0)+1;
+    return acc;
+  },{});
+
+  const countLabel = Object.entries(jenjangCount)
+    .map(([level,count])=>`${count} ${level}`)
+    .join(" · ");
+
   document.getElementById("mainContent").innerHTML = `
 
     <div class="section-title">
       <h2>Perolehan Medali ${activeKind}</h2>
-      <span class="pill">${branches.length} cabang</span>
+      <span class="pill">${branches.length} kartu · ${countLabel}</span>
     </div>
+
+    ${legacyCount ? `
+      <div class="status" style="display:block;margin-bottom:16px">
+        <span class="dot" style="background:#d97706"></span>
+        Ada ${legacyCount} data lama kategori ${escapeHtml(activeKind)}
+        yang belum memiliki jenjang. Data tersebut tidak ditampilkan
+        pada kartu SD/SMP agar tidak salah pengelompokan.
+      </div>
+    ` : ""}
 
     <div class="grid">
       ${cards}
@@ -1097,38 +1125,30 @@ function render() {
 
     <div class="section-title" style="margin-top:30px">
       <h2>🏆 Klasemen Kecamatan</h2>
-      <span class="pill">Emas → Perak → Perunggu</span>
+      <span class="pill">Akumulasi SD + SMP · Emas → Perak → Perunggu</span>
     </div>
 
     <div class="tablewrap">
       <table class="standings-table">
-
         <thead>
           <tr>
             <th class="rank-heading">Rank</th>
             <th>Kecamatan</th>
-
             <th class="num gold-heading">
               <img src="assets/medalis/emas.png" alt="Emas">
               <span>Emas</span>
             </th>
-
             <th class="num silver-heading">
               <img src="assets/medalis/perak.png" alt="Perak">
               <span>Perak</span>
             </th>
-
             <th class="num bronze-heading">
               <img src="assets/medalis/perunggu.png" alt="Perunggu">
               <span>Perunggu</span>
             </th>
-
-            <th class="num total-heading">
-              <span>Total</span>
-            </th>
+            <th class="num total-heading"><span>Total</span></th>
           </tr>
         </thead>
-
         <tbody>
           ${standings || `
             <tr>
@@ -1138,14 +1158,20 @@ function render() {
             </tr>
           `}
         </tbody>
-
       </table>
     </div>
   `;
 }
-document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>{
-  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");activeKind=btn.dataset.kind;render();
-}));
+
+document.querySelectorAll(".tab").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+    btn.classList.add("active");
+    activeKind=btn.dataset.kind;
+    render();
+  });
+});
+
 loadResults();
 </script>
 <!-- MODAL INPUT MEDALI -->

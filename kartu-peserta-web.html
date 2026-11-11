@@ -1675,6 +1675,174 @@
         }
     }
 
+    /* =========================================================
+    FINAL FIX — TOOLBAR PRATINJAU KARTU PESERTA
+    Laptop • Tablet • HP
+    ========================================================= */
+
+    /* Modal utama */
+    #modalKartu {
+        box-sizing: border-box;
+    }
+
+    /* Kotak pembungkus pratinjau */
+    #modalKartu .modal-kartu-content {
+        width: max-content;
+        max-width: calc(100vw - 28px);
+        box-sizing: border-box;
+        padding: 12px;
+        margin: 0 auto;
+    }
+
+    /* Toolbar: judul dan tombol */
+    #modalKartu .modal-kartu-toolbar {
+        width: 100%;
+        box-sizing: border-box;
+
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+
+        gap: 8px;
+        margin: 0 0 12px;
+    }
+
+    /* Judul pratinjau */
+    #modalKartu .modal-kartu-toolbar h2 {
+        min-width: 0;
+        margin: 0;
+
+        font-size: clamp(12px, 1.15vw, 16px);
+        line-height: 1.25;
+        font-weight: 850;
+
+        color: var(--porseni-navy, #102a56);
+        text-align: left;
+    }
+
+    /* Kelompok tombol */
+    #modalKartu .modal-kartu-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        flex-wrap: nowrap;
+        gap: 6px;
+
+        width: auto;
+        min-width: 0;
+    }
+
+    /* Semua tombol toolbar */
+    #modalKartu .modal-kartu-actions button {
+        flex: 0 0 auto;
+        width: auto;
+        min-width: 0;
+
+        min-height: 32px;
+        padding: 7px 10px;
+
+        font-size: 10px;
+        line-height: 1.2;
+        font-weight: 800;
+
+        white-space: nowrap;
+        border-radius: 8px;
+    }
+
+    /* Kartu A6 mengikuti lebar aslinya */
+    #modalKartu .kartu {
+        width: 105mm;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    /* ---------- TABLET ---------- */
+    @media (max-width: 768px) {
+        #modalKartu .modal-kartu-content {
+            padding: 10px;
+        }
+
+        #modalKartu .modal-kartu-toolbar {
+            grid-template-columns: 1fr;
+            gap: 9px;
+        }
+
+        #modalKartu .modal-kartu-toolbar h2 {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        #modalKartu .modal-kartu-actions {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 7px;
+        }
+
+        #modalKartu .modal-kartu-actions button {
+            width: 100%;
+            padding: 8px 5px;
+            font-size: 10px;
+        }
+    }
+
+    /* ---------- HP ---------- */
+    @media (max-width: 480px) {
+        #modalKartu .modal-kartu-content {
+            max-width: calc(100vw - 20px);
+            padding: 8px;
+            border-radius: 12px;
+        }
+
+        #modalKartu .modal-kartu-toolbar {
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        #modalKartu .modal-kartu-toolbar h2 {
+            font-size: 14px;
+        }
+
+        #modalKartu .modal-kartu-actions {
+            gap: 5px;
+        }
+
+        #modalKartu .modal-kartu-actions button {
+            min-height: 31px;
+            padding: 7px 3px;
+            font-size: 9px;
+            border-radius: 6px;
+        }
+    }
+
+    /* HP sangat kecil */
+    @media (max-width: 360px) {
+        #modalKartu .modal-kartu-content {
+            padding: 6px;
+        }
+
+        #modalKartu .modal-kartu-actions button {
+            font-size: 8px;
+            padding: 7px 2px;
+        }
+    }
+
+    /* ---------- CETAK: TIDAK TERPENGARUH ---------- */
+    @media print {
+        #modalKartu .modal-kartu-content {
+            width: auto !important;
+            max-width: none !important;
+        }
+
+        #modalKartu .kartu {
+            width: 105mm !important;
+            max-width: none !important;
+            height: 148mm !important;
+        }
+    }
+
   </style>
 </head>
 

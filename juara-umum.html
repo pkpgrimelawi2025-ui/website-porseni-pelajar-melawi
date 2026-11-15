@@ -113,10 +113,22 @@ body {
 }
 
 .hero h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
   margin: 0;
-  font-size: clamp(24px, 3vw, 34px);
+  font-size: clamp(36px, 5vw, 52px);
   font-weight: 900;
-  letter-spacing: -.5px;
+  letter-spacing: -.8px;
+}
+
+.hero-trophy {
+  width: clamp(54px, 6vw, 76px);
+  height: clamp(54px, 6vw, 76px);
+  object-fit: contain;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,.25));
 }
 
 .hero p {
@@ -563,7 +575,14 @@ body {
   }
 
   .hero h1 {
-    font-size: 24px;
+    gap: 10px;
+    font-size: clamp(29px, 7vw, 36px);
+    letter-spacing: -.5px;
+  }
+
+  .hero-trophy {
+    width: 48px;
+    height: 48px;
   }
 
   .hero {
@@ -767,8 +786,14 @@ body {
     </div>
 
     <div class="hero">
-      <h1>🏆 Juara Umum</h1>
-      <p>PORSENI Pelajar Berkarakter Kabupaten Melawi Tahun 2026</p>
+      <h1>
+        <img
+          src="assets/champions/juara-1.png"
+          alt="Ikon Juara Umum"
+          class="hero-trophy">
+        <span>Juara Umum</span>
+      </h1>
+      <p>Pekan Olahraga dan Seni (PORSENI) Pelajar SD & SMP Disdikbud Kabupaten Melawi Tahun 2026</p>
     </div>
 
   </div>

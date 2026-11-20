@@ -110,12 +110,17 @@
         const filter = pilihan || {};
 
         const namaCari = teksAman(filter.nama).toLowerCase();
+        const jenjangCari = teksAman(filter.jenjang_sekolah).toLowerCase();
         const cabangCari = teksAman(filter.cabang_lomba).toLowerCase();
         const kecamatanCari = teksAman(filter.kecamatan).toLowerCase();
 
         return peserta.filter(function (item) {
+
             const cocokNama = !namaCari ||
                 item.nama.toLowerCase().includes(namaCari);
+
+            const cocokJenjang = !jenjangCari ||
+                item.jenjang_sekolah.toLowerCase() === jenjangCari;
 
             const cocokCabang = !cabangCari ||
                 item.cabang_lomba.toLowerCase() === cabangCari;
@@ -123,7 +128,12 @@
             const cocokKecamatan = !kecamatanCari ||
                 item.kecamatan.toLowerCase() === kecamatanCari;
 
-            return cocokNama && cocokCabang && cocokKecamatan;
+            return (
+                cocokNama &&
+                cocokJenjang &&
+                cocokCabang &&
+                cocokKecamatan
+            );
         });
     }
 

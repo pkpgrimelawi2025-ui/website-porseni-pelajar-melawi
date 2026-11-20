@@ -1107,3 +1107,67 @@
         font-size: 0.61rem;
     }
 }
+
+
+/* ==================================================
+   RINCIAN JUMLAH PESERTA BERDASARKAN JENJANG
+   ================================================== */
+
+.rekap-statistik-rincian {
+    display: grid;
+    gap: 6px;
+    margin-top: 10px;
+    padding-top: 9px;
+    border-top: 1px solid rgba(100, 116, 139, 0.18);
+}
+
+.rekap-statistik-jenjang {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    min-width: 0;
+}
+
+.rekap-statistik-jenjang-label {
+    color: #64748b;
+    font-size: 0.66rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.rekap-statistik-jenjang-angka {
+    color: #243247;
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1.4;
+    font-variant-numeric: tabular-nums;
+}
+
+.rekap-statistik-jenjang-tidak-ada {
+    color: #64748b;
+    font-size: 0.62rem;
+    font-weight: 650;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    .rekap-statistik-rincian {
+        gap: 5px;
+        margin-top: 8px;
+        padding-top: 7px;
+    }
+
+    .rekap-statistik-jenjang-label {
+        font-size: 0.59rem;
+    }
+
+    .rekap-statistik-jenjang-angka {
+        font-size: 0.69rem;
+    }
+
+    .rekap-statistik-jenjang-tidak-ada {
+        font-size: 0.56rem;
+    }
+}

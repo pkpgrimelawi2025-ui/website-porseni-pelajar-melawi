@@ -1,21 +1,20 @@
-
 (function (global) {
     "use strict";
 
     const JUMLAH_PER_HALAMAN = 20;
 
     const DAFTAR_KECAMATAN = [
-    "Nanga Pinoh",
-    "Pinoh Utara",
-    "Pinoh Selatan",
-    "Belimbing",
-    "Belimbing Hulu",
-    "Ella Hilir",
-    "Menukung",
-    "Sayan",
-    "Tanah Pinoh",
-    "Tanah Pinoh Barat",
-    "Sokan"
+        "Nanga Pinoh",
+        "Pinoh Utara",
+        "Pinoh Selatan",
+        "Belimbing",
+        "Belimbing Hulu",
+        "Ella Hilir",
+        "Menukung",
+        "Sayan",
+        "Tanah Pinoh",
+        "Tanah Pinoh Barat",
+        "Sokan"
     ];
 
     const CABANG_LOMBA = [
@@ -58,9 +57,42 @@
         return node;
     }
 
-    
-    function buatKartuStatistik(nama, jumlah) {
-        const kartu = buatElemen("div", null, "rekap-statistik-kartu");
+    /* =========================================================
+       NORMALISASI JENJANG SEKOLAH
+    ========================================================= */
+
+    function normalisasiJenjang(nilai) {
+        const jenjang = String(nilai || "")
+            .trim()
+            .toLocaleLowerCase("id");
+
+        if (
+            jenjang === "sekolah dasar" ||
+            jenjang === "sd"
+        ) {
+            return "SD";
+        }
+
+        if (
+            jenjang === "sekolah menengah pertama" ||
+            jenjang === "smp"
+        ) {
+            return "SMP";
+        }
+
+        return "";
+    }
+
+    /* =========================================================
+       MEMBUAT KARTU STATISTIK
+    ========================================================= */
+
+    function buatKartuStatistik(nama, jumlah, rincian, tipe) {
+        const kartu = buatElemen(
+            "div",
+            null,
+            "rekap-statistik-kartu"
+        );
 
         const namaKartu = buatElemen(
             "span",
@@ -68,105 +100,243 @@
             "rekap-statistik-nama"
         );
 
+        // Angka total tetap menggunakan perhitungan sebelumnya.
         const angka = buatElemen(
             "strong",
             jumlah,
             "rekap-statistik-angka"
         );
 
-        const label = buatElemen(
+        const labelTotal = buatElemen(
             "span",
-            "Peserta",
+            "Total Peserta",
             "rekap-statistik-label"
         );
 
-        kartu.append(namaKartu, angka, label);
+        const rincianJenjang = buatElemen(
+            "div",
+            null,
+            "rekap-statistik-rincian"
+        );
+
+        ["SD", "SMP"].forEach(jenjang => {
+            const baris = buatElemen(
+                "div",
+                null,
+                "rekap-statistik-jenjang"
+            );
+
+            const label = buatElemen(
+                "span",
+                `Jenjang ${jenjang}`,
+                "rekap-statistik-jenjang-label"
+            );
+
+            const nilai = rincian[jenjang];
+
+            const hasil = buatElemen(
+                "strong",
+                nilai === null
+                    ? "Tidak Ada Pertandingan pada Jenjang Ini"
+                    : `${nilai} peserta`,
+                nilai === null
+                    ? "rekap-statistik-jenjang-tidak-ada"
+                    : "rekap-statistik-jenjang-angka"
+            );
+
+            baris.append(label, hasil);
+            rincianJenjang.appendChild(baris);
+        });
+
+        kartu.append(
+            namaKartu,
+            angka,
+            labelTotal,
+            rincianJenjang
+        );
 
         return kartu;
     }
 
+    /* =========================================================
+       MENAMPILKAN STATISTIK PESERTA
+       11 KECAMATAN DAN 14 CABANG LOMBA
+    ========================================================= */
+
     function tampilkanStatistikPeserta() {
-        const wadahKecamatan = elemen("rekap-statistik-kecamatan");
-        const wadahCabang = elemen("rekap-statistik-cabang");
+        const wadahKecamatan = elemen(
+            "rekap-statistik-kecamatan"
+        );
+
+        const wadahCabang = elemen(
+            "rekap-statistik-cabang"
+        );
 
         if (!wadahKecamatan || !wadahCabang) return;
 
         wadahKecamatan.replaceChildren();
         wadahCabang.replaceChildren();
 
-        // Menghitung peserta berdasarkan kecamatan
+        // Data statistik setiap kecamatan.
         const jumlahKecamatan = {};
 
         DAFTAR_KECAMATAN.forEach(kecamatan => {
-            jumlahKecamatan[kecamatan.toLocaleLowerCase("id")] = 0;
+            jumlahKecamatan[
+                kecamatan.toLocaleLowerCase("id")
+            ] = {
+                total: 0,
+                SD: 0,
+                SMP: 0
+            };
         });
 
-        // Menghitung peserta berdasarkan cabang lomba
+        // Data statistik setiap cabang lomba.
         const jumlahCabang = {};
 
         CABANG_LOMBA.forEach(cabang => {
-            jumlahCabang[cabang.toLocaleLowerCase("id")] = 0;
+            jumlahCabang[
+                cabang.toLocaleLowerCase("id")
+            ] = {
+                total: 0,
+                SD: 0,
+                SMP: 0
+            };
         });
 
+        // Menghitung jumlah peserta berdasarkan kecamatan,
+        // cabang lomba, dan jenjang sekolah.
         semuaPeserta.forEach(peserta => {
             const kecamatan = String(
                 peserta.kecamatan || ""
-            ).trim().toLocaleLowerCase("id");
+            )
+                .trim()
+                .toLocaleLowerCase("id");
 
             const cabang = String(
                 peserta.cabang_lomba || ""
-            ).trim().toLocaleLowerCase("id");
+            )
+                .trim()
+                .toLocaleLowerCase("id");
 
-            if (Object.prototype.hasOwnProperty.call(
-                jumlahKecamatan,
-                kecamatan
-            )) {
-                jumlahKecamatan[kecamatan]++;
+            const jenjang = normalisasiJenjang(
+                peserta.jenjang_sekolah
+            );
+
+            // Rekap berdasarkan kecamatan.
+            if (
+                Object.prototype.hasOwnProperty.call(
+                    jumlahKecamatan,
+                    kecamatan
+                )
+            ) {
+                jumlahKecamatan[kecamatan].total++;
+
+                if (jenjang) {
+                    jumlahKecamatan[kecamatan][jenjang]++;
+                }
             }
 
-            if (Object.prototype.hasOwnProperty.call(
-                jumlahCabang,
-                cabang
-            )) {
-                jumlahCabang[cabang]++;
+            // Rekap berdasarkan cabang lomba.
+            if (
+                Object.prototype.hasOwnProperty.call(
+                    jumlahCabang,
+                    cabang
+                )
+            ) {
+                jumlahCabang[cabang].total++;
+
+                if (jenjang) {
+                    jumlahCabang[cabang][jenjang]++;
+                }
             }
         });
 
-        // Menampilkan 11 kartu kecamatan
+        // Menampilkan 11 kartu kecamatan.
+        // SD dan SMP selalu menampilkan angka,
+        // termasuk jika jumlahnya 0.
         DAFTAR_KECAMATAN.forEach(kecamatan => {
-            const jumlah =
-                jumlahKecamatan[kecamatan.toLocaleLowerCase("id")] || 0;
+            const hasil =
+                jumlahKecamatan[
+                    kecamatan.toLocaleLowerCase("id")
+                ] || {
+                    total: 0,
+                    SD: 0,
+                    SMP: 0
+                };
 
             wadahKecamatan.appendChild(
-                buatKartuStatistik(kecamatan, jumlah)
+                buatKartuStatistik(
+                    kecamatan,
+                    hasil.total,
+                    {
+                        SD: hasil.SD,
+                        SMP: hasil.SMP
+                    },
+                    "kecamatan"
+                )
             );
         });
 
-        // Menampilkan 14 kartu cabang lomba
+        // Menampilkan 14 kartu cabang lomba.
+        // Jika tidak ada peserta pada suatu jenjang,
+        // tampilkan keterangan tidak ada pertandingan.
         CABANG_LOMBA.forEach(cabang => {
-            const jumlah =
-                jumlahCabang[cabang.toLocaleLowerCase("id")] || 0;
+            const hasil =
+                jumlahCabang[
+                    cabang.toLocaleLowerCase("id")
+                ] || {
+                    total: 0,
+                    SD: 0,
+                    SMP: 0
+                };
 
             wadahCabang.appendChild(
-                buatKartuStatistik(cabang, jumlah)
+                buatKartuStatistik(
+                    cabang,
+                    hasil.total,
+                    {
+                        SD: hasil.SD > 0
+                            ? hasil.SD
+                            : null,
+
+                        SMP: hasil.SMP > 0
+                            ? hasil.SMP
+                            : null
+                    },
+                    "cabang"
+                )
             );
         });
     }
 
+    /* =========================================================
+       STATUS REKAP
+    ========================================================= */
 
     function tampilkanStatus(pesan, tipe) {
         const status = elemen("rekap-status");
+
         if (!status) return;
 
         status.textContent = pesan;
         status.dataset.status = tipe || "info";
     }
 
+    /* =========================================================
+       FILTER PESERTA
+    ========================================================= */
+
     function ambilFilter() {
         return {
-            kecamatan: elemen("filter-kecamatan")?.value || "",
-            cabang_lomba: elemen("filter-cabang")?.value || "",
-            nama: elemen("cari-peserta")?.value || ""
+            jenjang_sekolah: elemen("filter-jenjang")?.value || "",
+            kecamatan:
+                elemen("filter-kecamatan")?.value || "",
+
+            cabang_lomba:
+                elemen("filter-cabang")?.value || "",
+
+            nama:
+                elemen("cari-peserta")?.value || ""
         };
     }
 
@@ -179,15 +349,22 @@
         );
 
         halamanAktif = 1;
+
         tampilkanDaftarPeserta();
         tampilkanInfoHasil();
     }
 
+    /* =========================================================
+       INFORMASI HASIL FILTER
+    ========================================================= */
+
     function tampilkanInfoHasil() {
         const info = elemen("rekap-info-hasil");
+
         if (!info) return;
 
         const total = pesertaTersaring.length;
+
         const awal = total === 0
             ? 0
             : (halamanAktif - 1) * JUMLAH_PER_HALAMAN + 1;
@@ -202,8 +379,13 @@
             : `Menampilkan ${awal}–${akhir} dari ${total} keikutsertaan.`;
     }
 
+    /* =========================================================
+       MEMBUAT TABEL PESERTA
+    ========================================================= */
+
     function buatTabel() {
         const tabel = buatElemen("table");
+
         tabel.className = "rekap-tabel";
 
         const kepala = buatElemen("thead");
@@ -229,7 +411,10 @@
         tabel.appendChild(kepala);
 
         const badan = buatElemen("tbody");
-        const awal = (halamanAktif - 1) * JUMLAH_PER_HALAMAN;
+
+        const awal =
+            (halamanAktif - 1) * JUMLAH_PER_HALAMAN;
+
         const dataHalaman = pesertaTersaring.slice(
             awal,
             awal + JUMLAH_PER_HALAMAN
@@ -259,6 +444,7 @@
 
         if (dataHalaman.length === 0) {
             const barisKosong = buatElemen("tr");
+
             const sel = buatElemen(
                 "td",
                 "Data peserta tidak ditemukan."
@@ -266,13 +452,19 @@
 
             sel.colSpan = 7;
             sel.style.textAlign = "center";
+
             barisKosong.appendChild(sel);
             badan.appendChild(barisKosong);
         }
 
         tabel.appendChild(badan);
+
         return tabel;
     }
+
+    /* =========================================================
+       NAVIGASI HALAMAN
+    ========================================================= */
 
     function tampilkanNavigasiHalaman(wadah) {
         const totalHalaman = Math.ceil(
@@ -280,6 +472,7 @@
         );
 
         const infoHalaman = elemen("rekap-info-halaman");
+
         if (!infoHalaman) return;
 
         infoHalaman.replaceChildren();
@@ -287,18 +480,22 @@
         if (totalHalaman <= 1) return;
 
         const navigasi = buatElemen("div");
+
         navigasi.className = "rekap-navigasi-halaman";
 
         const tombolSebelumnya = buatElemen(
             "button",
             "Sebelumnya"
         );
+
         tombolSebelumnya.type = "button";
+
         tombolSebelumnya.disabled = halamanAktif === 1;
 
         tombolSebelumnya.addEventListener("click", () => {
             if (halamanAktif > 1) {
                 halamanAktif--;
+
                 tampilkanDaftarPeserta();
                 tampilkanInfoHasil();
             }
@@ -313,13 +510,16 @@
             "button",
             "Berikutnya"
         );
+
         tombolBerikutnya.type = "button";
+
         tombolBerikutnya.disabled =
             halamanAktif >= totalHalaman;
 
         tombolBerikutnya.addEventListener("click", () => {
             if (halamanAktif < totalHalaman) {
                 halamanAktif++;
+
                 tampilkanDaftarPeserta();
                 tampilkanInfoHasil();
             }
@@ -334,25 +534,39 @@
         infoHalaman.appendChild(navigasi);
     }
 
+    /* =========================================================
+       MENAMPILKAN DAFTAR PESERTA
+    ========================================================= */
+
     function tampilkanDaftarPeserta() {
         const wadah = elemen("rekap-daftar-peserta");
+
         if (!wadah) return;
 
         wadah.replaceChildren();
 
         const pembungkus = buatElemen("div");
+
         pembungkus.className = "rekap-tabel-wrapper";
+
         pembungkus.appendChild(buatTabel());
 
         wadah.appendChild(pembungkus);
+
         tampilkanNavigasiHalaman(wadah);
     }
 
+    /* =========================================================
+       PILIHAN CABANG LOMBA PADA FILTER
+    ========================================================= */
+
     function isiPilihanCabang() {
         const pilihan = elemen("filter-cabang");
+
         if (!pilihan) return;
 
         const nilaiSebelumnya = pilihan.value;
+
         pilihan.replaceChildren();
 
         pilihan.appendChild(
@@ -360,26 +574,28 @@
         );
 
         CABANG_LOMBA.forEach(cabang => {
-            pilihan.appendChild(new Option(cabang, cabang));
+            pilihan.appendChild(
+                new Option(cabang, cabang)
+            );
         });
 
-        pilihan.value = CABANG_LOMBA.includes(nilaiSebelumnya)
+        pilihan.value = CABANG_LOMBA.includes(
+            nilaiSebelumnya
+        )
             ? nilaiSebelumnya
             : "";
     }
 
     /* =========================================================
-    LIVE DATA PESERTA — GOOGLE APPS SCRIPT
-    Sinkronisasi dengan halaman Kartu Peserta
+       LIVE DATA PESERTA — GOOGLE APPS SCRIPT
+       Sinkronisasi dengan halaman Kartu Peserta
     ========================================================= */
 
     const URL_DATA_PESERTA =
         "https://script.google.com/macros/s/AKfycbw2Vp1HH3mKF-f43Hhy-LB4P71kHamzWoC6Jy5fzZJAbL0rmV8iF7Jg1B8m74DIx086Zg/exec";
 
-
     function ambilDataPesertaLive() {
         return new Promise((resolve, reject) => {
-
             const callbackName =
                 "rekapPorseniCallback_" + Date.now();
 
@@ -387,9 +603,20 @@
 
             const url = new URL(URL_DATA_PESERTA);
 
-            url.searchParams.set("halaman", "data-peserta");
-            url.searchParams.set("callback", callbackName);
-            url.searchParams.set("_", Date.now());
+            url.searchParams.set(
+                "halaman",
+                "data-peserta"
+            );
+
+            url.searchParams.set(
+                "callback",
+                callbackName
+            );
+
+            url.searchParams.set(
+                "_",
+                Date.now()
+            );
 
             let selesai = false;
 
@@ -397,7 +624,9 @@
                 cleanup();
 
                 reject(
-                    new Error("Waktu pemuatan data peserta habis.")
+                    new Error(
+                        "Waktu pemuatan data peserta habis."
+                    )
                 );
             }, 30000);
 
@@ -407,24 +636,30 @@
                 selesai = true;
 
                 clearTimeout(timeout);
+
                 script.remove();
 
                 delete window[callbackName];
             }
 
             window[callbackName] = function(data) {
-
-                if (!data || !Array.isArray(data.peserta)) {
+                if (
+                    !data ||
+                    !Array.isArray(data.peserta)
+                ) {
                     cleanup();
 
                     reject(
-                        new Error("Format data peserta tidak valid.")
+                        new Error(
+                            "Format data peserta tidak valid."
+                        )
                     );
 
                     return;
                 }
 
                 cleanup();
+
                 resolve(data);
             };
 
@@ -432,46 +667,48 @@
                 cleanup();
 
                 reject(
-                    new Error("Gagal terhubung ke Google Apps Script.")
+                    new Error(
+                        "Gagal terhubung ke Google Apps Script."
+                    )
                 );
             };
 
             script.src = url.toString();
+
             script.async = true;
 
             document.head.appendChild(script);
         });
     }
 
-
     /* =========================================================
-    MEMUAT DAN MEMPERBARUI DATA REKAP
+       MEMUAT DAN MEMPERBARUI DATA REKAP
     ========================================================= */
 
     async function muatDataPesertaLive() {
-
         try {
-
             const data = await ambilDataPesertaLive();
 
-            semuaPeserta = global.RekapData.normalisasiDaftar(
-                data.peserta
-            );
+            semuaPeserta =
+                global.RekapData.normalisasiDaftar(
+                    data.peserta
+                );
 
-            // Perbarui statistik kecamatan dan cabang lomba
+            // Perbarui statistik kecamatan dan cabang lomba.
             tampilkanStatistikPeserta();
 
-            // Perbarui tabel dan jumlah keikutsertaan
+            // Perbarui tabel dan jumlah keikutsertaan.
             terapkanFilter();
 
-            const waktuPembaruan = new Date().toLocaleTimeString(
-                "id-ID",
-                {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                    second: "2-digit"
-                }
-            );
+            const waktuPembaruan =
+                new Date().toLocaleTimeString(
+                    "id-ID",
+                    {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                        second: "2-digit"
+                    }
+                );
 
             tampilkanStatus(
                 `Data peserta live berhasil dimuat: ${semuaPeserta.length} keikutsertaan. Terakhir diperbarui ${waktuPembaruan} WIB.`,
@@ -485,7 +722,6 @@
             return true;
 
         } catch (error) {
-
             console.error(
                 "[Rekap Live] Gagal memperbarui data:",
                 error
@@ -500,12 +736,17 @@
         }
     }
 
+    /* =========================================================
+       INISIALISASI REKAP PENDAFTARAN
+    ========================================================= */
+
     async function mulaiRekapPendaftaran() {
         if (!global.RekapData) {
             tampilkanStatus(
                 "Modul pengolahan data belum tersedia.",
                 "error"
             );
+
             return;
         }
 
@@ -515,14 +756,29 @@
             console.error(
                 "[Rekap] Elemen daftar peserta tidak ditemukan."
             );
+
             return;
         }
 
-        const filterKecamatan = elemen("filter-kecamatan");
-        const filterCabang = elemen("filter-cabang");
-        const cariNama = elemen("cari-peserta");
+        const filterJenjang = elemen("filter-jenjang");
+        
+        const filterKecamatan =
+            elemen("filter-kecamatan");
 
-        if (filterKecamatan) {
+        const filterCabang =
+            elemen("filter-cabang");
+
+        const cariNama =
+            elemen("cari-peserta");
+
+            if (filterJenjang) {
+                filterJenjang.addEventListener(
+                    "change",
+                    terapkanFilter
+                );
+            }
+        
+            if (filterKecamatan) {
             filterKecamatan.addEventListener(
                 "change",
                 terapkanFilter
@@ -544,29 +800,32 @@
         }
 
         isiPilihanCabang();
-        tampilkanStatus("Sedang memuat data peserta...", "info");
 
-        /* =========================================================
-        PEMUATAN AWAL DATA PESERTA LIVE
-        ========================================================= */
+        tampilkanStatus(
+            "Sedang memuat data peserta...",
+            "info"
+        );
+
+        /* =====================================================
+           PEMUATAN AWAL DATA PESERTA LIVE
+        ===================================================== */
 
         await muatDataPesertaLive();
 
-
-        /* =========================================================
-        PEMBARUAN OTOMATIS SETIAP 60 DETIK
-        ========================================================= */
+        /* =====================================================
+           PEMBARUAN OTOMATIS SETIAP 60 DETIK
+        ===================================================== */
 
         if (!intervalPembaruanRekap) {
-
             intervalPembaruanRekap = setInterval(
                 muatDataPesertaLive,
                 60000
             );
-
         }
     }
 
-    global.mulaiRekapPendaftaran = mulaiRekapPendaftaran;
+    // Fungsi inisialisasi yang dipanggil oleh modul utama.
+    global.mulaiRekapPendaftaran =
+        mulaiRekapPendaftaran;
 
 })(window);

@@ -1883,27 +1883,40 @@
 
     <div class="filter-grid">
 
+        <!-- FILTER JENJANG SEKOLAH -->
         <div class="filter-group">
-        <label for="filterKecamatan">Filter Kecamatan</label>
-        <select id="filterKecamatan">
-            <option value="">Semua Kecamatan</option>
-        </select>
+            <label for="filterJenjang">Jenjang Sekolah</label>
+            <select id="filterJenjang">
+                <option value="">Semua Jenjang</option>
+                <option value="SD">SD</option>
+                <option value="SMP">SMP</option>
+            </select>
         </div>
 
+        <!-- FILTER KECAMATAN -->
         <div class="filter-group">
-        <label for="filterCabang">Filter Cabang Lomba</label>
-        <select id="filterCabang">
-            <option value="">Semua Cabang Lomba</option>
-        </select>
+            <label for="filterKecamatan">Filter Kecamatan</label>
+            <select id="filterKecamatan">
+                <option value="">Semua Kecamatan</option>
+            </select>
         </div>
 
+        <!-- FILTER CABANG LOMBA -->
         <div class="filter-group">
-        <label for="cariPeserta">Cari Nama Peserta</label>
-        <input
-            type="search"
-            id="cariPeserta"
-            placeholder="Ketik nama peserta..."
-        >
+            <label for="filterCabang">Filter Cabang Lomba</label>
+            <select id="filterCabang">
+                <option value="">Semua Cabang Lomba</option>
+            </select>
+        </div>
+
+        <!-- PENCARIAN NAMA PESERTA -->
+        <div class="filter-group">
+            <label for="cariPeserta">Cari Nama Peserta</label>
+            <input
+                type="search"
+                id="cariPeserta"
+                placeholder="Ketik nama peserta..."
+            >
         </div>
 
     </div>
@@ -1918,6 +1931,7 @@
         <thead>
         <tr>
             <th>No.</th>
+            <th>Jenjang Sekolah</th>
             <th>Nama Peserta</th>
             <th>Cabang Lomba</th>
             <th>Kecamatan</th>
@@ -2074,7 +2088,7 @@
 
     tbody.innerHTML = `
         <tr>
-        <td colspan="5" style="text-align:center;">
+        <td colspan="6" style="text-align:center;">
             Memuat data peserta...
         </td>
         </tr>
@@ -2096,7 +2110,7 @@
 
         tbody.innerHTML = `
         <tr>
-            <td colspan="5" style="text-align:center;color:red;">
+            <td colspan="6" style="text-align:center;color:red;">
             Waktu pemuatan data habis.
             </td>
         </tr>
@@ -2117,7 +2131,7 @@
         if (!json || !Array.isArray(json.peserta)) {
         tbody.innerHTML = `
             <tr>
-            <td colspan="5" style="text-align:center;color:red;">
+            <td colspan="6" style="text-align:center;color:red;">
                 Format data peserta tidak valid.
             </td>
             </tr>
@@ -2166,7 +2180,7 @@
 
         tbody.innerHTML = `
         <tr>
-            <td colspan="5" style="text-align:center;color:red;">
+            <td colspan="6" style="text-align:center;color:red;">
             Gagal menghubungi server data peserta.
             </td>
         </tr>
@@ -2179,6 +2193,7 @@
     document.head.appendChild(script);
     }
 
+    const filterJenjang = document.getElementById("filterJenjang");
     const filterKecamatan = document.getElementById("filterKecamatan");
     const filterCabang = document.getElementById("filterCabang");
     const cariPeserta = document.getElementById("cariPeserta");
@@ -2214,13 +2229,37 @@
     "Semua Cabang Lomba"
     );
 
+    function normalisasiJenjang(nilai) {
+        const jenjang = String(nilai || "")
+            .trim()
+            .toLowerCase();
+
+        if (
+            jenjang === "sd" ||
+            jenjang === "sekolah dasar"
+        ) {
+            return "SD";
+        }
+
+        if (
+            jenjang === "smp" ||
+            jenjang === "sekolah menengah pertama"
+        ) {
+            return "SMP";
+        }
+
+        return jenjang.toUpperCase();
+    }
+    
     function tampilkanPeserta() {
+    const jenjang = filterJenjang.value;
     const kecamatan = filterKecamatan.value;
     const cabang = filterCabang.value;
     const nama = cariPeserta.value.toLowerCase().trim();
 
     // Filter seluruh peserta
     const hasil = pesertaContoh.filter(p =>
+        (!jenjang || normalisasiJenjang(p.jenjang) === jenjang) &&
         (!kecamatan || p.kecamatan === kecamatan) &&
         (!cabang || p.cabang === cabang) &&
         p.nama.toLowerCase().includes(nama)
@@ -2250,6 +2289,9 @@
         const tdNo = document.createElement("td");
         tdNo.textContent = mulai + index + 1;
 
+        const tdJenjang = document.createElement("td");
+        tdJenjang.textContent = normalisasiJenjang(p.jenjang);
+
         const tdNama = document.createElement("td");
         tdNama.textContent = p.nama;
 
@@ -2273,6 +2315,7 @@
 
         tr.append(
         tdNo,
+        tdJenjang,
         tdNama,
         tdCabang,
         tdKecamatan,
@@ -2331,6 +2374,11 @@
         muatFotoPeserta(p);
     }
 
+    filterJenjang.addEventListener("change", () => {
+        halamanAktif = 1;
+        tampilkanPeserta();
+    });
+    
     filterKecamatan.addEventListener("change", () => {
     halamanAktif = 1;
     tampilkanPeserta();
@@ -2356,24 +2404,26 @@
 
     // Tombol halaman berikutnya
     btnBerikutnya.addEventListener("click", () => {
-    const kecamatan = filterKecamatan.value;
-    const cabang = filterCabang.value;
-    const nama = cariPeserta.value.toLowerCase().trim();
+        const jenjang = filterJenjang.value;
+        const kecamatan = filterKecamatan.value;
+        const cabang = filterCabang.value;
+        const nama = cariPeserta.value.toLowerCase().trim();
 
-    const hasil = pesertaContoh.filter(p =>
-        (!kecamatan || p.kecamatan === kecamatan) &&
-        (!cabang || p.cabang === cabang) &&
-        p.nama.toLowerCase().includes(nama)
-    );
+        const hasil = pesertaContoh.filter(p =>
+            (!jenjang || normalisasiJenjang(p.jenjang) === jenjang) &&
+            (!kecamatan || p.kecamatan === kecamatan) &&
+            (!cabang || p.cabang === cabang) &&
+            p.nama.toLowerCase().includes(nama)
+        );
 
-    const totalHalaman = Math.ceil(
-        hasil.length / JUMLAH_PER_HALAMAN
-    );
+        const totalHalaman = Math.ceil(
+            hasil.length / JUMLAH_PER_HALAMAN
+        );
 
-    if (halamanAktif < totalHalaman) {
-        halamanAktif++;
-        tampilkanPeserta();
-    }
+        if (halamanAktif < totalHalaman) {
+            halamanAktif++;
+            tampilkanPeserta();
+        }
     });
 
     // Tutup modal kartu

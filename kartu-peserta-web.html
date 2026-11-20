@@ -1935,6 +1935,7 @@
             <th>Nama Peserta</th>
             <th>Cabang Lomba</th>
             <th>Kecamatan</th>
+            <th>Asal Sekolah</th>
             <th>Aksi</th>
         </tr>
         </thead>
@@ -2088,7 +2089,7 @@
 
     tbody.innerHTML = `
         <tr>
-        <td colspan="6" style="text-align:center;">
+        <td colspan="7" style="text-align:center;">
             Memuat data peserta...
         </td>
         </tr>
@@ -2110,7 +2111,7 @@
 
         tbody.innerHTML = `
         <tr>
-            <td colspan="6" style="text-align:center;color:red;">
+            <td colspan="7" style="text-align:center;color:red;">
             Waktu pemuatan data habis.
             </td>
         </tr>
@@ -2131,7 +2132,7 @@
         if (!json || !Array.isArray(json.peserta)) {
         tbody.innerHTML = `
             <tr>
-            <td colspan="6" style="text-align:center;color:red;">
+            <td colspan="7" style="text-align:center;color:red;">
                 Format data peserta tidak valid.
             </td>
             </tr>
@@ -2180,7 +2181,7 @@
 
         tbody.innerHTML = `
         <tr>
-            <td colspan="6" style="text-align:center;color:red;">
+            <td colspan="7" style="text-align:center;color:red;">
             Gagal menghubungi server data peserta.
             </td>
         </tr>
@@ -2301,6 +2302,9 @@
         const tdKecamatan = document.createElement("td");
         tdKecamatan.textContent = p.kecamatan;
 
+        const tdSekolah = document.createElement("td");
+        tdSekolah.textContent = p.sekolah || "-";
+
         const tdAksi = document.createElement("td");
         const aksi = document.createElement("div");
         aksi.className = "aksi-peserta";
@@ -2319,6 +2323,7 @@
         tdNama,
         tdCabang,
         tdKecamatan,
+        tdSekolah,
         tdAksi
         );
 
